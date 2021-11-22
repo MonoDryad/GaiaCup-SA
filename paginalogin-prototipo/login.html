@@ -5,26 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        /* *
+        {
+            border: 1px red solid;
+            margin: 3px;
+        } */
+    </style>
 </head>
 <body>
-    <div>
+        <!-- Login -->
+    <div id="divCorpoLC">
         <div>
-            <form>
-                <h3>Entrar</h3>
-                    <input type="email" id="inpEmailLogin" placeholder="E-mail">
-                    <input type="password" id="inpSenhaLogin" placeholder="Senha">
-                <div>
+            <div>
+                <form>
+                    <h3>Entrar</h3>
+                    <div>
+                        <input type="email" autocomplete="off" id="inpEmailLogin" placeholder="E-mail">
+                        <input type="password" autocomplete="off" id="inpSenhaLogin" placeholder="Senha">
+                    </div>
                     <div>
                         <input type="checkbox" id="manterLogado"><label>Manter-se Conectado</label>
                     </div>
-                    <button onclick="btnEntrar()" id="btnEntrarLogin">Entrar</button>
-                    <button onclick="btnCnc()" id="btnCncLogin">Criar nova conta</button>
+                    <div>
+                        <button type="button" onclick="btnEntrar()" id="btnEntrarLogin">Entrar</button>
+                        <button type="button" onclick="btnCnc()" id="btnCncLogin">Criar nova conta</button>
+                    </div>
+                </form>
+                <label id="lblVerificacaoLogin"></label>
+            </div>
+        </div>   
+    </div>
+        <!-- Cadastro -->
+    <div id="divCadastro-Container">
+        <div>
+            <form>
+                <h3>Cadastro</h3>
+                <div>
+                    <input type="text" id="inpNomeRegistro" placeholder="Nome" autocomplete="off">
+                    <input type="text" id="inpSobrenomeRegistro" placeholder="Sobrenome" autocomplete="off">
+                </div>
+                <div>
+                    <input type="email" id="inpEmailRegistro" placeholder="E-mail" autocomplete="off">
+                </div>
+                <div>
+                    <input type="password" id="inpSenhaRegistro" placeholder="Senha" autocomplete="off">
+                </div>
+                <div>
+                    <input type="password" id="inpConfirmarSenhaRegistro" placeholder="Confirmar Senha" autocomplete="off">
+                </div>
+                <div>
+                    <button type="button" onclick="btnCadastrar()" id="btnCadastro">Criar Conta</button>
                 </div>
             </form>
+            <label id="lblVerificacaoRegistro"></label>
         </div>
-        <div>
-        </div>
-        <label id="lblVerificacaoLogin"></label>
     </div>
 </body>
+<script src="./jquery-3.6.0.js"></script>
+<script src="./login.js"></script>
 </html>
