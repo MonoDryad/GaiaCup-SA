@@ -6,6 +6,7 @@ let contas =
     senha: $('#inpSenhaRegistro').val(),
 }
 
+localStorage.setItem('acessoAdmin', false)
 localStorage.setItem('Analise', 'Ativado!')
 
 const btnEntrar = function()
@@ -28,13 +29,17 @@ const btnEntrar = function()
     }
     else
     {
-        for (let i = 2; i <= localStorage.length; i++) 
+        for (let i = 3; i <= localStorage.length; i++) 
         {
             console.log(i, ':v')
             if($('#inpEmailLogin').val() == this["conta"+i].email && $('#inpSenhaLogin').val() == this["conta"+i].senha){
                 localStorage.setItem('acessoAdmin', false)
                 window.location.href = "teste.html"
                 console.log('aham')
+            }
+            else
+            {
+                alert('Final')
             }
         }
     }
@@ -55,7 +60,7 @@ const btnCadastrar = function()
 
     localStorage.setItem((localStorage.length + 1), JSON.stringify(contas))
 
-    for (let i = 2; i <= localStorage.length; i++) 
+    for (let i = 3; i <= localStorage.length; i++) 
     {
         this["conta"+i] = JSON.parse(localStorage.getItem(i))
         console.log(this['conta'+i].email,this['conta'+i].senha)
