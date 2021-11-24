@@ -1,68 +1,63 @@
-let contas = 
-{
-    nome: $('#inpNomeRegistro').val(),
-    sobrenome: $('#inpSobrenomeRegistro').val(),
-    email: $('#inpEmailRegistro').val(),
-    senha: $('#inpSenhaRegistro').val(),
-}
-
-localStorage.setItem('acessoAdmin', false)
-localStorage.setItem('Analise', 'Ativado!')
+criarContas()
+let contaConectada
 
 const btnEntrar = function()
 {
-    for (let i = 1; i <= localStorage.length; i++) 
-    {
-        this["conta"+i] = JSON.parse(localStorage.getItem(i))
-    }
-
+    criarContas()
 
     let emailLogin = $('#inpEmailLogin')
     let senhaLogin = $('#inpSenhaLogin')
 
     console.log(emailLogin.val(), senhaLogin.val())
 
-    if(emailLogin.val() == 'adminRai@admin.com' && senhaLogin.val() == 'adminRai')
+    if(emailLogin.val().length != '' && senhaLogin.val().length != '')
     {
-        localStorage.setItem('acessoAdmin', true)
-        window.location.href = "teste.html"
+        for (let i = 1; i <= 100; i++) 
+        {
+            console.log(i, 'verificação')
+            if($('#inpEmailLogin').val() == this["conta"+i].email && $('#inpSenhaLogin').val() == this["conta"+i].senha)
+            {
+                console.log(this["conta"+i])
+                conectandoOUsuario()
+                contaConectada = this["conta"+i]
+                break
+            }
+        }
     }
     else
     {
-        for (let i = 3; i <= localStorage.length; i++) 
-        {
-            console.log(i, ':v')
-            if($('#inpEmailLogin').val() == this["conta"+i].email && $('#inpSenhaLogin').val() == this["conta"+i].senha){
-                localStorage.setItem('acessoAdmin', false)
-                window.location.href = "teste.html"
-                console.log('aham')
-            }
-            else
-            {
-                alert('Final')
-            }
-        }
+        $('#lblVerificacaoLogin').text("Email ou senha incorreta.")
     }
 }
 
 const btnCadastrar = function()
 {
-    contas = 
+    let contas = 
     {
         nome: $('#inpNomeRegistro').val(),
         sobrenome: $('#inpSobrenomeRegistro').val(),
         email: $('#inpEmailRegistro').val(),
         senha: $('#inpSenhaRegistro').val(),
+        acessoAdmin: false,
+        conectado: false
     }
 
-    let jsonContas = JSON.stringify(contas)
-    console.log(jsonContas)
+    let account = localStorage.length
+    localStorage.setItem((account + 1), JSON.stringify(contas))
 
-    localStorage.setItem((localStorage.length + 1), JSON.stringify(contas))
+    criarContas()
+}
 
-    for (let i = 3; i <= localStorage.length; i++) 
+function criarContas()
+{
+    for(let i = 1;i < localStorage.length;i++)
     {
         this["conta"+i] = JSON.parse(localStorage.getItem(i))
-        console.log(this['conta'+i].email,this['conta'+i].senha)
     }
+}
+
+function conectandoOUsuario()
+{
+    console.log('verificando conta')
+    contaConectada.conectado = true
 }
