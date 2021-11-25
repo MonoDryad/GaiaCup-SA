@@ -1,4 +1,13 @@
 criarContas()
+let contaRaiAdmin = {
+    nome: "Raí",
+    sobrenome: "Souza",
+    email: "rair2544@hotmail.com",
+    senha: "adminRai12345",
+    acessoAdmin: true,
+    conectado: false
+}
+
 let contaConectada
 
 const btnEntrar = function()
@@ -12,17 +21,23 @@ const btnEntrar = function()
 
     if(emailLogin.val().length != '' && senhaLogin.val().length != '')
     {
-        for (let i = 1; i <= 100; i++) 
+        let i = 0
+        do
         {
-            console.log(i, 'verificação')
+            i++
             if($('#inpEmailLogin').val() == this["conta"+i].email && $('#inpSenhaLogin').val() == this["conta"+i].senha)
             {
-                console.log(this["conta"+i])
-                conectandoOUsuario()
                 contaConectada = this["conta"+i]
+                conectandoOUsuario()
+                break
+            } else if($('#inpEmailLogin').val() == "rair2544@hotmail.com" && $('#inpSenhaLogin').val() == "adminRai12345")
+            {
+                contaConectada = contaRaiAdmin
+                conectandoOUsuario()
                 break
             }
-        }
+            console.log("Verificando...", i, this["conta"+i])
+        } while($('#inpEmailLogin').val() != this["conta"+i].email)
     }
     else
     {
@@ -46,6 +61,9 @@ const btnCadastrar = function()
     localStorage.setItem((account + 1), JSON.stringify(contas))
 
     criarContas()
+
+    $('#divCadastro-Container').hide()
+    $('#divLoginCorpo').show()
 }
 
 function criarContas()
@@ -60,4 +78,13 @@ function conectandoOUsuario()
 {
     console.log('verificando conta')
     contaConectada.conectado = true
+    localStorage.setItem("Conta Conectada", JSON.stringify(contaConectada))
+    console.log(contaConectada)
+    window.location.href = "teste.html"
+}
+
+function btnCnc()
+{
+    $('#divCadastro-Container').show()
+    $('#divLoginCorpo').hide()
 }
