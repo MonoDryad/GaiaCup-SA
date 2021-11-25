@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./prototipo-css.css">
     <title>Login</title>
     <style>
         /* *
@@ -14,12 +15,14 @@
     </style>
 </head>
 <body>
+    <!-- <img id="background" src="./imagens/44387794_582677978837905_308235174175309824_n.png" alt="Fundo"> -->
         <!-- Login -->
-    <div id="divCorpoLC">
+<div id="divCorpoLC">    
+    <div id="divLoginCorpo">
         <div>
             <div>
                 <form>
-                    <h3>Entrar</h3>
+                    <h3>Entrar    -   Beach Route</h3>
                     <div>
                         <input type="email" autocomplete="off" id="inpEmailLogin" placeholder="E-mail">
                         <input type="password" autocomplete="off" id="inpSenhaLogin" placeholder="Senha">
@@ -30,6 +33,7 @@
                     <div>
                         <button type="button" onclick="btnEntrar()" id="btnEntrarLogin">Entrar</button>
                         <button type="button" onclick="btnCnc()" id="btnCncLogin">Criar nova conta</button>
+                        <img id="beachRoute" src=".\imagens\44493031_582674652171571_164285677347799040_n.png" alt="Beach Route">
                     </div>
                 </form>
                 <label id="lblVerificacaoLogin"></label>
@@ -56,11 +60,13 @@
                 </div>
                 <div>
                     <button type="button" onclick="btnCadastrar()" id="btnCadastro">Criar Conta</button>
+                    <img id="beachRoute" src=".\imagens\44493031_582674652171571_164285677347799040_n.png" alt="Beach Route">
                 </div>
             </form>
             <label id="lblVerificacaoRegistro"></label>
         </div>
     </div>
+</div>
 </body>
 <script src="./jquery-3.6.0.js"></script>
 <script src="./login.js"></script>
