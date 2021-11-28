@@ -4,58 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LoginCadastro.css">
     <title>Entrar - Beach Route</title>
 </head>
 <body>
     <!-- Entrar -->
     <div class="divClassContainerLogin">
+        <img src="./src/logo.png" id="imgLogo" alt="Beach Route">
         <form>
             <div class="divClasseEmail">
-                <label for="inpIdEmail">Email ou Telefone:</label>
+                <label for="inpIdEmail" id="lblIdEmail">Email ou Telefone</label>
                 <input type="email" class="inpClassEmail" id="inpIdEmail">
                 <label id="inpIdErroUsuario"></label>
             </div>
             <div class="divClasseSenha">
-                <label for="inpIdSenha">Senha:</label>
+                <label for="inpIdSenha" id="lblIdSenha">Senha</label>
                 <input type="password" class="inpClassSenha" id="inpIdSenha">
                 <label id="inpIdErroSenha"></label>
             </div>
             <div class="divClassMarcacao">
-                <label><input type="checkbox"> Lembrar Usuário</label>
+                <label id="labelLembrar"><input type="checkbox"> Lembrar Usuário</label>
             </div>
-            <button type="submit" class="btnClasseEntrar" id="btnIdEntrar">Entrar</button>
-            <button type="submit" class="btnClasseCadastrar" >Cadastrar-se</button>
+            <button type="button" class="btnClasseEntrar" id="btnIdEntrar">Entrar</button>
+            <button type="button" class="btnClasseCadastrar" id="btnIdCadastra-se">Cadastrar-se</button>
         </form> 
     </div>
     <!-- Registro -->
-    <div class="divClassContainerRegistro">
+    <div class="divClassContainerRegistro" style="display: none;">
         <form>
             <div class="divClasseRegistroNome">
-                <label for="inpIdRegistroNome">Nome:</label>
+                <label for="1inpIdRegistroNome" id="lblIdRegistroNome">Nome:</label>
                 <input type="text" class="inpClassRegistroNome" id="inpIdRegistroNome">
               </div>
               <div class="divClasseRegistroSobrenome">
-                <label for="inpIdRegistroSobrenome">Sobrenome:</label>
+                <label for="1inpIdRegistroSobrenome" id="lblIdRegistroSobrenome">Sobrenome:</label>
                 <input type="text" class="inpClassRegistroSobrenome" id="inpIdRegistroSobrenome">
               </div>
             <div class="divClasseRegistroEmail">
-              <label for="inpIdRegistroEmail">Email:</label>
-              <input type="email" class="inpClassRegistroEmail" id="inpIdRegistroEmail">
+              <label for="1inpIdRegistroEmail" id="lblIdRegistroEmail">Email:</label>
+              <input type="email" class="inpClassRegistroEmail" id="inpIdRegistroEmail" >
             </div>
             <div class="divClasseRegistroTelefone">
-                <label for="inpIdRegistroTelefone">Telefone:</label>
-                <input type="number" class="inpClassRegistroTelefone" id="inpIdRegistroTelefone">
+                <label for="1inpIdRegistroTelefone" id="lblIdRegistroTelefone">Telefone:</label>
+                <input type="tel" class="inpClassRegistroTelefone" id="inpIdRegistroTelefone" minlength="9" maxlength="15" required placeholder="(xx) xxxxx-xxxx">
             </div>
             <div class="divClasseRegistroSenha">
-              <label for="inpIdRegistroSenha">Senha:</label>
+              <label for="1inpIdRegistroSenha" id="lblIdRegistroSenha">Senha:</label>
               <input type="password" class="inpClassRegistroSenha" id="inpIdRegistroSenha">
             </div>
             <div class="divClasseRegistroSenha">
-                <label for="inpIdRegistroSenha">Confirmar Senha:</label>
+                <label for="1inpIdRegistroSenha" id="lblIdRegistroConfirmarSenha">Confirmar Senha:</label>
                 <input type="password" class="inpClassRegistroConfirmarSenha" id="inpIdRegistroConfirmarSenha">
             </div>
-            <button type="submit" class="btnClasseRegistroRegistrar" id="btnIdRegistroRegistrar">Efetuar Cadastro</button>
-            <button type="submit" class="btnClasseRegistroVoltar" id="btnIdRegistroVoltar">Voltar</button>
+            <button type="button" class="btnClasseRegistroRegistrar" id="btnIdRegistroRegistrar" disabled="true">Efetuar Cadastro</button>
+            <button type="button" class="btnClasseRegistroVoltar" id="btnIdRegistroVoltar">Voltar</button>
         </form> 
     </div>
 </body>

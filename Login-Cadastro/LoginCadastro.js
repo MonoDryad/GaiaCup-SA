@@ -1,21 +1,44 @@
 const novasContas = []
 let contaConectada
-if(localStorage.length > 0)
+
+localStorage.setItem('LocalStorage', 'Ativado')
+
+if(localStorage.length > 1)
 {
-const contasExistentes = JSON.parse(localStorage.getItem('Contas'))
-for(let i = 0;i<contasExistentes.length;i++){
-novasContas.push(contasExistentes[i])
-}
+    const contasExistentes = JSON.parse(localStorage.getItem('Contas'))
+    for(let i = 0;i<contasExistentes.length;i++)
+    {
+        novasContas.push(contasExistentes[i])
+    }
 }
 
 let contaRegistrada =
 {
-    nome: '',
-    sobrenome: '',
-    email: '',
-    telefone: '',
-    senha: '',
+    nome: null,
+    sobrenome: null,
+    email: null,
+    telefone: null,
+    senha: null,
 }
+
+document.getElementById('inpIdRegistroSenha').addEventListener('change', function ()
+{
+    if($('#inpIdRegistroConfirmarSenha').val() == $('#inpIdRegistroSenha').val())
+    {
+        console.log('ingual')
+        $('#btnIdRegistroRegistrar').removeAttr('disabled')
+    }
+})
+
+document.getElementById('inpIdRegistroConfirmarSenha').addEventListener('change', function ()
+{
+    if($('#inpIdRegistroConfirmarSenha').val() == $('#inpIdRegistroSenha').val())
+    {
+        console.log('ingual')
+        $('#btnIdRegistroRegistrar').removeAttr('disabled')
+    }
+})
+
 
 $('#btnIdRegistroRegistrar').click(function()
 {
@@ -34,11 +57,11 @@ $('#btnIdRegistroRegistrar').click(function()
 
     contaRegistrada =
     {
-        nome: '',
-        sobrenome: '',
-        email: '',
-        telefone: '',
-        senha: '',
+        nome: null,
+        sobrenome: null,
+        email: null,
+        telefone: null,
+        senha: null,
     }
 })
 
@@ -79,9 +102,24 @@ function confirmarConta()
     else if(contaConectada.senha != $('#inpIdSenha').val())
     {
         $('#inpIdErroSenha').html('Senha incorreta!')
+        contaConectada = null
     }
     else
     {
         $('#inpIdErroSenha').html('Campo de Senha não foi preenchido!')
+        contaConectada = null
     }
 }
+
+$('#btnIdCadastra-se').click(function()
+{
+    $('.divClassContainerLogin').hide()
+    $('.divClassContainerRegistro').css("display","block")
+})
+
+$('#btnIdRegistroVoltar').click(function()
+{
+    $('.divClassContainerLogin').show()
+    $('.divClassContainerRegistro').css("display","none")
+})
+
