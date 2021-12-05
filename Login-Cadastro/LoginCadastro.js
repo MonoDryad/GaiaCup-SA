@@ -1,31 +1,10 @@
-const novasContas = []
+const novasContas = JSON.parse(localStorage.getItem('Contas')) || []
 let contaConectada
-
-localStorage.setItem('LocalStorage', 'Ativado')
-
-if(localStorage.length > 1)
-{
-    const contasExistentes = JSON.parse(localStorage.getItem('Contas'))
-    for(let i = 0;i<contasExistentes.length;i++)
-    {
-        novasContas.push(contasExistentes[i])
-    }
-}
-
-let contaRegistrada =
-{
-    nome: null,
-    sobrenome: null,
-    email: null,
-    telefone: null,
-    senha: null,
-}
 
 document.getElementById('inpIdRegistroSenha').addEventListener('change', function ()
 {
     if($('#inpIdRegistroConfirmarSenha').val() == $('#inpIdRegistroSenha').val())
     {
-        console.log('ingual')
         $('#btnIdRegistroRegistrar').removeAttr('disabled')
     }
 })
@@ -42,7 +21,7 @@ document.getElementById('inpIdRegistroConfirmarSenha').addEventListener('change'
 
 $('#btnIdRegistroRegistrar').click(function()
 {
-    contaRegistrada =
+    let contaRegistrada =
     {
         nome: $('#inpIdRegistroNome').val(),
         sobrenome: $('#inpIdRegistroSobrenome').val(),
@@ -50,19 +29,10 @@ $('#btnIdRegistroRegistrar').click(function()
         telefone: $('#inpIdRegistroTelefone').val(),
         senha: $('#inpIdRegistroSenha').val(),
     }
-    console.log("Seja bem-vindo: ", contaRegistrada.nome, contaRegistrada.sobrenome)
+    console.log("Seja bem-vindo:", contaRegistrada.nome, contaRegistrada.sobrenome)
 
     novasContas.unshift(contaRegistrada)
     localStorage.setItem("Contas", JSON.stringify(novasContas))
-
-    contaRegistrada =
-    {
-        nome: null,
-        sobrenome: null,
-        email: null,
-        telefone: null,
-        senha: null,
-    }
 })
 
 $('#btnIdEntrar').click(function()
