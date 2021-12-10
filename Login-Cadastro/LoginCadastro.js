@@ -1,24 +1,6 @@
 const novasContas = JSON.parse(localStorage.getItem('Contas')) || []
 let contaConectada
 
-document.getElementById('inpIdRegistroSenha').addEventListener('change', function ()
-{
-    if($('#inpIdRegistroConfirmarSenha').val() == $('#inpIdRegistroSenha').val())
-    {
-        $('#btnIdRegistroRegistrar').removeAttr('disabled')
-    }
-})
-
-document.getElementById('inpIdRegistroConfirmarSenha').addEventListener('change', function ()
-{
-    if($('#inpIdRegistroConfirmarSenha').val() == $('#inpIdRegistroSenha').val())
-    {
-        console.log('ingual')
-        $('#btnIdRegistroRegistrar').removeAttr('disabled')
-    }
-})
-
-
 $('#btnIdRegistroRegistrar').click(function()
 {
     let contaRegistrada =
@@ -29,7 +11,7 @@ $('#btnIdRegistroRegistrar').click(function()
         telefone: $('#inpIdRegistroTelefone').val(),
         senha: $('#inpIdRegistroSenha').val(),
     }
-    console.log("Seja bem-vindo:", contaRegistrada.nome, contaRegistrada.sobrenome)
+    console.log("Bem-vindo:", contaRegistrada.nome, contaRegistrada.sobrenome)
 
     novasContas.unshift(contaRegistrada)
     localStorage.setItem("Contas", JSON.stringify(novasContas))
