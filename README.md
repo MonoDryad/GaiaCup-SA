@@ -9,7 +9,7 @@ Esse é o projeto do grupo INEXORABILIS do curso Desenvolvimento de Sistemas - T
 - [Kamilly Fernanda](https://github.com/Millyzinha)
 - [Lucas Gomes](---)
 
-## A Gaia Cup!
+## A Gaia Cup
 
 A Gaia Cup, também conhecida como Inexorabilis Cup, é um campeonato de League of Legends TIER 3. O objetivo desse campeonato é ser competitivo, com transmissão ao vivo e narração, qualquer erro ou brilho será visto por várias telas ao redor do Brasil.
 
