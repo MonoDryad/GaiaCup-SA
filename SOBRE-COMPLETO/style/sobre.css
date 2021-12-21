@@ -1,97 +1,7 @@
-*
-{
-    /* border: 1px red solid; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body
 {
-    margin: 0;
     background-image: url("https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-noxus.jpg");
     background-size: 260%;
-    background-repeat: no-repeat;
-}
-
-footer
-{
-    background-color: black;
-    margin-top: 30%;
-    height: 300px;
-    color: white;
-}
-
-.ul-gaiagaming
-{
-    position: absolute;
-    margin-left: 18%;
-    padding-top: 8%
-}
-
-.ul-inexorabilis
-{
-    position: absolute;
-    margin-left: 58%;
-    padding-top: 8%
-}
-
-.ul-inexorabilis li
-{
-    margin-left: 68%;
-}
-
-.imgfooter-inexorabilis
-{
-    width: 26%;
-    position: absolute;
-    margin-top: 15px;
-    right: 0%;
-}
-
-.imgfooter-gaiagaming
-{
-    margin-top: -15px;
-    width: 40%; 
-    position: absolute;
-    left: -10%;
-}
-
-.nav-container-main
-{
-    height: 48px;
-    background-color: black;
-}
-
-.lblINICIO, .lblSOBRE, .lblREGULAMENTO, .lblCADASTRO, .lblINICIARSESSAO
-{
-    position: absolute;
-    font-size: larger;
-    color: white;
-    top: 1.8%;
-}
-
-.lblINICIO
-{
-    left: 10%;
-}
-
-.lblSOBRE
-{
-    left: 17%;
-}
-
-.lblREGULAMENTO
-{
-    left: 24%;
-}
-
-.lblINICIARSESSAO
-{
-    left: 79%;
-}
-
-.lblCADASTRO
-{
-    left: 91.3%;
 }
 
 .body-container-main
@@ -103,7 +13,6 @@ footer
 {
     padding-right: 25%;
     margin: 3%;
-    color: white;
     text-align: center;
     font-size: xx-large;
 }
@@ -121,7 +30,6 @@ footer
     padding-top: 13%;
     padding-left: 25%;
     margin: 3%;
-    color: white;
     text-align: center;
     font-size: xx-large;
 }
@@ -139,7 +47,6 @@ footer
     padding-top: 13%;
     padding-right: 25%;
     margin: 3%;
-    color: white;
     text-align: center;
     font-size: xx-large;
 }

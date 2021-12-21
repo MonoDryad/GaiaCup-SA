@@ -1,0 +1,41 @@
+footer
+{
+    background-color: black;
+    margin-top: 30%;
+    height: 300px;
+}
+
+.ul-gaiagaming
+{
+    position: absolute;
+    margin-left: 18%;
+    padding-top: 8%
+}
+
+.ul-inexorabilis
+{
+    position: absolute;
+    margin-left: 58%;
+    padding-top: 8%
+}
+
+.ul-inexorabilis li
+{
+    margin-left: 68%;
+}
+
+.imgfooter-inexorabilis
+{
+    width: 26%;
+    position: absolute;
+    margin-top: 15px;
+    right: 0%;
+}
+
+.imgfooter-gaiagaming
+{
+    margin-top: -15px;
+    width: 40%; 
+    position: absolute;
+    left: -10%;
+}
