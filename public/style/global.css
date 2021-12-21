@@ -1,0 +1,13 @@
+body
+{
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+*
+{
+    /* border: 1px red solid; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
