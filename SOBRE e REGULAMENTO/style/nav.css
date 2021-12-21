@@ -1,38 +1,31 @@
-.nav-container-main
-{
-    height: 48px;
-    background-color: black;
-}
-
-.lblINICIO, .lblSOBRE, .lblREGULAMENTO, .lblCADASTRO, .lblINICIARSESSAO
-{
+.logo-gaiacup-nav {
+    margin-top: 7.5vh;
+    margin-left: 2vw;
+    width: 85px;
     position: absolute;
-    font-size: larger;
-    color: white;
-    top: 1.8%;
+
 }
 
-.lblINICIO
-{
-    left: 10%;
+
+@media screen and (max-width:991px) {
+    .logo-gaiacup-nav {
+        width: 85px;
+        margin-top: 10vh;
+        margin-left: 50%;
+    }
 }
 
-.lblSOBRE
+
+.navbar-collapse
 {
-    left: 17%;
+    margin-left: 10vw;
+    font-size: 1.5rem;
 }
 
-.lblREGULAMENTO
-{
-    left: 24%;
+.active {
+	color: rgb(207, 91, 253) !important
 }
 
-.lblINICIARSESSAO
-{
-    left: 79%;
-}
-
-.lblCADASTRO
-{
-    left: 91.3%;
+a:hover {
+	color: rgb(234, 180, 255) !important
 }
