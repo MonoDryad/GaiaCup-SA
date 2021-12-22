@@ -1,33 +1,29 @@
 .logo-gaiacup-nav {
-    margin-top: 7.5vh;
-    margin-left: 2vw;
-    width: 85px;
-    position: absolute;
-
+  margin-top: 7.5vh;
+  margin-left: 2vw;
+  width: 85px;
+  position: absolute;
 }
 
-
-@media screen and (max-width:991px) {
-    .logo-gaiacup-nav {
-        width: 8vw;
-        margin-top: 5%;
-        display: block;
-        margin-left: 90%;
-        margin-right: 10%;
-    }
+@media screen and (max-width: 991px) {
+  .logo-gaiacup-nav {
+    width: 8vw;
+    margin-top: 5%;
+    display: block;
+    margin-left: 90%;
+    margin-right: 10%;
+  }
 }
 
-
-.navbar-collapse
-{
-    margin-left: 10vw;
-    font-size: 1.5rem;
+.navbar-collapse {
+  margin-left: 10vw;
+  font-size: 1.5rem;
 }
 
 .active {
-	color: rgb(207, 91, 253) !important
+  color: rgb(207, 91, 253) !important;
 }
 
 a:hover {
-	color: rgb(234, 180, 255) !important
+  color: rgb(234, 180, 255) !important;
 }
