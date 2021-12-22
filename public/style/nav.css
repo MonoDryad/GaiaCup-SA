@@ -9,9 +9,11 @@
 
 @media screen and (max-width:991px) {
     .logo-gaiacup-nav {
-        width: 85px;
-        margin-top: 10vh;
-        margin-left: 50%;
+        width: 8vw;
+        margin-top: 5%;
+        display: block;
+        margin-left: 90%;
+        margin-right: 10%;
     }
 }
 

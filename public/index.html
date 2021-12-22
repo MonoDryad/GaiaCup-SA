@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,110 +9,112 @@
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/global.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
     <title>Início | Gaia Cup</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/LOGO-TERCEIRA-EDI%C3%87%C3%83O.png" alt="Gaia" class="logo-gaiacup-nav">
+      <img
+        src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/LOGO-TERCEIRA-EDI%C3%87%C3%83O.png"
+        alt="Gaia"
+        class="logo-gaiacup-nav">
+      <div class="container-fluid">
         <div class="container-fluid">
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./regulamento.html">Regulamento</a>
-                    </li>
-                  </ul>
-                  <span class="navbar-text">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Iniciar Sessão</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Cadastrar-se</a>
-                        </li>
-                      </ul>
-                </span>
-                </div>
-            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle
+            navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="./index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./regulamento.html">Regulamento</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Iniciar Sessão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cadastrar-se</a>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </div>
       </nav>
+
 
       <h1 class="tier3">O TIER 3 EM OUTRO NÍVEL</h1>
 
-      <div class="fake-image-carrossel1">
-        <video class="fake-image-carrossel1" src="video/slide2.mp4" type="video/mp4"></video>
-      </div>
-      
-      <div class="fake-image-carrossel2">
-        <video class="fake-image-carrossel2" src="video/slide3.mp4"></video>
-      </div>
 
-      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <video class="d-block w-100" autoplay loop muted >
-              <source src="./video/slide1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <video class="d-block w-100" autoplay loop muted>
-              <source src="./video/slide2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <video class="d-block w-100" autoplay loop muted>
-              <source src="./video/slide3.mp4" type="video/mp4">
-            </video>
-          </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <video style="width:100%" autoplay loop muted>
+            <source src="./video/slide3.mp4">
+          </video>
         </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Próximo</span>
-            </button>
-          </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <video style="width:100%" autoplay loop muted>
+            <source src="./video/slide2.mp4">
+          </video>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <video style="width:100%" autoplay loop muted>
+            <source src="./video/slide1.mp4">
+          </video>
+        </div>
+      </div>
 
+      <h1 class="text-news">NOTÍCIAS</h1>
 
-
-
-
-
-
-
-    <footer>
-        <img class="imgfooter-inexorabilis" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Logo-f.png">
-        <img class="imgfooter-gaiagaming" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/GAIA_sem_fundo.png">
+      <footer>
+        <img class="imgfooter-inexorabilis"
+          src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Logo-f.png">
+        <img class="imgfooter-gaiagaming"
+          src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/GAIA_sem_fundo.png">
         <div>
-            <ul class="ul-gaiagaming">
-                <h3>Gaia Gaming</h3>
-                <li><a>Discord</a></li>
-                <li><a>Youtube</a></li>
-                <li><a>Twitter</a></li>
-                <li><a>Twitch</a></li>
-            </ul>
+          <ul class="ul-gaiagaming">
+            <h3>Gaia Gaming</h3>
+            <li><a>Discord</a></li>
+            <li><a>Youtube</a></li>
+            <li><a>Twitter</a></li>
+            <li><a>Twitch</a></li>
+          </ul>
         </div>
         <div>
-            <ul class="ul-inexorabilis">
-                <h3>Inexorabilis E-Sports</h3>
-                <li><a>Discord</a></li>
-                <li><a>Youtube</a></li>
-                <li><a>Twitter</a></li>
-                <li><a>Twitch</a></li>
-            </ul>
+          <ul class="ul-inexorabilis">
+            <h3>Inexorabilis E-Sports</h3>
+            <li><a>Discord</a></li>
+            <li><a>Youtube</a></li>
+            <li><a>Twitter</a></li>
+            <li><a>Twitch</a></li>
+          </ul>
         </div>
-    </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</html>
+      </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/inicio.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+  </html>
