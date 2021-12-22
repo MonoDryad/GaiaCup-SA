@@ -1,16 +1,5 @@
 # Gaia Cup - Website
 
-## Projeto da SA
-
-Esse é o projeto do grupo INEXORABILIS do curso Desenvolvimento de Sistemas - TI:
-- [Rai Raul](https://github.com/MonoDryad)
-- [Raul Bruno](https://github.com/raulbrunouuskt)
-- [Marcyelen Rosa](https://github.com/Marcynha01)
-- [Kamilly Fernanda](https://github.com/Millyzinha)
-- [Lucas Gomes](---)
-
-## A Gaia Cup
-
 A Gaia Cup, também conhecida como Inexorabilis Cup, é um campeonato de League of Legends TIER 3. O objetivo desse campeonato é ser competitivo, com transmissão ao vivo e narração, qualquer erro ou brilho será visto por várias telas ao redor do Brasil.
 
 ## Status
@@ -19,3 +8,7 @@ A Gaia Cup, também conhecida como Inexorabilis Cup, é um campeonato de League 
 ## Links
 - [Netlify](https://gaiacup.netlify.app)
 - [Github](https://github.com/MonoDryad/GaiaCup-SA)
+
+## Data prevista para o término do Website
+
+03/01/2022
