@@ -63,3 +63,19 @@ body {
     opacity: 1;
   }
 }
+
+.child-image-1,
+.child-image-2 {
+  filter: blur(4px);
+  position: absolute;
+  max-width: 750px;
+  margin: auto;
+}
+
+.child-image-2 {
+  right: 5vw;
+}
+
+.child-image-1 {
+  left: 5vw;
+}
