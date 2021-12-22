@@ -1,0 +1,33 @@
+.body-form-mods {
+  background-color: rgba(59, 59, 59, 0.548);
+  margin: 10%;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.h2-form-mod,
+.h4-form-mod {
+  text-align: center;
+}
+
+.h2-form-mod {
+  margin-top: -4%;
+}
+
+.h4-form-mod {
+  margin-bottom: 8%;
+}
+
+input {
+  display: inline-block;
+  width: 120%;
+  top: -3em;
+}
+
+label {
+  display: inline-block;
+  width: 85%;
+  position: relative;
+  margin-right: 0.5em;
+  padding-top: 1.5em;
+}
