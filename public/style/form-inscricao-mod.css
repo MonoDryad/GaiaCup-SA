@@ -3,6 +3,7 @@
   margin: 10%;
   padding: 5%;
   border-radius: 5px;
+ 
 }
 
 .h2-form-mod,
@@ -22,6 +23,7 @@ input {
   display: inline-block;
   width: 120%;
   top: -3em;
+  color: black !important
 }
 
 label {
