@@ -1,0 +1,35 @@
+body
+{
+    background-image: url("https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-collections/global/default/background.jpg");
+    background-size: cover;
+}
+
+.tier3
+{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.carousel .carousel-item 
+{
+    width: 65%;
+    margin-top: 3%;
+    margin-left: 17%;
+}
+
+.fake-image-carrossel1
+{
+    filter: blur(8px);
+    position: absolute;
+    top: 36.5%;
+    width: 80%;
+}
+
+.fake-image-carrossel2
+{
+    filter: blur(8px);
+    position: absolute;
+    top: 36.5%;
+    left: 20%;
+    width: 80%;
+}
