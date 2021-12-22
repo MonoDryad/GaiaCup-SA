@@ -9,6 +9,10 @@ A Gaia Cup, também conhecida como Inexorabilis Cup, é um campeonato de League 
 - [Netlify](https://gaiacup.netlify.app)
 - [Github](https://github.com/MonoDryad/GaiaCup-SA)
 
+## Known issues
+- Slider de video sumindo, tempo errado
+- Responsividade das páginas está ruim
+
 ## Data prevista para o término do Website
 
 03/01/2022
