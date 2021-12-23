@@ -70,6 +70,7 @@ body {
   position: absolute;
   max-width: 750px;
   margin: auto;
+  display: block;
 }
 
 .child-image-2 {
@@ -78,4 +79,11 @@ body {
 
 .child-image-1 {
   left: 5vw;
+}
+
+@media screen and (max-width: 809px) {
+  .child-image-1, .child-image-2
+  {
+    display: none;
+  }
 }
