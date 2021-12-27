@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginRegister.css">
+    <title>Registe | Gaia Cup</title>
+</head>
+<body background="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.Fundo\img.fundo.gaiacup.jpg">
+<form>
+ <div id="register-login">
+     <section class="style-register">
+       <h2>CADASTRO</h2>
+         <div class="label-settings">
+           <input type="text" name="name" id="nameRegister" required>
+           <label id="labelName">Nome</label>
+         </div>
+         <div class="label-settings">
+           <input  type="text" name="lastname" id="lastName" required>
+           <label id="labelLastName">Sobrenome</label>
+         </div>
+         <div class="label-settings">
+           <input type="email" name="emailRegister" id="emailRegister" required>
+           <label id="labelEmail">Email</label>
+         </div>
+         <div class="label-settings">
+           <img src="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.olho.jpg" class="password-visible-blind" onclick="clickVisibleBlind()" id="visible" alt="img-senha" width="30px" >
+           <img src="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.senha (1).jpg" class="password-visible-blind" onclick="clickBlindVisible()" id="blind" width="30px" alt="img-senha">
+           <input type="password" name="password" id="password" required>
+           <label id="labelPassword">Senha</label>
+         </div>
+         <div class="label-settings">
+           <img src="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.olho.jpg" class="password-visible-blind" onclick="clickVisibleBlind1()" id="visible1" alt="img-senha" width="30px">
+           <img src="C:\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.senha (1).jpg" class="password-visible-blind" onclick="clickVisibleBlind2()" id="blind1" width="30px" alt="img-senha">
+           <input type="password" name="comfirmPassword" id="comfirmPassword" required>
+           <label id="labelComfirmPassword">Comfirme sua senha</label>
+         </div>
+         <button class="button-cadastro" id="submitRegister" onclick="submitRegister()">Cadastrar</button>   
+     </section>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="ErroEmail.js"></script>
+<script src="BlindandVisiblePassword.js"></script>
+</body>
+</html>

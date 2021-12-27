@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginRegister.css">
+    <title>login | Gaia Cup</title>
+</head>
+<body background="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.Fundo\img.fundo.gaiacup.jpg">
+
+<form>
+  <div id="login">
+   <section class="style-login">
+     <h2>INICIAR SESSÃO</h2>
+       <div class="label-settings">
+         <input type="email" name="emailLogin" id="emailLogin" required>
+         <label id="labelEmail">Email</label>
+       </div>
+       <div class="label-settings">
+         <img src="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.olho.jpg" class="password-visible-blind" onclick="clickVisibleBlind()" id="visible" alt="img-senha" width="30px">
+         <img src="\Users\Usuario\Downloads\raulPaginas\INEXORABILLIS.S.A.ON\img.senha\img.senha (1).jpg" class="password-visible-blind" onclick="clickBlindVisible()" id="blind" width="30px" alt="img-senha">
+         <input type="password" name="passwordLogin" id="password" required>
+         <label id="labelPassword">Senha</label>
+       </div>
+        <button class="button-login" id="buttonLogin" onclick="Login()">Entrar</button>
+        <p>Não possui conta ainda?<a href="register.html"> Criar conta</a></p>
+   </section>
+  </div>
+</form>
+
+<!-- <script src="SA.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="ErroEmail.js"></script>
+<script src="BlindandVisiblePassword.js"></script>
+</body>
+</html>
