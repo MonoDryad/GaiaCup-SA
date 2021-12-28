@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/global.css">
+  <link rel="stylesheet" href="./style/cadastro-sessao.css">
+  <title>Cadastro | Gaia Cup</title>
+</head>
+
+<body>
+  <img src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/LOGO-TERCEIRA-EDI%C3%87%C3%83O.png" alt="Gaia"
+    class="logo-gaiacup-nav">
+  <form method="post">
+    <div id="register-login">
+      <section class="style-register">
+        <h2>CADASTRO</h2>
+        <div class="label-settings">
+          <input type="text" name="name" id="nameRegister" required>
+          <label id="labelName">Usuário</label>
+        </div>
+        <div class="label-settings">
+          <input type="email" name="emailRegister" id="emailRegister" required>
+          <label id="labelEmail">Email</label>
+        </div>
+        <div class="label-settings">
+          <img src="./images/mostrar-senha.jpg" class="password-visible-blind" onclick="clickVisibleBlind()"
+            id="visible" alt="img-senha" width="30px">
+          <img src="./images/ocultar-senha.jpg" class="password-visible-blind" onclick="clickBlindVisible()" id="blind"
+            width="30px" alt="img-senha">
+          <input type="password" name="password" id="password" required>
+          <label id="labelPassword">Senha</label>
+        </div>
+        <div class="label-settings">
+          <img src="./images/mostrar-senha.jpg" class="password-visible-blind" onclick="clickVisibleBlind1()"
+            id="visible1" alt="img-senha" width="30px">
+          <img src="./images/ocultar-senha.jpg" class="password-visible-blind" onclick="clickVisibleBlind2()"
+            id="blind1" width="30px" alt="img-senha">
+          <input type="password" name="confirmPassword" id="confirmPassword" required>
+          <label id="labelConfirmPassword">Confirme sua senha</label>
+        </div>
+        <button disabled type="submit" class="button-cadastro" id="submitRegister">Cadastrar</button>
+        <p>Já possui uma conta?<a href="./isessao.html"> Inicie sua Sessão</a></p>
+      </section>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/visu.js"></script>
+  <script src="./js/validacaoMestra.js"></script>
+  <script src="./js/cadastro-isessao.js"></script>
+</body>
+
+</html>
