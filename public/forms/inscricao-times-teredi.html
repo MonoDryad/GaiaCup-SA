@@ -86,6 +86,10 @@
           <span>Discord Tag do capitão da Lineup (Ex: Mono Dryad#5733):</span>
           <input name="Discord Tag do capitao da Lineup" type="text" required>
         </label>
+        <label>
+          <span>LOGO da Lineup (Maior que x512, será usado na transmissão e publicações oficiais):</span>
+          <input name="Logo" type="file" accept="image/*"/>
+        </label>
       </fieldset>
 
       <fieldset id="InfoJogadorUm">
@@ -295,7 +299,7 @@
         </label>
       </fieldset>
 
-      <p>
+      <p class="pSair">
         <button id="btnNext" onclick="questaoProximo()" type="button">Próximo</button>
         <button id="btnFinish" disabled>Enviar</button>
         <button id="btnVoltar" disabled onclick="questaoVoltar()" type="button">Voltar</button>
