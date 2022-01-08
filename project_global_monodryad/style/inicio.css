@@ -1,6 +1,11 @@
 body {
   background-image: url('https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-collections/global/default/background.jpg');
   background-size: cover;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none !important; 
 }
 
 .tier3 {
@@ -31,10 +36,131 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 806px){
+@media screen and (max-width: 806px) {
   .tier3 {
     text-align: center;
     margin-top: 6%;
     margin-bottom: 3%;
   }
+}
+
+.noticias-container {
+  margin: 8vw;
+}
+
+.noticia-1,
+.noticia-2,
+.noticia-3 {
+  height: 93%;
+  width: 100%;
+  border: blanchedalmond 1px solid;
+}
+
+.noticia-4,
+.noticia-5,
+.noticia-6 {
+  height: 96%;
+  width: 100%;
+  border: blanchedalmond 1px solid;
+}
+
+.not-1 {
+  width: 100%;
+}
+
+.noticia-main {
+  border: blanchedalmond 1px solid;
+}
+
+.not-main-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: 6vh;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3vh;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-1-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-2-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-3-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-4-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-5-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-6-text {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 0px;
+  height: bottom;
+  text-align: center;
+  vertical-align: middle;
+  line-height: bottom;
+  border-top: blanchedalmond 1px solid;
+}
+
+.not-1-date {
+  position: absolute;
+}
+
+.noticia-1,
+.noticia-2,
+.noticia-3 {
+  margin-top: 10%;
+}
+
+.noticia-4,
+.noticia-5,
+.noticia-6 {
+  margin-top: 6%;
 }
