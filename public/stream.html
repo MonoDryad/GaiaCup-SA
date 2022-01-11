@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <link rel="stylesheet" href="./style/inicio.css">
+    <link rel="stylesheet" href="./style/stream.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/global.css">
@@ -43,35 +43,25 @@
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        <a class="nav-link" href="./isessao.html">Iníciar Sessão</a>
+                        <a class="nav-link" href="./isessao.html">Iníciar sessão</a>
                     </span>
                 </div>
             </div>
     </nav>
-
-    <!-- Add a placeholder for the Twitch embed -->
+<div class='body-twitch'>
     <div id="twitch-embed"></div>
-
-
-    <!-- Load the Twitch embed JavaScript file -->
+</div>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
     <script type="text/javascript">
         new Twitch.Embed("twitch-embed", {
-            width: 960,
-            height: 490,
+            width: 1079,
+            height: 510,
             channel: "monodryad",
-            autoplay: true,
+            autoplay: false,
             allowfullscreen: true,
         });
     </script>
-
-<iframe id="twitch-chat-embed"
-        src="https://www.twitch.tv/embed/twitchdev/chat?parent=dev.twitch.tv"
-        height="500"
-        width="350">
-</iframe>
 
     <footer class="bg-dark text-center text-white">
         <div class="container p-4">
