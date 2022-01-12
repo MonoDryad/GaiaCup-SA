@@ -25,7 +25,6 @@ a {
   max-width: 755px;
   position: relative;
   margin: auto;
-  box-shadow: inset 0px 0px 15px 15px rgba(0,0,0,0.62) !important
 }
 
 .fake-video {
@@ -34,7 +33,6 @@ a {
   max-width: 750px;
   margin: auto;
   display: block;
-  box-shadow: 0px 0px 9px 10px #000000, inset 0px 0px 15px 15px rgba(0,0,0,0.62) !important;
 }
 
 @media screen and (max-width: 806px) {
@@ -164,4 +162,38 @@ a {
 .noticia-5,
 .noticia-6 {
   margin-top: 6%;
+}
+
+#mudar-slider-direita {
+  width: 8vh;
+  position: absolute;
+  right: 21vw;
+  top: 62%;
+  cursor: pointer;
+}
+
+#mudar-slider-esquerda {
+  width: 8vh;
+  position: absolute;
+  left: 21vw;
+  top: 62%;
+  cursor: pointer;
+}
+
+#mostrar-slider-1,
+#mostrar-slider-2,
+#mostrar-slider-3 {
+  width: 2.3vh;
+  position: relative;
+  cursor: pointer;
+}
+
+#mostrar-slider-1 {
+  left: 46.3vw;
+}
+#mostrar-slider-2 {
+  left: 47vw;
+}
+#mostrar-slider-3 {
+  left: 47.7vw;
 }

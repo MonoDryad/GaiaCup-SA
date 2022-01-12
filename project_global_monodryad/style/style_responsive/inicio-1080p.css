@@ -1,0 +1,27 @@
+.slideshow-container {
+  max-width: 1000px !important;
+  position: relative;
+  margin: auto;
+}
+
+.tier3{
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 4%;
+}
+
+#mudar-slider-direita {
+  width: 8vh;
+  position: absolute;
+  right: 21vw;
+  top: 50vh;
+  cursor: pointer;
+}
+
+#mudar-slider-esquerda {
+  width: 8vh;
+  position: absolute;
+  left: 21vw;
+  top: 50vh;
+  cursor: pointer;
+}
