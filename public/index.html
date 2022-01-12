@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/nav.css">
   <link rel="stylesheet" href="./style/global.css">
-  <link rel="stylesheet" media="screen and (min-width: 1500px)" href="./style/style_responsive/inicio-900p.css">
+
+  <link rel="stylesheet" media="screen and (min-width: 1801px)" href="./style/style_responsive/inicio-1080p.css">
+  <link rel="stylesheet" media="screen and (min-width: 1401px)" href="./style/style_responsive/inicio-900p.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -44,42 +47,47 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a class="nav-link" href="./isessao.html">Iníciar sessão</a>
+            <a class="nav-link" href="./isessao.html">Iniciar sessão</a>
           </span>
         </div>
       </div>
   </nav>
   <h1 class="tier3">O TIER 3 EM OUTRO NÍVEL</h1>
+
   <div>
-    <img class="fake-video" id="fake-video1"
-      src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg1.PNG">
     <img class="fake-video" id="fake-video2"
       src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg2.PNG">
+    <img class="fake-video" id="fake-video1"
+      src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg1.PNG">
     <img class="fake-video" id="fake-video3"
       src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg3.PNG">
   </div>
   <div class="slideshow-container">
-    <video style="width:100%" autoplay muted id="video1">
-      <source src="https://github.com/MonoDryad/GaiaCup/blob/main/video/slide1.mp4?raw=true">
-    </video>
-    <video style="width:100%" autoplay muted id="video2">
-      <source src="https://github.com/MonoDryad/GaiaCup/blob/main/video/slide2.mp4?raw=true">
-    </video>
-    <video style="width:100%" autoplay muted id="video3">
-      <source src="https://github.com/MonoDryad/GaiaCup/blob/main/video/slide3.mp4?raw=true">
+    <video class="video-01" style="width:100%" autoplay muted id="video1">
+      <source src="./videos/slide3.webm" type="video/webm">
     </video>
   </div>
+  <div>
+    <img id="mudar-slider-esquerda" value='esquerda' src="./images/seta.png" style="transform: scaleX(-1)">
+    <img id="mudar-slider-direita" value='direita' src="./images/seta.png">
+  </div>
+  <div>
+    <img id="mostrar-slider-1" value='1' src="./images/slider_selecionado.png">
+    <img id="mostrar-slider-2" value='2' src="./images/slider_apagado.png">
+    <img id="mostrar-slider-3" value='3' src="./images/slider_apagado.png">
+  </div>
   <script>
-    $('#fake-video1').hide()
-    $('#fake-video2').show()
-    $('#fake-video3').show()
+    $("#fake-video1").show();
+    $("#fake-video2").show();
+    $("#fake-video3").hide();
 
-    $('#fake-video2').css("right", "5vw")
-    $('#fake-video3').css("left", "5vw")
+    $("#fake-video2").css("left", "");
+    $("#fake-video1").css("right", "");
+
+    $("#fake-video2").css("right", "5vw");
+    $("#fake-video1").css("left", "5vw");
 
     $('#video1').show()
-    $('#video2').hide()
-    $('#video3').hide()
   </script>
   <h1 class="text-news">NOTÍCIAS</h1>
   <div class="noticias-container">
