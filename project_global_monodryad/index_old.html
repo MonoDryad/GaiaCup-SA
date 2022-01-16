@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <link rel="stylesheet" href="./style/index2.0.css">
+  <link rel="stylesheet" href="./style/inicio.css">
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/nav.css">
   <link rel="stylesheet" href="./style/global.css">
@@ -22,6 +22,8 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/LOGO-TERCEIRA-EDI%C3%87%C3%83O.png" alt="Gaia"
+      class="logo-gaiacup-nav">
     <div class="container-fluid">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -50,74 +52,115 @@
         </div>
       </div>
   </nav>
+  <h1 class="tier3">O TIER 3 EM OUTRO NÍVEL</h1>
 
+  <div>
+    <img class="fake-video" id="fake-video2"
+      src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg2.PNG">
+    <img class="fake-video" id="fake-video1"
+      src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg1.PNG">
+    <img class="fake-video" id="fake-video3"
+      src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/video/fakeimg3.PNG">
+  </div>
+  <div class="slideshow-container">
+    <video class="video-01" style="width:100%" autoplay muted id="video1">
+      <source src="./videos/slide3.webm" type="video/webm">
+    </video>
+  </div>
+  <div>
+    <img id="mudar-slider-esquerda" value='esquerda' src="./images/seta.png" style="transform: scaleX(-1)">
+    <img id="mudar-slider-direita" value='direita' src="./images/seta.png">
+  </div>
+  <div>
+    <img id="mostrar-slider-1" value='1' src="./images/slider_selecionado.png">
+    <img id="mostrar-slider-2" value='2' src="./images/slider_apagado.png">
+    <img id="mostrar-slider-3" value='3' src="./images/slider_apagado.png">
+  </div>
+  <script>
+    $("#fake-video1").show();
+    $("#fake-video2").show();
+    $("#fake-video3").hide();
 
-  <div class="container-main">
-    <div class="video-container">
-      <video class="video" style="width:100%" autoplay muted loop>
-        <source src="./videos/video-inicio.webm" type="video/webm">
-      </video>
-      <div class="video-shadow"></div>
-    </div>
-    <div class="video-container-child">
-      <h1 class="video-titulo-tier3">O TIER 3 EM OUTRO NÍVEL</h1>
-      <p class="video-texto-tier3">Times do Tier 3 lutando com honra nos campos da justiça, épicas jogadas, evolução e
-        viradas, tudo isso na Gaia Cup!</p>
-    </div>
-    <div>
-      <p class="video-texto-promo">Inscreva o seu time!</p>
+    $("#fake-video2").css("left", "");
+    $("#fake-video1").css("right", "");
+
+    $("#fake-video2").css("right", "5vw");
+    $("#fake-video1").css("left", "5vw");
+
+    $('#video1').show()
+  </script>
+  <h1 class="text-news">NOTÍCIAS</h1>
+  <div class="noticias-container">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="./noticias/inscricao-gaiacup-terceira.html">
+          <div class="noticia-main">
+            <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+            <h5 class="not-main-text">Inscrição Gaia Cup Terceira-Edição</h5>
+            <!-- <p class="not-1-date">03/01/2022</p> -->
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-8 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-1">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-1-text">Inscrição Gaia Cup Segunda-Edição</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-2">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-2-text">Inscrição Gaia Cup Primeira-Edição</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-3">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-3-text">Inscrição Gaia Cup Primeira-Edição</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-4">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-4-text">Inscrição Gaia Cup Primeira-Edição</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-5">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-5-text">Inscrição Gaia Cup Primeira-Edição</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4">
+            <a href="./noticias/inscricao-gaiacup-terceira.html">
+              <div class="noticia-6">
+                <img class="not-1" src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/Noticia-Teste.png">
+                <h5 class="not-6-text">Resultado: UMBRA Noxus VS Retsz Gaming</h5>
+                <!-- <p class="not-1-date">03/01/2022</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="news">
-    <div class="news-first">
-      <img id="news-img-first" src="./images/comunicado.png">
-      <label id="news-text-first">Inscrição Gaia Cup Terceira Edição</label>
-    </div>
-    <div class="news-middle">
-      <img id="news-img-middle" src="./images/comunicado.png">
-      <label id="news-text-middle">A inscrição da Terceira Edição abrirá em breve!</label>
-    </div>
-    <div class="news-last">
-      <img id="news-img-last" src="./images/comunicado.png">
-      <label id="news-text-last">Segunda Edição cancelada!</label>
-    </div>
-  </div>
-
-
-  <div class="second-container-main">
-    <img class="section-image-divider" src="./images/tft-season-start-divider.png">
-    <video width="100%" class="winners-background winners-video" muted onended="videoFinalizado = true">
-      <source src="./videos/eos_intro_2.webm" type="video/webm">
-    </video>
-    <video width="100%" class="winners-background winners-upper-video-start" muted autoplay onended="segundoVideoFinalizado = true; trocarAnimação()">
-      <source src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_intro.webm">
-    </video>
-    <video width="100%" class="winners-background winners-upper-video-loop" loop muted play>
-      <source src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_loop.webm">
-    </video>
-    <div class="winners-background-unsee"></div>
-    <div>
-      <div class="wrapper-winners">
-        <h2 class="winners-titulo">FINALISTAS DA PRIMEIRA EDIÇÃO GAIA CUP</h2>
-      </div>
-      <div>
-        <img class="winners-primeiro" src="./images/retsz_gaming.png">
-        <label class="winners-posicao-primeiro">CAMPEÃ DA PRIMEIRA EDIÇÃO</label>
-        <img class="winners-primeiro-info" src="./images/retsz_gaming_text.png">
-      </div>
-      <!-- <div>
-        <img class="winners-segundo" src="./images/umbra_noxus.png">
-        <label class="winners-posicao-segundo">2º</label>
-        <img class="winners-segundo-info" src="./images/umbra_noxus_text.png">
-      </div>
-      <div>
-        <img class="winners-terceiro" src="./images/inexorabilis.png">
-        <label class="winners-posicao-terceiro">3º</label>
-        <img class="winners-terceiro-info" src="./images/inexorabilis_text.png">
-      </div> -->
-    </div>
-  </div>
-
   <footer class="bg-dark text-center text-white">
     <div class="container p-4">
       <section class="">
@@ -205,7 +248,7 @@
     </div>
   </footer>
 </body>
-<script src="./js/inicio2.0.js"></script>
+<script src="./js/inicio.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
