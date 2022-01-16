@@ -3,6 +3,10 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 * {
   /* border: 1px red solid; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
