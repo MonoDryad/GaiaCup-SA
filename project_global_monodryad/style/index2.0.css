@@ -90,12 +90,11 @@ body {
   right: 5%;
 }
 
-.second-container-main {
-  margin-top: 20%;
-}
-
-.slide-animacao {
-  animation: 1s wrapper-winners-title;
+.divisor{
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 3%;
 }
 
 .second-container-main {
@@ -107,116 +106,129 @@ body {
 .winners-titulo {
   text-align: center;
   position: absolute;
-  left: 25%;
-  top: 3%;
+  left: 25vw;
+  top: 6vh;
   font-size: 2.5vw;
 }
 
 .winners-primeiro,
 .winners-segundo,
 .winners-terceiro {
-  width: 24%;
-  max-width: 24%;
+  width: 24vw;
+  max-width: 24vw;
   position: absolute;
-  
-}
-.winners-primeiro {
-  top: 21%;
-  left: 38%;
+  top: 30vh;
+  left: 36.5vw;
 }
 
-.winners-segundo {
-  top: 45%;
-  left: 14%;
-}
-
-.winners-terceiro {
-  top: 45%;
-  right: 14%;
-}
-
-.winners-primeiro-info {
-  top: 63%;
-  left: 28.5%;
-  width: 45%;
-  position: absolute;
-}
-
-.winners-segundo-info {
-  top: 68%;
-  left: 8%;
-  width: 30%;
-  position: absolute;
-}
-
+.winners-primeiro-info,
+.winners-segundo-info,
 .winners-terceiro-info {
-  top: 68%;
-  right: 8%;
-  width: 30%;
+  top: 67vh;
+  left: 27vw;
+  width: 45vw;
   position: absolute;
 }
 
-.winners-background{
+.winners-background {
   position: absolute;
   width: 100%;
 }
-.winners-background-unsee{
+.winners-background-unsee {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.winners-posicao-primeiro, .winners-posicao-segundo, .winners-posicao-terceiro{
+.winners-posicao-primeiro,
+.winners-posicao-segundo,
+.winners-posicao-terceiro {
   position: absolute;
-}
-
-.winners-posicao-primeiro{
-  top: 18%;
-  left: 40.5%;
+  top: 24vh;
+  left: 39vw;
   font-size: 1.4vw;
   font-weight: bolder;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
-.winners-posicao-segundo{
-  top: 44%;
-  left: 22.6%;
-  font-size: 16px;
-  color:blueviolet;
-}
-
-.winners-posicao-terceiro{
-  top: 44%;
-  right: 22.6%;
-  font-size: 16px;
-  color:blueviolet;
-}
-
-.section-image-divider{
+.winners-upper-video-start,
+.winners-upper-video-loop {
   position: absolute;
-  width: 100%;
+  left: 16vw;
+  top: 10.5vh;
+  width: 67.3vw;
+  max-width: 67.3vw;
 }
 
-.winners-upper-video-start, .winners-upper-video-loop{
+.slide-animacao {
+  animation: 1s wrapper-winners-img;
+}
+
+.arrow-left {
+  transform: scaleX(-1);
+}
+
+.arrow-right,
+.arrow-left {
   position: absolute;
-  left:16%;
-  top: 7.5%;
-  width: 70%;
-  max-width: 70%;
+  width: 6vw;
+}
+
+.arrow-right {
+  right: 15vw;
+  top: 52vh;
+}
+
+.arrow-left {
+  left: 15vw;
+  top: 52vh;
 }
 
 @keyframes wrapper-winners-title {
   from {
-    position: absolute;
-    top: 3%;
-    width: 100%;
     transform: scaleX(0);
     opacity: 0%;
   }
 
   to {
     position: absolute;
-    top: 3%;
+    top: 6vh;
     width: 100%;
+    transform: scaleX(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes wrapper-winners-img {
+  from {
+    transform: scaleX(0);
+    opacity: 0%;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes wrapper-winners-pos {
+  from {
+    transform: scaleX(0);
+    opacity: 0%;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes wrapper-winners-info {
+  from {
+    transform: scaleX(0);
+    opacity: 0%;
+  }
+
+  to {
     transform: scaleX(1);
     opacity: 100%;
   }
