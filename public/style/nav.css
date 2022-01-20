@@ -1,12 +1,21 @@
-.navbar-collapse {
-  margin-left: 10vw;
-  font-size: 1.5rem;
-}
-
 .active {
   color: rgb(207, 91, 253) !important;
 }
 
 a:hover {
   color: rgb(234, 180, 255) !important;
+}
+
+.nav-item{
+  margin-left: 1rem;
+}
+
+.nav-logo{
+  position: relative;
+  margin-top: -1.5%;
+  width: 10vw !important;
+}
+
+.upper{
+  border-top: 0.1vw black  solid !important;
 }

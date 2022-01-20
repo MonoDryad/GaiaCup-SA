@@ -1,3 +1,14 @@
+@font-face {
+  font-family: BannerFont;
+  src: url('../fonts/ash.otf');
+}
+
+* {
+  /* border: 1px red solid; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
 body {
   margin: 0;
   background-repeat: no-repeat;
@@ -7,8 +18,60 @@ a {
   text-decoration: none !important;
 }
 
-* {
-  /* border: 1px red solid; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4d4d4d00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(53, 53, 53);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(32, 32, 32);
+}
+
+.slide-animacao-banner {
+  animation: 1s wrapper-banner;
+}
+
+.opacity-animacao {
+  animation: 1s wrapper-opacity;
+}
+
+@keyframes wrapper-opacity {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    bottom: -36vh;
+    opacity: 0%;
+  }
+}
+
+@keyframes wrapper-banner{
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+
+@keyframes wrapper-winners-img {
+  from {
+    transform: scaleX(0);
+    opacity: 0%;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 100%;
+  }
 }

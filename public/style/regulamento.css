@@ -1,6 +1,7 @@
 body {
-  background-image: url('https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-shurima.jpg');
-  background-size: cover;
+  background-image: url('https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-static-assets/global/default/images/2019-intro-background.jpg');
+  background-position-x: left;
+  background-size: 150%;
 }
 
 .container-main {

@@ -1,7 +1,8 @@
 /* Divisores */
 
 .divisor {
-  position: relative;
+  z-index: 3;
+  position: relative ;
   width: 100%;
   margin-top: 15vh;
   margin-bottom: 1vw;
@@ -30,7 +31,7 @@
   right: 4vw;
   font-size: 3.5vw;
   background-color: rgba(0, 0, 0, 0.493);
-  border: rgba(20, 20, 20, 0.753) 2px solid;
+  border: rgba(20, 20, 20, 0.753) 2px solid; 
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -38,25 +39,26 @@
 
 .video-shadow {
   position: absolute;
-  width: 100%;
+  width: 100% ;
   height: 100%;
   top: 0;
   left: 0;
-  -moz-box-shadow: inset 0px -30vw 18vw -19px #000000;
-  -webkit-box-shadow: inset 0px -30vw 18vw -19px #000000;
-  box-shadow: inset 0px -30vw 18vw -19px #000000;
+  -moz-box-shadow: inset 0px -15vw 6vh -19px #000000 ;
+  -webkit-box-shadow: inset 0px -15vw 6vh -19px #000000 ;
+  box-shadow: inset 0px -15vw 6vh -19px #000000 ;
 }
 
 /* News - novidades */
 
 .news {
-  position: relative;
+  position: relative ;
 }
 
 .news-first,
 .news-middle,
 .news-last {
-  position: absolute;
+  
+  position: absolute ;
   width: 29vw;
   max-width: 29vw;
   top: 4vw;
@@ -90,9 +92,12 @@
 }
 
 /* Aba dos vencedores - Videos, imagens e Textos */
-
 .second-container-main {
   position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 100%;
 }
 
 .winners-titulo {
@@ -123,7 +128,7 @@
 }
 
 .winners-background {
-  position: absolute;
+  position: relative ;
   width: 100%;
 }
 .winners-background-unsee {
@@ -136,7 +141,7 @@
 .winners-posicao-terceiro {
   position: absolute;
   top: 22vh;
-  left: 26.5vw;
+  left: 26.5vw; 
   font-size: 1.4vh;
   font-weight: bolder;
   color: rgb(255, 255, 255);
@@ -148,52 +153,49 @@
 }
 
 .arrow-right {
+  position: absolute;
   right: 12.5vw;
   top: 35vh;
-  width: 10vw;
+  width: 14vw;
 }
 
 .arrow-left {
+  position: absolute;
   left: 12.5vw;
-  top: 35vh;
-  width: 10vw;
+  top: 50vw;
+  width: 14vw ;
 }
 
-.winners-video {
+.winners-background {
   position: absolute;
-  transform: rotate(90deg);
+  left: 50%;
+transform: translateX(-50%);
 
-  transform-origin: bottom left;
-  width: 70vh;
-  height: 70vw;
-  left: 15vw;
-  margin-top: -65vw;
-  object-fit: cover;
+  width: 100vh;
+  height: 100vh;
 }
 
 .winners-background-unsee {
+  z-index: 1;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  max-height: 760px;
-  top: 0;
-  left: 0;
-  -moz-box-shadow: inset 0px 24vw 19px -10px #000000, inset 0px -187vw 19px -10px #000000;
-  -webkit-box-shadow: inset 0px 24vw 19px -10px #000000, inset 0px -187vw 19px -10px #000000;
-  box-shadow: inset 0px 24vw 19px -10px #000000, inset 0px -187px 19px -10px #000000;
+  width: 100vh;
+  height: 100vh;
+
+  max-width: 100vh;
+  max-height: 100vh;
+  -moz-box-shadow: inset 0px 21vh 19px -10px #000000, inset 0px -21vh 19px -10px #000000;
+  -webkit-box-shadow: inset 0px 21vh 19px -10px #000000, inset 0px -21vh 19px -10px #000000;
+  box-shadow: inset 0px 21vh 19px -10px #000000, inset 0px -21vh 19px -10px #000000;
 }
 
 .winners-upper-video-start,
 .winners-upper-video-loop {
   position: absolute;
-  transform-origin: bottom left;
-  transform: rotate(90deg);
-  width: 94vh;
-  max-width: 94vh;
-  height: 94vw;
-  max-height: 94vw;
-  left: -1.2vh;
-  margin-top: -140vw;
+  width: 100vh;
+  max-width: 100vh;
+  height: 100vw;
+  max-height: 100vw;
+  left: -50%;
 }
 
 /* Animação */
