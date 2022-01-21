@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/inicio.css">
-    <link rel="stylesheet" href="../style/form-inscricao-mod.css">
-    <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/nav.css">
-    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="./style/inicio.css">
+    <link rel="stylesheet" href="./style/form-inscricao-mod.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/global.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,52 +25,20 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <img
-        src="https://raw.githubusercontent.com/MonoDryad/GaiaCup/main/LOGO-TERCEIRA-EDI%C3%87%C3%83O.png"
-        alt="Gaia"
-        class="logo-gaiacup-nav">
-      <div class="container-fluid">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle
-            navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../sobre.html">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../regulamento.html">Regulamento</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="../login/iniciar_sessao.html">Iniciar
-                    Sessão</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../login/cadastrar-se.html">Cadastrar-se</a>
-                </li>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </nav>
+    <nav>
+      <script>
+        $(function () {
+          $("nav").load("./pages/nav.html");
+        });
+      </script>
+    </nav>
 
       <div class="body-form-mods">
         <h2 class="h2-form-mod">Formulário de Inscrição</h2>
         <h4 class="h4-form-mod">Gaia Cup | Times - Terceira Edição</h4>
         <p class="h4-form-mod">Formulário de inscrição da Terceira Edição,
           recomendo se familiarizar com o <a
-            href="../regulamento.html">regulamento da Gaia Cup</a>, é importante
+            href="./regulamento.html">regulamento da Gaia Cup</a>, é importante
           todos os jogadores estárem cientes do
           regulamento para não ocorrer problemas, que pode resultar em
           desclassificação do seu time e possivelmente o
@@ -82,7 +50,7 @@
           irá analisar o seu time e, caso o seu time esteja 100% OK, iremos
           contatar o dono ou o capitão da lineup!</p>
         <form name="Formulario-de-Times" data-netlify="true"
-          action="../index.html">
+          action="./index.html">
           <p id="pLocalizacao">Informação da lineup</p>
           <fieldset id="InfoLineup">
             <label>
@@ -326,98 +294,15 @@
         </form>
       </div>
 
-      <script src="../js/incricao-times.js"></script>
+      <script src="./js/incricao-times.js"></script>
 
-      <footer class="bg-dark text-center text-white">
-        <div class="container p-4">
-          <section class="">
-            <form action="">
-              <div class="row d-flex justify-content-center">
-                <div class="col-auto">
-                  <p class="pt-2">
-                    <strong>Insira o seu E-mail para receber notícias da Gaia
-                      Cup</strong>
-                  </p>
-                </div>
-                <div class="col-md-5 col-12">
-                  <div class="form-outline form-white mb-4">
-                    <input type="email" id="form5Example21" class="form-control"
-                      />
-                    <label class="form-label" for="form5Example21">E-mail</label>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <button type="submit" class="btn btn-outline-light mb-4">
-                    Inscrever-se
-                  </button>
-                </div>
-              </div>
-            </form>
-          </section>
-          <section class="">
-            <div class="row">
-              <div class="col-lg-4 col-md-2 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Gaia Cup</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="../index.html" class="text-white">Início</a>
-                  </li>
-                  <li>
-                    <a href="../sobre.html" class="text-white">Sobre</a>
-                  </li>
-                  <li>
-                    <a href="../regulamento.html" class="text-white">Regulamento</a>
-                  </li>
-                  <li>
-                    <a href="../login/iniciar_sessao.html" class="text-white">Iniciar
-                      Sessão</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-3 col-md-2 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Gaia Cup - Redes Sociais</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="https://discord.gg/cgdYuUJBmy" class="text-white">Discord</a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/GaiaCup" class="text-white">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="https://twitch.tv/MonoDryad" class="text-white">Twitch</a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.youtube.com/channel/UCcYe5FrQNEsUezOBfVomYeA"
-                      class="text-white">Youtube</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-4 col-md-2 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Gaia Gaming</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="https://discord.gg/5jwGhHFDaj" class="text-white">Discord</a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/GaiaGamingg"
-                      class="text-white">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Youtube</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Instagram</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </div>
-      </footer>
+      <footer>
+        <script>
+            $(function () {
+                $("footer").load("./pages/footer.html");
+            });
+        </script>
+    </footer>
     </body>
 
     <script

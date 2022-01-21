@@ -3,7 +3,11 @@
   margin: 10%;
   padding: 5%;
   border-radius: 5px;
- 
+}
+
+body{
+  background-image: url(https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-static-assets/global/default/images/2019-intro-background.jpg);
+  background-size: cover;
 }
 
 .pSair{

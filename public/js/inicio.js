@@ -18,11 +18,12 @@ videoFinalizado = false;
 segundoVideoFinalizado = false;
 
 $(".video-texto-promo").click(function () {
-  if (localStorage.getItem("Conectado") == true) {
-    window.location.href = "./sobre.html";
-  } else {
-    window.location.href = "./isessao.html";
-  }
+  window.location.href = './inscricao-times-teredi.html'
+  // if (localStorage.getItem("Conectado") == true) {
+  //   window.location.href = "./sobre.html";
+  // } else {
+  //   window.location.href = "./isessao.html";
+  // }
 });
 
 $(window).bind("scroll", function () {
