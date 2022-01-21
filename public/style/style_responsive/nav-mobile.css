@@ -1,0 +1,34 @@
+.active {
+  color: rgb(207, 91, 253);
+}
+
+a:hover {
+  color: rgb(234, 180, 255) ;
+}
+
+.nav-item{
+  margin-left: 1rem;
+}
+
+
+.qpmode{
+  position: absolute;
+  left: 0;
+}
+
+.iniciar-sessao{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-logo{
+  position: relative;
+  margin-top: -1.5%;
+  left: 35%;
+  width: 30% !important;
+}
+
+.upper{
+  border-top: 0.1vw black  solid ;
+}

@@ -1,0 +1,33 @@
+.banner-timing{
+    position: fixed;
+    bottom: 2%;
+    width: 100%;
+    left: 0;
+    height: 9%;
+    z-index: 4;
+    background-image: url('../../images/banner_background.gif');
+    background-size: cover;
+    border-radius: 1vw;
+}
+
+.banner-timer-countdown{
+    font-weight: bolder;
+    font-size: 3rem;
+    font-family:BannerFont;
+    color: black;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.banner-logo{
+    position: absolute;
+    width: 23%;
+    margin-top: 1.4%;
+}
+
+.banner-close{
+    position: absolute;
+    width: 10%;
+    top: -30%;
+    right: 2%;
+}
