@@ -1,0 +1,21 @@
+.banner-development-container{
+    position: fixed;
+    top: 23%;
+    z-index: 7;
+    right: 0;
+}
+
+.banner-development-background{
+    position: relative;
+    width: 110%;
+    transform: rotateY(180deg);
+}
+
+#version-txt{
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: 18%;
+    font-size: 60%;
+}

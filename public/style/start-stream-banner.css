@@ -4,7 +4,7 @@
     bottom: 2vh;
     width: 90%;
     height: 5.5vw;
-    z-index: 4;
+    z-index: 5;
     background-image: url('../images/banner_background.gif');
     background-size: cover;
     border-radius: 1vw;
