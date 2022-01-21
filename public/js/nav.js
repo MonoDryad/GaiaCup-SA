@@ -19,32 +19,30 @@ $(".qpmode, .iniciar-sessao").hover(
   }
 );
 
-let actualpage = window.location.pathname;
-
 pageLoaded();
 
 function pageLoaded() {
   if (
-    actualpage == "/project_global_monodryad/index.html" ||
-    actualpage == "/public/index.html"
+    window.location.pathname == "/project_global_monodryad/index.html" ||
+    window.location.pathname == "/public/index.html"
   ) {
     $(".nav-link").removeClass("active");
     $("#index").addClass("active");
   } else if (
-    actualpage == "/project_global_monodryad/sobre.html" ||
-    actualpage == "/public/sobre.html"
+    window.location.pathname == "/project_global_monodryad/sobre.html" ||
+    window.location.pathname == "/public/sobre.html"
   ) {
     $(".nav-link").removeClass("active");
     $("#sobre").addClass("active");
   } else if (
-    actualpage == "/project_global_monodryad/regulamento.html" ||
-    actualpage == "/public/regulamento.html"
+    window.location.pathname == "/project_global_monodryad/regulamento.html" ||
+    window.location.pathname == "/public/regulamento.html"
   ) {
     $(".nav-link").removeClass("active");
     $("#regulamento").addClass("active");
   } else if (
-    actualpage == "/project_global_monodryad/stream.html" ||
-    actualpage == "/public/stream.html"
+    window.location.pathname == "/project_global_monodryad/stream.html" ||
+    window.location.pathname == "/public/stream.html"
   ) {
     $(".nav-link").removeClass("active");
     $("#stream").addClass("active");

@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/cadastro-sessao.css">
+    <link rel="stylesheet" href="./style/development-banner.css">
+    <link rel="stylesheet" media="screen and (max-width: 890px)" href="./style/style_responsive/development-banner-mobile.css">
+    <script src="./js/development-banner.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/visualizacao.js"></script>
+    <script src="./js/cadastro-isessao.js"></script>
+    
     <title>Iníciar Sessão | Gaia Cup</title>
   </head>
 
@@ -38,9 +45,15 @@
         </section>
       </div>
     </form>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/visualizacao.js"></script>
-    <script src="./js/cadastro-isessao.js"></script>
+    <div class="banner-development">
+      <script>
+        $(function () {
+          $(".banner-development").load("./banners/banner-development.html");
+        });
+      </script>
+    </div>
+    
+
   </body>
 
 </html>

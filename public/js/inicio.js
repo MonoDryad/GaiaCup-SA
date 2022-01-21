@@ -26,7 +26,26 @@ $(".video-texto-promo").click(function () {
   // }
 });
 
-$(window).bind("scroll", function () {
+let videoPrincipal = document.getElementById("videoP")
+let currentTimePrincipal = videoPrincipal.currentTime;
+
+let segundoVideoLoop = document.getElementById("winners-upper-video-loop")
+let currentTimeSegundoLoop = segundoVideoLoop.currentTime;
+
+$(window).on("scroll", function () {
+  if (
+    $(window).scrollTop() >=
+    $(".divisor").offset().top +
+      $(".divisor").outerHeight() -
+      window.innerHeight
+  ) {
+    $(".video")[currentTimePrincipal].pause()
+  }else{
+    $(".video")[currentTimePrincipal].play()
+  }
+});
+
+$(window).on("scroll", function () {
   if (
     $(window).scrollTop() >=
     $(".divisor").offset().top +
@@ -41,6 +60,19 @@ $(window).bind("scroll", function () {
       $(".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info").removeClass("slide-animacao");
       changeCurrentWinner()
     }
+  }
+});
+
+$(window).on("scroll", function () {
+  if (
+    $(window).scrollTop() >=
+    $(".elos-container").offset().top +
+      $(".elos-container").outerHeight() -
+      window.innerHeight
+  ) {
+    $(".winners-upper-video-loop")[currentTimeSegundoLoop].pause()
+  }else{
+    $(".winners-upper-video-loop")[currentTimeSegundoLoop].play()
   }
 });
 

@@ -32,7 +32,7 @@
   </nav>
   <div class="container-main">
     <div class="video-container">
-      <video class="video" style="width:100%" autoplay muted loop>
+      <video class="video" id="videoP" style="width:100%" autoplay muted loop>
         <source src="./videos/video-inicio.mp4" type="video/mp4">
       </video>
       <div class="video-shadow"></div>
@@ -71,7 +71,7 @@
         <source
           src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_intro.webm">
       </video>
-      <video width="100%" class="winners-background winners-upper-video-loop" loop muted play>
+      <video width="100%" class="winners-background winners-upper-video-loop" id="winners-upper-video-loop" loop muted play>
         <source
           src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_loop.webm">
       </video>
@@ -106,11 +106,11 @@
   </div>
 
   <div class="elos-container">
-    <!-- <script>
+    <script>
       $(function () {
         $(".elos-container").load("./pages/elos-index.html");
       });
-    </script> -->
+    </script>
   </div>
   <div class="banner-development">
     <script>
