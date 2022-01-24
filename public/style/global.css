@@ -42,13 +42,25 @@ a {
   animation: 1s wrapper-opacity;
 }
 
+.rank-show{
+  animation: 0.5s rank-show;
+}
+
+.rank-border{
+  animation: 7s rank-border;
+}
+
+.rank-poem{
+  animation: 2s rank-poem;
+}
+
 @keyframes wrapper-opacity {
   from {
     opacity: 100%;
   }
 
   to {
-    bottom: -36vh;
+    bottom: -56vh;
     opacity: 0%;
   }
 }
@@ -72,6 +84,36 @@ a {
 
   to {
     transform: scaleX(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes rank-show {
+  from{
+    opacity: 0%;
+  }
+
+  to{
+    opacity: 100%;
+  }
+}
+
+@keyframes rank-border {
+  from {
+    width: 0%;
+  }
+
+  top {
+    width: 100%;
+  }
+}
+
+@keyframes rank-poem {
+  from{
+    opacity: 0%;
+  }
+
+  to{
     opacity: 100%;
   }
 }

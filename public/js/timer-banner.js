@@ -51,5 +51,5 @@ $(".banner-close").click(function () {
     $(".banner-timing").addClass("opacity-animacao")
     setInterval(function () {
         $(".banner-timing").remove()
-    }, 930);
+    }, 1000);
 });
