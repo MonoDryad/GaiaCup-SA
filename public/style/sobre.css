@@ -1,52 +1,42 @@
 body {
-  background-image: url('https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-noxus.jpg');
-  background-size: 260%;
+  background-color: #150e18 !important;
 }
 
 .body-container-main {
-  margin-top: 10%;
+  position: relative;
+  margin-top: 5%;
+  height: 100%;
 }
 
-.body-container-gaiacup-sobre {
-  padding-right: 25%;
-  margin: 3%;
-  text-align: center;
-  font-size: xx-large;
+::-webkit-scrollbar {
+  display: none !important;
 }
 
-.imgsobre-gaiacup {
-  width: 16%;
+#miniPage-0, #miniPage-1, #miniPage-2, #miniPage-3{
   position: absolute;
-  top: 29%;
-  left: 77%;
+  right: 1%;
 }
 
-.body-container-inexorabilis-sobre {
-  padding-top: 13%;
-  padding-left: 25%;
-  margin: 3%;
-  text-align: center;
-  font-size: xx-large;
+#miniPage-0{
+  margin-top: 13%
 }
 
-.imgsobre-inexorabilis {
-  width: 24%;
-  position: absolute;
-  top: 126%;
-  right: 75%;
+#miniPage-1{
+  margin-top: 15%
 }
 
-.body-container-gaiagaming-sobre {
-  padding-top: 13%;
-  padding-right: 25%;
-  margin: 3%;
-  text-align: center;
-  font-size: xx-large;
+#miniPage-2{
+  margin-top: 17%
 }
 
-.imgsobre-gaiagaming {
-  width: 34%;
-  position: absolute;
-  top: 196%;
-  left: 65%;
+#miniPage-3{
+  margin-top: 19%
+}
+
+.hideContent{
+  display: none !important;
+}
+
+.showContent{
+  display: block !important;
 }

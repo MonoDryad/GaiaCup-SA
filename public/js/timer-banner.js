@@ -18,7 +18,7 @@ let x = setInterval(function () {
     clearInterval(x);
     $(".banner-timer-countdown").text("AO VIVO!");
     $(".banner-timer-countdown").click(function(){
-      window.href.location = 'https://twitch.tv/monodryad'
+      window.href.location = './stream.html'
     });
   }
 }, 1000);

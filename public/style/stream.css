@@ -1,6 +1,5 @@
 body {
-    background-image: url('https://raw.communitydragon.org/11.24/plugins/rcp-fe-lol-collections/global/default/background.jpg');
-    background-size: cover;
+    background-color: #150e18 !important;
     text-decoration: none;
 }
 
