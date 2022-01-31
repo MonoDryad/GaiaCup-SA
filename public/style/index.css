@@ -1,5 +1,5 @@
 body {
-  background-color: #150e18 !important;
+  background-color: #000000 !important;
 }
 
 .container-main {
@@ -46,9 +46,9 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -moz-box-shadow: inset 0px -270px 208px -19px #150e18;
-  -webkit-box-shadow: inset 0px -270px 208px -19px #150e18;
-  box-shadow: inset 0px -270px 208px -19px #150e18;
+  -moz-box-shadow: inset 0px -270px 208px -19px #000000;
+  -webkit-box-shadow: inset 0px -270px 208px -19px #000000;
+  box-shadow: inset 0px -270px 208px -19px #000000;
 }
 
 .news {
@@ -151,8 +151,8 @@ body {
   height: 100%;
   top: 0;
   z-index: 1;
-  -webkit-box-shadow: inset 0px 3vw 5px -26px #150e18, inset 0px -7vw 5px -26px #150e18; 
-  box-shadow: inset 0px 3vw 5px -26px #150e18, inset 0px -7vw 5px -26px #150e18;
+  -webkit-box-shadow: inset 0px 3vw 5px -26px #000000, inset 0px -7vw 5px -26px #000000; 
+  box-shadow: inset 0px 3vw 5px -26px #000000, inset 0px -7vw 5px -26px #000000;
 }
 .winners-posicao-primeiro,
 .winners-posicao-segundo,
