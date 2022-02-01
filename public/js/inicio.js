@@ -36,48 +36,29 @@ let ultimoVideo = document.getElementById("final-video");
 let currentTimeultimoVideo = ultimoVideo.currentTime;
 
 $(window).on("scroll", function () {
-  if (
-    $(window).scrollTop() >=
-    $(".divisor").offset().top +
-      $(".divisor").outerHeight() -
-      window.innerHeight
-  ) {
+  if ($(window).scrollTop() >= $(".divisor").offset().top + $(".divisor").outerHeight() - window.innerHeight) {
+    $(".video")[currentTimePrincipal].pause();
     if (videoFinalizado == false) {
-      $(".video")[currentTimePrincipal].pause();
       $(".second-container-main").css("opacity", "100%");
       $(".winners-video")[0].play();
       $(".winners-upper-video-start")[0].play();
-      $(
-        ".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info"
-      ).addClass("slide-animacao");
-      $(
-        ".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info"
-      ).removeClass("slide-animacao");
+      $(".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info").addClass("slide-animacao");
+      $(".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info").removeClass("slide-animacao");
       changeCurrentWinner();
-    } else {
-      $(".video")[currentTimePrincipal].play();
     }
-    if (
-      $(window).scrollTop() >=
-      $(".elos-container").offset().top +
-        $(".elos-container").outerHeight() -
-        window.innerHeight
-    ) {
-      $(".winners-upper-video-loop")[currentTimeSegundoLoop].pause();
-      initiateEloAnimation();
-    } else {
-      $(".winners-upper-video-loop")[currentTimeSegundoLoop].play();
-    }
-    if (
-      $(window).scrollTop() >=
-      $(".barra-rank").offset().top +
-        $(".barra-rank").outerHeight() -
-        window.innerHeight
-    ) {
-      $(".final-video")[currentTimeultimoVideo].play();
-    } else {
-      $(".final-video")[currentTimeultimoVideo].pause();
-    }
+  }else{
+    $(".video")[currentTimePrincipal].play();
+  }
+  if ( $(window).scrollTop() >= $(".barra-rank").offset().top + $(".barra-rank").outerHeight() - window.innerHeight) {
+    $(".final-video")[currentTimeultimoVideo].play();
+  } else {
+    $(".final-video")[currentTimeultimoVideo].pause();
+  }
+  if ($(window).scrollTop() >= $(".elos-container").offset().top + $(".elos-container").outerHeight() - window.innerHeight){
+    $(".winners-upper-video-loop")[currentTimeSegundoLoop].pause();
+    initiateEloAnimation();
+  } else {
+    $(".winners-upper-video-loop")[currentTimeSegundoLoop].play();
   }
 });
 
@@ -112,17 +93,14 @@ function changeCurrentWinner() {
     $("#winners-0").show();
     $("#winners-1").hide();
     $("#winners--1").hide();
-    console.log("0");
   } else if (currentImage == 1) {
     $("#winners-0").hide();
     $("#winners-1").show();
     $("#winners--1").hide();
-    console.log("1");
   } else if (currentImage == -1) {
     $("#winners-0").hide();
     $("#winners-1").hide();
     $("#winners--1").show();
-    console.log("-1");
   }
 }
 

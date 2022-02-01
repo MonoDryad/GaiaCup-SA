@@ -2,9 +2,7 @@ let countDownDate = new Date("Feb 07, 2022 19:00:00").getTime();
 
 let x = setInterval(function () {
   let now = new Date().getTime();
-
   let distance = countDownDate - now;
-
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -21,7 +19,7 @@ let x = setInterval(function () {
       window.href.location = './stream.html'
     });
   }
-}, 1000);
+}, 300);
 
 $(".banner-close").hover(
   function () {
@@ -47,9 +45,9 @@ $(".banner-close").hover(
 );
 
 $(".banner-close").click(function () {
-
     $(".banner-timing").addClass("opacity-animacao")
     setInterval(function () {
+        $(".banner-timer-container").remove()
         $(".banner-timing").remove()
-    }, 1000);
+    }, 300);
 });
