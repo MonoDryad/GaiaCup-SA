@@ -10,11 +10,6 @@ a:hover {
   margin-left: 1%;
 }
 
-.navbar-sticky{
-  position: sticky !important;
-  top: 0 !important;
-}
-
 .nav-logo{
   position: relative;
   margin-top: -1.5%;
