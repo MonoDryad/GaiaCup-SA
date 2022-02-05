@@ -1,6 +1,9 @@
 .banner-developer-tool{
     position: fixed;
-    background-size: cover;
-    width: 100px;
-    height: 600px;
+    z-index: 150;
+    top: 10%;
+}
+
+.img-developer-menu{
+    width: 50%;
 }
