@@ -1,0 +1,9 @@
+body {
+    background-color: #000000 !important;
+    text-decoration: none;
+}
+
+#twitch-embed {
+    
+    box-shadow: 0px 0px 4px 10px #000000
+}
