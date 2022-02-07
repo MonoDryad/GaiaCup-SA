@@ -22,16 +22,16 @@ $(".qpmode, .iniciar-sessao").hover(
 pageLoaded();
 
 function pageLoaded() {
-  if (window.location.pathname == "/project_global_monodryad/index.html" || window.location.pathname == "/public/index.html" || window.location.pathname == "/league/index.html") {
+  if (window.location.pathname == "/index.html" ||window.location.pathname == "/project_global_monodryad/index.html" || window.location.pathname == "/public/index.html" || window.location.pathname == "/league/index.html" || window.location.pathname == "/") {
     $(".nav-link").removeClass("active");
     $("#index").addClass("active");
-  } else if ( window.location.pathname == "/project_global_monodryad/sobre.html" || window.location.pathname == "/public/sobre.html" || window.location.pathname == "/league/sobre.html") {
+  } else if (window.location.pathname == "/sobre.html" || window.location.pathname == "/project_global_monodryad/sobre.html" || window.location.pathname == "/public/sobre.html" || window.location.pathname == "/league/sobre.html") {
     $(".nav-link").removeClass("active");
     $("#sobre").addClass("active");
-  } else if (window.location.pathname == "/project_global_monodryad/regulamento.html" || window.location.pathname == "/public/regulamento.html" || window.location.pathname == "/league/regulamento.html") {
+  } else if (window.location.pathname == "/regulamento.html" || window.location.pathname == "/project_global_monodryad/regulamento.html" || window.location.pathname == "/public/regulamento.html" || window.location.pathname == "/league/regulamento.html") {
     $(".nav-link").removeClass("active");
     $("#regulamento").addClass("active");
-  } else if (window.location.pathname == "/project_global_monodryad/stream.html" || window.location.pathname == "/public/stream.html" || window.location.pathname == "/league/stream.html") {
+  } else if (window.location.pathname == "/stream.html" || window.location.pathname == "/project_global_monodryad/stream.html" || window.location.pathname == "/public/stream.html" || window.location.pathname == "/league/stream.html") {
     $(".nav-link").removeClass("active");
     $("#stream").addClass("active");
   }

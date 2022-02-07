@@ -1,9 +1,9 @@
 .active {
-  color: rgb(207, 91, 253) !important;
+  color: rgb(255, 57, 57) !important;
 }
 
 a:hover {
-  color: rgb(234, 180, 255) !important;
+  color: rgb(0, 162, 255) !important;
 }
 
 .nav-item{
@@ -12,7 +12,7 @@ a:hover {
 
 .nav-logo{
   position: relative;
-  margin-top: -1.5%;
+  margin-top: 0;
   width: 10vw !important;
 }
 
