@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/inicio.css">
+  <link rel="stylesheet" href="./style/form-inscricao-mod.css">
+  <link rel="stylesheet" href="./style/footer.css">
+  <link rel="stylesheet" href="./style/nav.css">
+  <link rel="stylesheet" href="./style/global.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    button {
+      color: black;
+    }
+  </style>
+  
+  <link rel="shortcut icon" href="./images/New_logo.png" type="image/.png">
+  <title>Formulário | Gaia Cup</title>
+</head>
+
+<body>
+  <header>
+    <script>
+      $(function () {
+        $("header").load("./pages/nav.html");
+      });
+    </script>
+  </header>
+  <div class="body-form-mods">
+    <h2 class="h2-form-mod">Formulário de Inscrição</h2>
+    <h4 class="h4-form-mod">Gaia Cup | Times - Terceira Edição</h4>
+    <p class="h4-form-mod">A inscrição da Gaia Cup Terceira Edição está fechada, todos as vagas já estão preenchidas. A inscrição da quarta edição está planejada para abril!</p>
+    <!-- <form name="Formulario-de-Times" data-netlify="true" action="./index.html">
+      <p id="pLocalizacao">Informação da lineup</p>
+      <fieldset id="InfoLineup">
+        <label>
+          <span>Nome da lineup (Ex: Gaia Gaming):</span>
+          <input id="inpNome" name="Nome da lineup" type="text" required>
+        </label>
+        <label>
+          <span>Tag da lineup (Ex: GGG) (2 a 4 letras):</span>
+          <input name="Tag da lineup" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag do dono da Organização (Ex: Mono Dryad#5733):</span>
+          <input name="Discord Tag do dono da Organização" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag do capitão da Lineup (Ex: Mono Dryad#5733):</span>
+          <input name="Discord Tag do capitao da Lineup" type="text" required>
+        </label>
+        <label>
+          <span>LOGO da Lineup (Maior que x512, será usado na transmissão e
+            publicações oficiais):</span>
+          <input name="Logo" type="file" accept="image/*" />
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorUm">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 1" type="text" required>
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 1" type="text" required>
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 1" type="text" required>
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 1" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 1" type="text" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorDois">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 2" type="text" required>
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 2" type="text" required>
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 2" type="text" required>
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 2" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 2" type="text" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorTres">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 3" type="text" required>
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 3" type="text" required>
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 3" type="text" required>
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 3" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 3" type="text" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorQuatro">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 4" type="text" required>
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 4" type="text" required>
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 4" type="text" required>
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 4" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 4" type="text" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorCinco">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 5" type="text" required>
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 5" type="text" required>
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 5" type="text" required>
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 5" type="text" required>
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 5" type="text" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorSeis">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 6" type="text">
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 6" type="text">
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 6" type="text">
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 6" type="text">
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 6" type="text">
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorSete">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 7" type="text">
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 7" type="text">
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 7" type="text">
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 7" type="text">
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 7" type="text">
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorOito">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 8" type="text">
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 8" type="text">
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 8" type="text">
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 8" type="text">
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 8" type="text">
+        </label>
+      </fieldset>
+
+      <fieldset id="InfoJogadorNove">
+        <label>
+          <span>Primeiro nome:</span>
+          <input name="Nome do Jogador 9" type="text">
+        </label>
+        <label>
+          <span>Nome do Invocador:</span>
+          <input name="Nome do Invocador 9" type="text">
+        </label>
+        <label>
+          <span>Op.gg: </span>
+          <input name="Op.gg do Jogador 9" type="text">
+        </label>
+        <label>
+          <span>Lane: </span>
+          <input name="Lane do Jogador 9" type="text">
+        </label>
+        <label>
+          <span>Discord Tag: </span>
+          <input name="Discord Tag do Jogador 9" type="text">
+        </label>
+      </fieldset>
+
+      <p class="pSair">
+        <button id="btnNext" onclick="questaoProximo()" type="button">Próximo</button>
+        <button id="btnFinish" disabled>Enviar</button>
+        <button id="btnVoltar" disabled onclick="questaoVoltar()" type="button">Voltar</button>
+      </p>
+    </form>
+  </div> -->
+
+  <div class="banner-development">
+    <script>
+      $(function () {
+        $(".banner-development").load("./banners/banner-development.html");
+      });
+    </script>
+  </div>
+  <footer>
+    <script>
+      $(function () {
+        $("footer").load("./pages/footer.html");
+      });
+    </script>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="./js/extra-pages/incricao-times.js"></script> -->
+</html>
