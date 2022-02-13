@@ -3,6 +3,16 @@
   src: url('../fonts/ash.otf');
 }
 
+@font-face {
+  font-family: OpenSansRegular;
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+
 * {
   /* border: 1px red solid; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,6 +62,10 @@ a {
 
 .rank-poem{
   animation: 2s rank-poem;
+}
+
+.button-enter-animation{
+  animation: button-enter-animation 0.5s infinite;
 }
 
 @keyframes wrapper-opacity {
@@ -116,4 +130,8 @@ a {
   to{
     opacity: 100%;
   }
+}
+
+@keyframes button-enter-animation {
+
 }

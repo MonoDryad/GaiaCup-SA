@@ -1,2 +1,2 @@
 Relatar problema
-League v0.40.02b
+League v0.41.00b

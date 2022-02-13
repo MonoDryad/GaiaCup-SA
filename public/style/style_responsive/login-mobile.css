@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://raw.communitydragon.org/12.3/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-worlds2021.jpg');
+    background-size: auto;
+}
+
+input{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    border-bottom: #797979 solid 1px;
+    outline: none;
+    font-size: 28px;
+    margin-left: 20%;
+}
+
+.container-login-main{
+    margin-top: 1%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hrDivisor{
+    margin-top: 4%;
+    border-color:rgb(134, 134, 134);
+}
+
+.container-login-submain{
+    width: 95%;
+    background-color: #1a1a1c;
+    padding: 2%;
+    border: 2px rgb(116, 116, 116) solid;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 14px 19px 16px 9px rgba(0, 0, 0, 0.33);
+}
+
+.container-sideway-submain{
+    border: 2px rgb(116, 116, 116) solid;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 95%;
+    background-image: url('../../images/bg.gif');  
+    background-repeat: no-repeat;
+    background-size: cover;  
+    padding: 2%;
+    box-shadow: 14px 19px 16px 9px rgba(0,0,0,0.33);
+}
+
+.imgCapslock{
+    margin-top: 2.5vh;
+    width: 0vh;
+    height: 0vw;
+    position: absolute;
+    opacity: 0;
+}
+
+.content-title{
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.div-forgot-something{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.div-user-decision{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.div-user-enter, .div-user-registro{
+    position: relative;
+}
+
+.btnDecision{
+    margin-top: 10%;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: larger;
+    height: 40px;
+
+}
+
+.lbl-forgot-something{
+    cursor: pointer;
+}
+
+.btnEntrar, .btnCadastro{
+    background: linear-gradient(90deg, rgba(0,212,255,1), rgb(44, 44, 44) 100%);
+    width: 100%;
+}
+
+.btnCadastrar, .btnIsessao{
+    background: linear-gradient(90deg,rgb(44, 44, 44) , rgb(255, 0, 0) 100%);
+    width: 100%;
+}
+
+.container-login-content input{
+    width: 55%;
+}
+
+.login-logo{
+    width: 35%;
+}
+
+.container-login-logo{
+    text-align: center;
+}
+
+.pText{
+    font-size: 20px;
+    position: absolute;
+    margin-top: 6.5%;
+    margin-left: 20%;
+    color: #797979;
+    z-index: 1;
+}
+
+.inpLogin{
+    margin-top: 5%;
+    z-index: 2;
+}
