@@ -64,8 +64,8 @@ a {
   animation: 2s rank-poem;
 }
 
-.button-enter-animation{
-  animation: button-enter-animation 0.5s infinite;
+.input-goup-login{
+  animation: input-goup-login 0.25s;
 }
 
 @keyframes wrapper-opacity {
@@ -132,6 +132,3 @@ a {
   }
 }
 
-@keyframes button-enter-animation {
-
-}

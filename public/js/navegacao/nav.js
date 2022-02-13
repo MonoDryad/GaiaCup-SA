@@ -2,22 +2,28 @@ $(".qpmode, .iniciar-sessao").hover(
   function () {
     $(this).attr("src", function (index, attr) {
       $(".iniciar-sessao").css("cursor", "pointer");
-      $(".iniciar-sessao").click(function () {
-        window.location.href = "./isessao.html";
-      });
       return attr.replace(".png", "-hover.png");
     });
   },
   function () {
     $(this).attr("src", function (index, attr) {
       $(".qpmode").css("cursor", "pointer");
-      $(".qpmode").click(function () {
-        window.location.href = "./registro.html";
-      });
       return attr.replace("-hover.png", ".png");
     });
   }
 );
+
+$(".qpmode, .iniciar-sessao").click(function(){
+  let whatUserWant
+  if($(this).hasClass('qpmode')){
+    whatUserWant = 'register'
+    localStorage.setItem('registerOrLogin', JSON.stringify(whatUserWant))
+  }else{
+    whatUserWant = 'login'
+    localStorage.setItem('registerOrLogin', JSON.stringify(whatUserWant))
+  }
+  window.location.href = './login.html'
+})
 
 pageLoaded();
 

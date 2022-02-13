@@ -55,7 +55,8 @@ input{
 }
 
 .imgCapslock{
-    margin-top: 2.5vh;
+    margin-top: 4vh;
+    margin-left: 1%;
     width: 4vh;
     height: 2vw;
     position: absolute;
@@ -118,8 +119,13 @@ input{
     width: 100%;
 }
 
-.container-login-content input{
+.container-login-submain input{
     width: 55%;
+    margin-top: 5%;
+}
+
+.container-login-submain label{
+    margin-top: 0.5%;
 }
 
 .login-logo{
@@ -130,15 +136,30 @@ input{
     text-align: center;
 }
 
-.pText{
+.pText, .pError{
     position: absolute;
-    margin-top: 1.5%;
     margin-left: 8%;
     color: #797979;
     z-index: 1;
+}
+
+.pError{
+    margin-left: -12%;
+    color: rgb(255, 71, 71);
 }
 
 .inpLogin{
     margin-top: 3%;
     z-index: 2;
 }
+
+@keyframes input-goup-login {
+    from{
+      margin-top: 2.3%;
+      font-size: 20px;
+    }
+  
+    to{
+      margin-top: 0.5%;
+    }
+  }

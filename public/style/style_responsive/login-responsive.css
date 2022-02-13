@@ -5,6 +5,10 @@ body{
     background-size: auto;
 }
 
+*{
+    font-family: OpenSansLight;
+}
+
 input{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -12,7 +16,7 @@ input{
     border-bottom: #797979 solid 1px;
     outline: none;
     font-size: 20px;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 .container-login-main{
@@ -51,9 +55,10 @@ input{
 }
 
 .imgCapslock{
-    margin-top: 2.5vh;
-    width: 7vh;
-    height: 3.5vw;
+    margin-top: 4vh;
+    margin-left: 1%;
+    width: 4vh;
+    height: 2vw;
     position: absolute;
     opacity: 0;
 }
@@ -62,6 +67,7 @@ input{
     font-size: 30px;
     padding-left: 0;
     text-align: center;
+    font-family: OpenSansRegular;
 }
 
 .div-forgot-something{
@@ -74,11 +80,18 @@ input{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 5%;
     width: 100%;
 }
 
 .div-user-enter, .div-user-registro{
     position: relative;
+}
+
+.imgOcultando, .imgOcultandoRegistro, .imgOcultandoRegistroConfirm{
+    width: 5%;
+    margin-left: -7%;
+    cursor: pointer;
 }
 
 .btnDecision{
@@ -88,7 +101,8 @@ input{
     border-radius: 5px;
     font-size: larger;
     height: 50px;
-
+    font-family: OpenSansRegular;
+    border: 1px rgb(116, 116, 116) solid;
 }
 
 .lbl-forgot-something{
@@ -96,17 +110,22 @@ input{
 }
 
 .btnEntrar, .btnCadastro{
-    background: linear-gradient(90deg, rgba(0,212,255,1), rgb(44, 44, 44) 100%);
-    width: 150%;
+    background: black;
+    width: 100%;
 }
 
 .btnCadastrar, .btnIsessao{
-    background: linear-gradient(90deg,rgb(44, 44, 44) , rgb(255, 0, 0) 100%);
-    width: 150%;
+    background: black;
+    width: 100%;
 }
 
-.container-login-content input{
-    width: 55%;
+.container-login-submain input{
+    width: 75%;
+    margin-top: 5%;
+}
+
+.container-login-submain label{
+    margin-top: 0.5%;
 }
 
 .login-logo{
@@ -117,15 +136,22 @@ input{
     text-align: center;
 }
 
-.pText{
+.pText, .pError{
     position: absolute;
-    margin-top: 2.8%;
-    margin-left: 9%;
+    margin-left: 4.65%;
     color: #797979;
+    font-size: 14px;
     z-index: 1;
 }
 
+.pError{
+    margin-left: -18%;
+    color: rgb(255, 71, 71);
+    font-size: 14px;
+}
+
 .inpLogin{
-    margin-top: 5%;
+    margin-top: 3%;
     z-index: 2;
 }
+
