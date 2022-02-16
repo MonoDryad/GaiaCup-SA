@@ -15,20 +15,30 @@ $('.btnCadastro').click(function(){
     if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val()}) == undefined){
         registeredUser.username = $('.inpRegistroUserName').val()
         if($('.inpRegistroEmail').val().length > 3  && allUsers.find(function(usuariosExistentes){return usuariosExistentes.email == $('.inpRegistroEmail').val()}) == undefined){
-            registeredUser.email = $('.inpRegistroEmail').val()
-            if($('.inpRegistroPassword').val().length > 5){
-                if($('.inpRegistroPassword').val() == $('.inpRegistroConfirmPassword').val()){
-                    registeredUser.senha = $('.inpRegistroPassword').val()
-                    registeredUser.codigo = allUsers.length+1
-                    allUsers.push(registeredUser)
-                    localStorage.setItem('contas', JSON.stringify(allUsers))
+            if($('.inpRegistroEmail').val().includes('@', 3)){
+                if($('.inpRegistroEmail').val().indexOf('.') > ($('.inpRegistroEmail').val().indexOf('@') + 1) && $('.inpRegistroEmail').val().includes('.', 5)){
+                    registeredUser.email = $('.inpRegistroEmail').val()
+                    if($('.inpRegistroPassword').val().length > 5){
+                        if($('.inpRegistroPassword').val() == $('.inpRegistroConfirmPassword').val()){
+                            registeredUser.senha = $('.inpRegistroPassword').val()
+                            registeredUser.codigo = allUsers.length+1
+                            allUsers.push(registeredUser)
+                            localStorage.setItem('contas', JSON.stringify(allUsers))
+                        }else{
+                            $('.inpRegistroConfirmPassword').css('border-bottom', '#b40000 solid 1px')
+                            $('.pErrorRegisterConfirmPassword').text('• Senhas incompatíveis')
+                        }
+                    }else{
+                        $('.inpRegistroPassword').css('border-bottom', '#b40000 solid 1px')
+                        $('.pErrorRegisterPassword').text('• Senha pequena')
+                    }
                 }else{
-                    $('.inpRegistroConfirmPassword').css('border-bottom', '#b40000 solid 1px')
-                    $('.pErrorRegisterConfirmPassword').text('• Senhas incompatíveis')
+                    $('.inpRegistroEmail').css('border-bottom', '#b40000 solid 1px')
+                    $('.pErrorRegisterEmail').text('• E-mail inválido')
                 }
             }else{
-                $('.inpRegistroPassword').css('border-bottom', '#b40000 solid 1px')
-                $('.pErrorRegisterPassword').text('• Senha pequena')
+                $('.inpRegistroEmail').css('border-bottom', '#b40000 solid 1px')
+                $('.pErrorRegisterEmail').text('• E-mail inválido')
             }
         }else{
             $('.inpRegistroEmail').css('border-bottom', '#b40000 solid 1px')
@@ -131,92 +141,6 @@ $('input').focusout(function(){
         $('.pTextRegisterConfirmPassword').hide()
     }
 })
-
-// $('.inpUserName').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextUsername').show()
-// })
-
-// $('.inpUserName').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'Nome do usuário')
-//     $('.pTextUsername').hide()    
-//     }
-// })
-
-// $('.inpPassword').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextPassword').show()
-// })
-
-// $('.inpPassword').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'Senha')
-//     $('.pTextPassword').hide()    
-//     }
-// })
-
-
-
-// $('.inpRegistroUserName').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextRegisterUsername').show()
-// })
-
-// $('.inpRegistroUserName').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'Nome do usuário')
-//     $('.pTextRegisterUsername').hide()    
-//     }
-// })
-
-// $('.inpRegistroEmail').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextRegisterEmail').show()
-// })
-
-// $('.inpRegistroEmail').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'E-mail')
-//     $('.pTextRegisterEmail').hide()    
-//     }
-// })
-
-// $('.inpRegistroPassword').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextRegisterPassword').show()
-// })
-
-// $('.inpRegistroPassword').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'Senha')
-//     $('.pTextRegisterPassword').hide()    
-//     }
-// })
-
-// $('.inpRegistroConfirmPassword').focusin( function(){
-//     $(this).attr('placeholder', '')
-//     $('.pTextRegisterConfirmPassword').show()
-// })
-
-// $('.inpRegistroConfirmPassword').focusout( function(){
-//     if($(this).val().length > 0){
-//         $(this).attr('placeholder', '')
-//     }else{
-//         $(this).attr('placeholder', 'Confirmar senha')
-//     $('.pTextRegisterConfirmPassword').hide()    
-//     }
-// })
 
 const whatUserWant = JSON.parse(localStorage.getItem('registerOrLogin'))
 
