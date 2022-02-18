@@ -17,14 +17,14 @@ $(".arrow-left, .arrow-right").hover(
 videoFinalizado = false;
 segundoVideoFinalizado = false;
 
-$(".video-texto-promo").click(function () {
-  window.location.href = "./inscricao-times-teredi.html";
-  // if (localStorage.getItem("Conectado") == true) {
-  //   window.location.href = "./sobre.html";
-  // } else {
-  //   window.location.href = "./isessao.html";
-  // }
-});
+// $(".video-texto-promo").click(function () {
+//   window.location.href = "./inscricao-times-teredi.html";
+//   // if (localStorage.getItem("Conectado") == true) {
+//   //   window.location.href = "./sobre.html";
+//   // } else {
+//   //   window.location.href = "./isessao.html";
+//   // }
+// });
 
 let videoPrincipal = document.getElementById("videoP");
 let currentTimePrincipal = videoPrincipal.currentTime;
