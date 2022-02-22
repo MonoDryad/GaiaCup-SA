@@ -13,20 +13,21 @@ a:hover {
 
 .qpmode{
   position: absolute;
-  left: 0;
+  left: 20%;
+  top: 8%; 
 }
 
 .iniciar-sessao{
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20%;
+  top: 8%;
 }
 
 .nav-logo{
   position: relative;
   margin-top: -1.5%;
-  left: 35%;
-  width: 30% !important;
+  left: 38%;
+  width: 25% !important;
 }
 
 .upper{
