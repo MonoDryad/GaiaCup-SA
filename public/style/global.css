@@ -37,11 +37,11 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(53, 53, 53);
+  background: rgb(168, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(32, 32, 32);
+  background: rgb(0, 183, 255);
 }
 
 .slide-animacao-banner {

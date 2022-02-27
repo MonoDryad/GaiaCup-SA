@@ -9,19 +9,21 @@ $('.btnCadastro').click(function(){
         senha: null,
         invocador: null,
         codigo: null,
-        isConnected: false
+        isConnected: false,
+        icon: null
     }
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
-    if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val()}) == undefined){
-        registeredUser.username = $('.inpRegistroUserName').val()
-        if($('.inpRegistroEmail').val().length > 3  && allUsers.find(function(usuariosExistentes){return usuariosExistentes.email == $('.inpRegistroEmail').val()}) == undefined){
+    if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val().toLowerCase()}) == undefined){
+        registeredUser.username = $('.inpRegistroUserName').val().toLowerCase()
+        if($('.inpRegistroEmail').val().length > 3  && allUsers.find(function(usuariosExistentes){return usuariosExistentes.email == $('.inpRegistroEmail').val().toLowerCase()}) == undefined){
             if($('.inpRegistroEmail').val().includes('@', 3)){
                 if($('.inpRegistroEmail').val().indexOf('.') > ($('.inpRegistroEmail').val().indexOf('@') + 1) && $('.inpRegistroEmail').val().includes('.', 5)){
-                    registeredUser.email = $('.inpRegistroEmail').val()
+                    registeredUser.email = $('.inpRegistroEmail').val().toLowerCase()
                     if($('.inpRegistroPassword').val().length > 5){
                         if($('.inpRegistroPassword').val() == $('.inpRegistroConfirmPassword').val()){
                             registeredUser.senha = $('.inpRegistroPassword').val()
                             registeredUser.codigo = allUsers.length+1
+                            registeredUser.icon = `https://raw.communitydragon.org/12.4/game/assets/ux/summonericons/profileicon${Math.round(Math.random() * 5267)}.png`
                             allUsers.push(registeredUser)
                             localStorage.setItem('contas', JSON.stringify(allUsers))
                         }else{
@@ -52,9 +54,12 @@ $('.btnCadastro').click(function(){
 
 $('.btnEntrar').click(function(){
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
-    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserName').val()})){
-        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val()})){
-            alert('sucesso!')
+    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserName').val().toLowerCase()})){
+        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val().toLowerCase()})){
+            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val().toLowerCase()})
+            loggedAccount.isConnected = true
+            localStorage.setItem('ContaConectada',JSON.stringify(loggedAccount))
+            window.location.href = "./index.html"
         }else if($('.inpPassword').val() < 1){
             $('.inpPassword').css('border-bottom', '#b40000 solid 1px')
             $('.pErrorPassword').text('• Campo não preenchido')
@@ -142,17 +147,10 @@ $('input').focusout(function(){
     }
 })
 
-const whatUserWant = JSON.parse(localStorage.getItem('registerOrLogin'))
+$('.content-title').text('Iníciar Sessão')
+$('.register-content-main').hide()
+$('.login-content-main').show()
 
-if(whatUserWant == 'register'){
-    $('.content-title').text('Cadastro')
-    $('.register-content-main').show()
-    $('.login-content-main').hide()
-}else{
-    $('.content-title').text('Iníciar Sessão')
-    $('.register-content-main').hide()
-    $('.login-content-main').show()
-}
 
 $('.btnCadastrar').click(function(){
     $('.content-title').text('Cadastro')

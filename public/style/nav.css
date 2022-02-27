@@ -10,12 +10,26 @@ a:hover {
   margin-left: 1%;
 }
 
-.nav-logo{
-  position: relative;
-  margin-top: 0;
-  width: 10vw !important;
+.userImage{
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
 }
 
-.upper{
-  border-top: 0.1vw black  solid !important;
+.contaConectada{
+  margin-left: 20%;
+  font-size: 1.3rem;
+}
+
+.meuDropDown{
+  z-index: 4 !important;
+  background-color: #292b2c !important;
+}
+
+.meuDropDown a{
+  color: rgb(173, 173, 173) !important;
+}
+
+.meuDropDown a:hover{
+  background-color: #333536 !important;
 }

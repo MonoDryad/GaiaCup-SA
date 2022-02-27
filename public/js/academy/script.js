@@ -1,0 +1,1 @@
+// $('.hidding, .adminNewVideo').hide()
