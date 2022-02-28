@@ -1,9 +1,63 @@
 $('.connected').hide()
 
+callAdmins()
+
+function callAdmins(addAdmins){
+
+  let administradores = [
+    {
+        username: 'monodryad' ,
+        email: 'rair2544@gmail.com',
+        senha: 'sudoadmin',
+        invocador: null,
+        codigo: 1,
+        isConnected: false,
+        icon: null,
+        isAdmin: true,
+        badge: `<span class="badge bg-danger text-dark">Admin</span>`
+    },
+    {
+      username: 'marcy',
+      email: 'marcye@gmail.com',
+      senha: 'sudoadmin',
+      invocador: null,
+      codigo: 2,
+      isConnected: false,
+      icon: null,
+      isAdmin: true,
+      badge: `<span class="badge bg-danger text-dark">Admin</span>`
+    },
+    {
+      username: 'milly',
+      email: 'millyzi@gmail.com',
+      senha: 'sudoadmin',
+      invocador: null,
+      codigo: 3,
+      isConnected: false,
+      icon: null,
+      isAdmin: true,
+      badge: `<span class="badge bg-danger text-dark">Admin</span>`
+    }
+  ]
+
+  if(addAdmins == 1){
+    
+  }
+
+  let adminAccounts =  []
+  for(let i = 0;i < administradores.length;i++){
+    adminAccounts.push(administradores[i])
+  }
+  console.log(adminAccounts)
+  localStorage.setItem('admin',JSON.stringify(adminAccounts))
+}
+
+
+
 if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
   $('.connected').show()
   $('.detectIfIsConnected').hide()
-  $('.contaConectada').html(JSON.parse(localStorage.getItem('ContaConectada')).username)
+  $('.contaConectada').html(`${JSON.parse(localStorage.getItem('ContaConectada')).username} ${JSON.parse(localStorage.getItem('ContaConectada')).badge}`)
   $('.userImage').attr('src', `${JSON.parse(localStorage.getItem('ContaConectada')).icon}`)
   $(".userImage").on('error', function(){
     let userAccount = JSON.parse(localStorage.getItem('ContaConectada'))
@@ -20,10 +74,14 @@ if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
         break
       }
     }
-
     console.log(allAccounts.indexOf(userAccount.username))
     $('.userImage').attr('src', `${JSON.parse(localStorage.getItem('ContaConectada')).icon}`)
   });
+  if(JSON.parse(localStorage.getItem('ContaConectada')).isAdmin == true){
+    $('.isAdmin').show()
+  }else{
+    $('.isAdmin').hide()
+  }
 }else{
   $('.connected').hide()
 }

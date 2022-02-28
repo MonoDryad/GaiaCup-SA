@@ -5,6 +5,11 @@ body{
     background-size: auto;
 }
 
+body, html{
+    height: 90%;
+    width: 100%;
+}
+
 *{
     font-family: OpenSansLight;
 }
@@ -20,7 +25,7 @@ input{
 }
 
 .container-login-main{
-    margin-top: 5%;
+    margin-top: 2.5%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -39,7 +44,6 @@ input{
     padding: 2%;
     border: 2px rgb(116, 116, 116) solid;
     border-radius: 10px 0px 0px 10px;
-    box-shadow: 14px 19px 16px 9px rgba(0, 0, 0, 0.33);
 }
 
 .container-sideway-submain{
@@ -51,10 +55,9 @@ input{
     background-repeat: no-repeat;
     background-size: cover;  
     padding: 2%;
-    box-shadow: 14px 19px 16px 9px rgba(0,0,0,0.33);
 }
 
-.imgCapslock{
+.imgCapslock, .imgCapslockAdmin{
     margin-top: 4vh;
     margin-left: 1%;
     width: 4vh;
@@ -88,7 +91,7 @@ input{
     position: relative;
 }
 
-.imgOcultando, .imgOcultandoRegistro, .imgOcultandoRegistroConfirm{
+.imgOcultando, .imgOcultandoRegistro, .imgOcultandoRegistroConfirm, .imgOcultandoAdmin{
     width: 5%;
     margin-left: -7%;
     cursor: pointer;
@@ -109,7 +112,7 @@ input{
     cursor: pointer;
 }
 
-.btnEntrar, .btnCadastro{
+.btnEntrar, .btnCadastro, .btnEntrarAdmin{
     background: black;
     width: 100%;
 }
@@ -151,6 +154,41 @@ input{
 .inpLogin{
     margin-top: 3%;
     z-index: 2;
+}
+
+.container-admin-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 25.5rem;
+}
+
+.sideway-admin-textbottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.container-admin-invert{
+    transition: 1s;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.adjusted-border-right{
+    border-left: none;
+    border: 2px rgb(116, 116, 116) solid;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.adjusted-border-left{
+    border-right: none !important;
+    border: 2px rgb(116, 116, 116) solid;
+    border-radius: 10px 0px 0px 10px;
 }
 
 @keyframes input-goup-login {

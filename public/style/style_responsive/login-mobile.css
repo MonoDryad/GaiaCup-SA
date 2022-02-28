@@ -156,6 +156,20 @@ input{
     z-index: 2;
 }
 
+.container-admin-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 10.5rem;
+}
+
+.sideway-admin-textbottom{
+    position: absolute;
+    bottom: 0;
+}
+
 @keyframes input-goup-login {
     from{
       margin-top: 5.5%;

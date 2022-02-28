@@ -10,7 +10,9 @@ $('.btnCadastro').click(function(){
         invocador: null,
         codigo: null,
         isConnected: false,
-        icon: null
+        icon: null,
+        isAdmin: false,
+        badge: `<span class="badge bg-info text-dark">User</span>`
     }
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
     if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val().toLowerCase()}) == undefined){
@@ -26,6 +28,8 @@ $('.btnCadastro').click(function(){
                             registeredUser.icon = `https://raw.communitydragon.org/12.4/game/assets/ux/summonericons/profileicon${Math.round(Math.random() * 5267)}.png`
                             allUsers.push(registeredUser)
                             localStorage.setItem('contas', JSON.stringify(allUsers))
+                            $('.register-content-main').hide()
+                            $('.container-login-content').show()
                         }else{
                             $('.inpRegistroConfirmPassword').css('border-bottom', '#b40000 solid 1px')
                             $('.pErrorRegisterConfirmPassword').text('• Senhas incompatíveis')
@@ -75,6 +79,30 @@ $('.btnEntrar').click(function(){
         $('.pErrorUsername').text('• Usuário não existe')
     }
 })
+
+$('.btnEntrarAdmin').click(function(){
+    const allUsers = JSON.parse(localStorage.getItem('admin')) || []
+    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})){
+        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})){
+            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})
+            loggedAccount.isConnected = true
+            localStorage.setItem('ContaConectada',JSON.stringify(loggedAccount))
+            window.location.href = "./index.html"
+        }else if($('.pTextUsernameAdmin').val() < 1){
+            $('.pTextUsernameAdmin').css('border-bottom', '#b40000 solid 1px')
+            $('.pErrorPassword').text('• Campo não preenchido')
+        }else{
+            $('.pTextUsernameAdmin').css('border-bottom', '#b40000 solid 1px')
+            $('.pErrorPassword').text('• Senha incorreta')
+        }
+    }else if($('.inpUserNameAdmin').val() < 1){
+        $('.inpUserName').css('border-bottom', '#b40000 solid 1px')
+        $('.pErrorUsername').text('• Campo não preenchido')
+    }else{
+        $('.inpUserNameAdmin').css('border-bottom', '#b40000 solid 1px')
+        $('.pErrorUsername').text('• Usuário não existe')
+    }
+})
 // -- // -- // -- // LOCALSTORAGE FUNCTIONALITY \\ -- \\ -- \\ -- \\ 
 
 // -- // -- // -- // PAGE FUNCTIONALITY \\ -- \\ -- \\ -- \\
@@ -94,6 +122,8 @@ $('.inpRegistroConfirmPassword, .inpRegistroPassword, .inpRegistroEmail, .inpReg
         $('.pErrorPassword').text('')
     }
 })
+
+
 
 $('.pText').hide()
 
@@ -122,6 +152,14 @@ $('input').focusin(function(){
         $(this).attr('placeholder', '')
         $('.pTextRegisterConfirmPassword').addClass('input-goup-login')
         $('.pTextRegisterConfirmPassword').show()
+    }else if($(this).hasClass('inpUserNameAdmin')){
+        $(this).attr('placeholder', '')
+        $('.pTextUsernameAdmin').addClass('input-goup-login')
+        $('.pTextUsernameAdmin').show()
+    }else if($(this).hasClass('inpPasswordAdmin')){
+        $(this).attr('placeholder', '')
+        $('.pTextPasswordAdmin').addClass('input-goup-login')
+        $('.pTextPasswordAdmin').show()
     }
 })
 
@@ -144,6 +182,12 @@ $('input').focusout(function(){
     }else if($(this).hasClass('inpRegistroConfirmPassword') && $(this).val().length < 1){
         $(this).attr('placeholder', 'Confirmar senha')
         $('.pTextRegisterConfirmPassword').hide()
+    }else if($(this).hasClass('inpUserNameAdmin') && $(this).val().length < 1){
+        $(this).attr('placeholder', 'Nome do usuário')
+        $('.pTextUsernameAdmin').hide()
+    }else if($(this).hasClass('inpPasswordAdmin') && $(this).val().length < 1){
+        $(this).attr('placeholder', 'Senha')
+        $('.pTextPasswordAdmin').hide()
     }
 })
 
@@ -155,18 +199,19 @@ $('.login-content-main').show()
 $('.btnCadastrar').click(function(){
     $('.content-title').text('Cadastro')
     $('.register-content-main').show()
-    $('.login-content-main').hide()
+    $('.container-login-content').hide()
 })
 
 $('.btnIsessao').click(function(){
     $('.content-title').text('Iníciar Sessão')
     $('.register-content-main').hide()
-    $('.login-content-main').show()
+    $('.container-login-content').show()
 })
 
 let showingPassword = 0
 let showingRegisterPassword = 0
-let showingRegisterConfirmationPassword
+let showingRegisterConfirmationPassword = 0
+let showingAdminPassword = 0
 
 $('.imgOcultando').click(function(){
     if(showingPassword == 0){
@@ -181,6 +226,26 @@ $('.imgOcultando').click(function(){
         $(this).attr("src", function (index, attr) {
             showingPassword = 0
             $('.inpPassword').attr('type', 'password')
+            $(this).css('width', '5%')
+            $(this).css('margin-left', '-7%')
+            return attr.replace("-showing.png", ".png")
+        })
+    }
+})
+
+$('.imgOcultandoAdmin').click(function(){
+    if(showingPassword == 0){
+        $(this).attr("src", function (index, attr) {
+            showingPassword = 1
+            $('.inpPasswordAdmin').attr('type', 'text')
+            $(this).css('width', '7%')
+            $(this).css('margin-left', '-8%')
+            return attr.replace(".png", "-showing.png")
+        })
+    }else{
+        $(this).attr("src", function (index, attr) {
+            showingPassword = 0
+            $('.inpPasswordAdmin').attr('type', 'password')
             $(this).css('width', '5%')
             $(this).css('margin-left', '-7%')
             return attr.replace("-showing.png", ".png")
@@ -236,14 +301,14 @@ $(document).bind('keyup', function(tecla){
         if(isShiftPressed == true){
             return
         }else{
-            $('.imgCapslock').css('opacity', '100%')
+            $('.imgCapslock, .imgCapslockAdmin').css('opacity', '100%')
             isCapsPressed = true
         }
     }else if(tecla.which==20 && isCapsPressed == true){
         if(isShiftPressed == true){
             return
         }else{
-            $('.imgCapslock').css('opacity', '0%')
+            $('.imgCapslock, .imgCapslockAdmin').css('opacity', '0%')
             isCapsPressed = false
         }
     }
@@ -254,7 +319,7 @@ $(document).on('keydown',function(tecla){
         if(isCapsPressed == true){
             return
         }else{        
-        $('.imgCapslock').css('opacity', '100%')
+        $('.imgCapslock, .imgCapslockAdmin').css('opacity', '100%')
         isShiftPressed = true
         }
     }
@@ -265,10 +330,31 @@ $(document).on('keyup',function(tecla){
         if(isCapsPressed == true){
             return
         }else{        
-        $('.imgCapslock').css('opacity', '0%')
+        $('.imgCapslock, .imgCapslockAdmin').css('opacity', '0%')
         isShiftPressed = false
         }
     }
 });
+
+$('.container-loginAdmin-content').hide()
+
+$('.sideway-admin-textbottom').on('click', function(){
+    if($('.container-login-main').hasClass('container-admin-invert')){
+        $('.container-login-main').removeClass('container-admin-invert')
+        $('.container-sideway-submain').removeClass('adjusted-border-left')
+        $('.container-login-submain').removeClass('adjusted-border-right')
+        $('.content-title').text('Iníciar Sessão')
+        $('.register-content-main').hide()
+        $('.container-login-content').show()
+        $('.container-loginAdmin-content').hide()
+    }else{
+        $('.container-login-main').addClass('container-admin-invert')
+        $('.container-sideway-submain').addClass('adjusted-border-left')
+        $('.container-login-submain').addClass('adjusted-border-right')
+        $('.container-loginAdmin-content').show()
+        $('.container-login-content').hide()
+        $('.register-content-main').hide()
+    }
+})
 
 // -- // -- // -- // PAGE FUNCTIONALITY \\ -- \\ -- \\ -- \\
