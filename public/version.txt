@@ -1,2 +1,0 @@
-Relatar problema
-Public v0.43.10
