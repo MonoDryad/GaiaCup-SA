@@ -77,19 +77,16 @@
   </nav>
   <div class="container-main">
     <div class="video-container">
-      <video class="video" id="videoP" style="width:100%" autoplay muted loop>
-        <source src="./videos/video-inicio.mp4" type="video/mp4">
-      </video>
+      <video class="video" id="videoP" style="width:100%" autoplay muted loop src="./videos/video-inicio.mp4" type="video/mp4"> </video>
       <div class="video-shadow"></div>
     </div>
     <div class="video-container-child">
       <h1 class="video-titulo-tier3">O TIER 3 EM OUTRO NÍVEL</h1>
-      <p class="video-texto-tier3">Times do Tier 3 lutando com honra nos campos da justiça, jogadas épicas, evolução e
-        viradas, tudo isso na Gaia Cup!</p>
+      <p class="video-texto-tier3">Times do Tier 3 lutando com honra nos campos da justiça, jogadas épicas, evolução e viradas, tudo isso na Gaia Cup!</p>
     </div>
-    <div>
+    <!-- <div>
       <iframe class="video-texto-promo" src="https://battlefy.com/embeds/join/6136a86b37734939566f5c0c" title="Gaia Cup | ESPECIAL | Quarta Edição" width="186" height="60" scrolling="no" frameborder="1"></iframe>
-    </div>
+    </div> -->
   </div>
   <div class="news">
     <div class="news-first">
@@ -108,18 +105,9 @@
   <div><img class="divisor" src="./images/divider.png"></div>
   <div class="second-container-main">
     <div class="main-background">
-      <video width="100%" class="winners-background winners-video" muted onended="videoFinalizado = true">
-        <source src="./videos/eos_intro_2.mp4" type="video/mp4">
-      </video>
-      <video width="100%" class="winners-background winners-upper-video-start" muted
-        onended="segundoVideoFinalizado = true; trocarAnimação()">
-        <source
-          src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_intro.webm">
-      </video>
-      <video width="100%" class="winners-background winners-upper-video-loop" id="winners-upper-video-loop" loop muted play>
-        <source
-          src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_loop.webm">
-      </video>
+      <video width="100%" class="winners-background winners-video" muted onended="videoFinalizado = true" src="./videos/eos_intro_2.mp4" type="video/mp4"></video>
+      <video width="100%" class="winners-background winners-upper-video-start" muted onended="segundoVideoFinalizado = true; trocarAnimação()" src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_intro.webm"></video>
+      <video width="100%" class="winners-background winners-upper-video-loop" id="winners-upper-video-loop" loop muted play src="https://raw.communitydragon.org/12.1/plugins/rcp-fe-lol-loot/global/default/assets/reveal_redeem/anim_reveal_permanent_loop.webm"></video>
       <div class="winners-background-unsee"></div>
       <div>
         <div class="wrapper-winners">
@@ -170,10 +158,8 @@
   </div>
   <div class="final-container">
     <div class="final-video-container">
-      <video class="final-video" id="final-video" style="width:100%" autoplay muted loop>
-        <source src="./videos/final_background.mp4" type="video/mp4">
-      </video>
-      <p class="jornada-start">COMECE A SUA JORNADA</p>
+      <video class="final-video" id="final-video" style="width:100%" autoplay muted loop src="./videos/afinal_background.mp4" type="video/mp4"></video>
+      <p class="jornada-start"></p>
     </div>
   <footer>
     <script>
