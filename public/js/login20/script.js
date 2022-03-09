@@ -12,6 +12,7 @@ $('.btnCadastro').click(function(){
         isConnected: false,
         icon: null,
         isAdmin: false,
+        team: null,
         badge: `<span class="badge bg-info text-dark">User</span>`
     }
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []

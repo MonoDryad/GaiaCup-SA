@@ -1,0 +1,1 @@
+$('.creatorConnected, .divTeam').hide()

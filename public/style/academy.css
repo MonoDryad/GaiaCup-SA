@@ -58,7 +58,6 @@ h2{
     text-align: center;
     margin-top: 5%;
     margin-bottom: 0;
-    cursor: pointer;
 }
 
 .adminNewVideo{
@@ -68,5 +67,6 @@ h2{
     padding: 1%;
     background-color: #272727;
     font-size: 1.1rem;
-    width: 15%;
+    width: 35%;
+    cursor: pointer;
 }
