@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://raw.communitydragon.org/12.3/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-worlds2021.jpg');
+    background-size: auto;
+}
+
+*{
+    font-family: OpenSansLight;
+}
+
+input{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    border-bottom: #797979 solid 1px;
+    outline: none;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.container-login-main{
+    margin-top: 1%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hrDivisor{
+    margin-top: 4%;
+    border-color:rgb(134, 134, 134);
+}
+
+.container-login-submain{
+    width: 95%;
+    background-color: #1a1a1c;
+    padding: 2%;
+    border: 2px rgb(116, 116, 116) solid;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 14px 19px 16px 9px rgba(0, 0, 0, 0.33);
+}
+
+.container-sideway-submain{
+    border: 2px rgb(116, 116, 116) solid;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 95%;
+    background-image: url('../../images/bg.gif');  
+    background-repeat: no-repeat;
+    background-size: cover;  
+    padding: 2%;
+    box-shadow: 14px 19px 16px 9px rgba(0,0,0,0.33);
+}
+
+.imgCapslock{
+    margin-top: 4vh;
+    margin-left: 1%;
+    width: 4vh;
+    height: 2vw;
+    position: absolute;
+    opacity: 0;
+}
+
+.content-title{
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+    font-family: OpenSansRegular;
+}
+
+.div-forgot-something{
+    text-align: center;
+}
+
+.div-user-decision{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+}
+
+.div-user-enter, .div-user-registro{
+    position: relative;
+}
+
+.imgOcultando, .imgOcultandoRegistro, .imgOcultandoRegistroConfirm{
+    width: 5%;
+    margin-left: -7%;
+    cursor: pointer;
+}
+
+.btnDecision{
+    margin-top: 10%;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: larger;
+    height: 50px;
+    font-family: OpenSansRegular;
+    border: 1px rgb(116, 116, 116) solid;
+}
+
+.lbl-forgot-something{
+    cursor: pointer;
+}
+
+.btnEntrar, .btnCadastro{
+    background: black;
+    width: 100%;
+}
+
+.btnCadastrar, .btnIsessao{
+    background: black;
+    width: 100%;
+}
+
+.container-login-submain input{
+    width: 75%;
+    margin-top: 5%;
+}
+
+.container-login-submain label{
+    margin-top: 1%;
+}
+
+.login-logo{
+    width: 35%;
+}
+
+.container-login-logo{
+    text-align: center;
+}
+
+.pText, .pError{
+    position: absolute;
+    margin-left: 10%;
+    color: #797979;
+    font-size: 17px;
+    z-index: 1;
+}
+
+.pError{
+    margin-top: 1.5% !important;
+    margin-left: -27%;
+    color: rgb(255, 71, 71);
+    font-size: 12px;
+}
+
+.inpLogin{
+    margin-top: 3%;
+    z-index: 2;
+}
+
+.container-admin-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 10.5rem;
+}
+
+.sideway-admin-textbottom{
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes input-goup-login {
+    from{
+      margin-top: 5.5%;
+      font-size: 20px;
+    }
+  
+    to{
+      margin-top: 1%;
+    }
+  }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./style/nav.css">
+    <link rel="stylesheet" type="text/css" href="./style/global.css">
+    <link rel="stylesheet" type="text/css" href="./style/myteam.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="shortcut icon" href="./images/New_logo.png" type="image/.png">
+    <title>Meu Time | Gaia Cup</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img class="brandnav" src="./images/LOGO-NAV.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bem-Vindo a Gaia Cup!</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./regulamento.html">Regulamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./stream.html">Transmissão</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html">Sobre</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link detectIfIsConnected iniciarSessao" href="./login.html">Iníciar Sessão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link detectIfIsConnected cadastrarSe" href="./login.html">Cadastre-se</a>
+                </li>
+                <li class="nav-item dropdown connected">
+                  <img class="userImage" width="15%" alt="Your Icon" src="">
+                  <a class="nav-link dropdown-toggle contaConectada" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </a>
+                  <ul class="dropdown-menu meuDropDown" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                    <li><a class="dropdown-item active" href="./myteam.html">Meu Time</a></li>
+                    <li><a class="dropdown-item" href="./academy.html">Academy</a></li>
+                    <li>
+                      <hr class="dropdown-divider isAdmin">
+                    </li>
+                    <li><a class="dropdown-item isAdmin" href="#">Administrar Contas</a></li>
+                    <li><a class="dropdown-item isAdmin" href="#">Administrar Times</a></li>
+                    <li><a class="dropdown-item isAdmin" href="#">Adicionar Vídeo - Academy</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disconnectFromAccount" href="#">Sair</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-myteam">
+        <h1 class="MyTeam-Title">Meu Time</h1>
+        <div class="divNoTeam">
+            <div class="divWhatShouldDo">
+              <h3 class="btnCreateTeam">Criar Time</h3>
+              <h3 class="btnSearchTeam">Procurar Time</h3>
+            </div>
+            <div class="vr" style="height: 200px;"></div>
+            <div class="divCreateTeamInformation">
+              <h2>Crie a sua Equipe!</h2>
+              <p>Crie a sua equipe e o gerencie pelo sistema Meu Time da Gaia Cup, dando liberdade para editar, adicionar e remover os jogadores com facilidade!</p>
+            </div>
+        </div>
+        <div class="divCreatingTeam">
+          <div class="divCreatingTeamContainer">
+            <h3 class="titleCreatingTeam">Criar Time</h3>
+            <hr>
+            <div class="divSubContainerCreatingTeam">
+              <label class="lblCreateTeam createTeamName">Nome da Organização</label>
+              <input class="inpCreatingTeam inpCreateTeamName" type="text" placeholder="Nome da Organização">
+              <label class="lblCreateTeam createTeamTag">Tag da Organização</label>
+              <input class="inpCreatingTeam inpCreateTeamTag" maxlength="4" type="text" placeholder="Tag da Organização">
+              <label class="lblCreateTeam createTeamLogo">Logo</label>
+              <input class="inpCreatingTeam inpFileCreateTeamLogo" type="file">
+            </div>
+            <label class="inpCreate goCreate">Salvar</label>
+            <label class="inpCreate goBack">Voltar</label>
+          </div>
+        </div>
+        <div class="divTeam">
+            <div class="divTeamHeader">
+                <img src="" width="6%" class="teamHeaderImg">
+                <h2 class="h2TeamHeaderName"></h2>
+                <h3 class="h3TagHeaderName"></h3>
+            </div>
+            <div class="divTeamBody">
+                <div class="divTeamMain">
+                    <div class="divPlayers divStaff-1">
+                        <img src="" class="perfilImageTecnico-1 perfilImageJogador">
+                        <label class="lblPlayers perfilFuncao-1"></label>
+                        <input type="text" class="perfilNomeTecnico-1" readonly placeholder="Staff 1">
+                    </div>
+                    <div class="divPlayers divStaff-2">
+                        <img src="" class="perfilImageTecnico-2 perfilImageJogador">
+                        <label class="lblPlayers perfilFuncao-2"></label>
+                        <input type="text" class="perfilNomeTecnico-2" readonly placeholder="Staff 2">
+                    </div>
+                    <div class="divPlayers divStaff-3">
+                        <img src="" class="perfilImageTecnico-3 perfilImageJogador">
+                        <label class="lblPlayers perfilFuncao-3"></label>
+                        <input type="text" class="perfilNomeTecnico-3" readonly placeholder="Staff 3">
+                    </div>
+                    <div class="divPlayers divStaff-4">
+                        <img src="" class=" perfilImageTecnico-4 perfilImageJogador">
+                        <label class="lblPlayers perfilFuncao-4"></label>
+                        <input type="text" class="perfilNomeTecnico-4" readonly placeholder="Staff 4">
+                    </div>
+                    <hr>
+                    <div class="divPlayers divJogador-1">
+                        <img src="" class="perfilImageJogador perfilImageJogador-1">
+                        <label class="lblPlayers perfilRotaJogador-1"></label>
+                        <input type="text" class="perfilNomeJogador-1" readonly placeholder="Jogador 1">
+                        <img src="" class="eloInvocadorPerfil-1">
+                    </div>
+                    <div class="divPlayers divJogador-2">
+                        <img src="" class="perfilImageJogador perfilImageJogador-2">
+                        <label class="lblPlayers perfilRotaJogador-2"></label>
+                        <input type="text" class="perfilNomeJogador-2" readonly placeholder="Jogador 2">
+                        <img src="" class="eloInvocadorPerfil-2">
+                    </div>
+                    <div class="divPlayers divJogador-3">
+                        <img src="" class="perfilImageJogador perfilImageJogador-3">
+                        <label class="lblPlayers perfilRotaJogador-3"></label>
+                        <input type="text" class="perfilNomeJogador-3" readonly placeholder="Jogador 3">
+                        <img src="" class="eloInvocadorPerfil-3">
+                    </div>
+                    <div class="divPlayers divJogador-4">
+                        <img src="" class="perfilImageJogador-4 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogador-4"></label>
+                        <input type="text" class="perfilNomeJogador-4" readonly placeholder="Jogador 4">
+                        <img src="" class="eloInvocadorPerfil-4">
+                    </div>
+                    <div class="divPlayers divJogador-5">
+                        <img src="" class="perfilImageJogador-5 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogador-5"></label>
+                        <input type="text" class="perfilNomeJogador-5" readonly placeholder="Jogador 5">
+                        <img src="" class="eloInvocadorPerfil-5">
+                    </div>
+                    <hr>
+                    <div class="divPlayers divJogadorReserva-1">
+                        <img src="" class="perfilImageJogadorReserva-1 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogadorReserva-1"></label>
+                        <input type="text" class="perfilNomeJogadorReserva-1" readonly placeholder="Jogador Reserva 1">
+                        <img src="" class="eloInvocadorPerfilReserva-1">
+                    </div>
+                    <div class="divPlayers divJogadorReserva-2">
+                        <img src="" class="perfilImageJogadorReserva-2 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogadorReserva-2"></label>
+                        <input type="text" class="perfilNomeJogadorReserva-2" readonly placeholder="Jogador Reserva 2">
+                        <img src="" class="eloInvocadorPerfilReserva-2">
+                    </div>
+                    <div class="divPlayers divJogadorReserva-3">
+                        <img src="" class="perfilImageJogadorReserva-3 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogadorReserva-3"></label>
+                        <input type="text" class="perfilNomeJogadorReserva-3" readonly placeholder="Jogador Reserva 3">
+                        <img src="" class="eloInvocadorPerfilReserva-3">
+                    </div>
+                    <div class="divPlayers divJogadorReserva-1">
+                        <img src="" class="perfilImageJogadorReserva-4 perfilImageJogador">
+                        <label class="lblPlayers perfilRotaJogadorReserva-4"></label>
+                        <input type="text" class="perfilNomeJogadorReserva-4" readonly placeholder="Jogador Reserva 4">
+                        <img src="" class="eloInvocadorPerfilReserva-4">
+                    </div>
+                </div>
+                <div class="divTeamInformation">
+                    <div class="divCreatedBy">
+                        <p class="createdBy">Criado por</p>
+                        <img src="" width="25%" class="imgCreatedByUser">
+                        <h4 class="nameCreatedBy"></h4>
+                        <p class="dateCreated"></p>
+                    </div>
+                    <hr>
+                    <div class="creatorConnected teamTools">
+                        <p class="btnTools addPlayer">• Adicionar Jogadores</p>
+                        <p class="btnTools addReserva">• Adicionar Reserva</p>
+                        <p class="btnTools addStaff">• Adicionar Staff</p>
+                        <hr>
+                        <p class="btnTools removePlayer">• Remover Jogadores</p>
+                        <p class="btnTools removeReserva">• Remover Reserva</p>
+                        <p class="btnTools removeStaff">• Remover Staff</p>
+                        <hr>
+                        <p class="btnTools removeTeam">• Apagar Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./js/navegacao/nav.js"></script>
+<script src="./js/myteam/script.js"></script>
+</html>

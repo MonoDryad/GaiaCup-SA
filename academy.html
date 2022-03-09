@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/academy.css">
+    <link rel="stylesheet" media="screen and (max-width: 835px)" href="./style/style_responsive/academy-mobile.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="shortcut icon" href="./images/New_logo.png" type="image/.png">
+
+    <title>Academy | Gaia Cup</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img class="brandnav" src="./images/LOGO-NAV.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bem-Vindo a Gaia Cup!</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./regulamento.html">Regulamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./stream.html">Transmissão</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html">Sobre</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link detectIfIsConnected iniciarSessao" href="./login.html">Iníciar Sessão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link detectIfIsConnected cadastrarSe" href="./login.html">Cadastre-se</a>
+                </li>
+                <li class="nav-item dropdown connected">
+                  <img class="userImage" width="15%" alt="Your Icon" src="">
+                  <a class="nav-link dropdown-toggle contaConectada" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </a>
+                  <ul class="dropdown-menu meuDropDown" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                    <li><a class="dropdown-item" href="./myteam.html">Meu Time</a></li>
+                    <li><a class="dropdown-item active" href="./academy.html">Academy</a></li>
+                    <li>
+                      <hr class="dropdown-divider isAdmin">
+                    </li>
+                    <li><a class="dropdown-item isAdmin" href="#">Administrar Contas</a></li>
+                    <li><a class="dropdown-item isAdmin" href="#">Administrar Times</a></li>
+                    <li><a class="dropdown-item isAdmin" href="#">Adicionar Vídeo - Academy</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disconnectFromAccount" href="#">Sair</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <h2>Academy - Gaia Cup</h2>
+      <h4>De jogador para jogador</h4>
+      <div class="administration mysticky-top">
+        <p class="adminNewVideo goToAdministration">Administração</p>
+      </div>
+      
+      <div class="mainContainerAcademy">
+        <div class="containerContent">
+          <div class="videosFirstRow">
+            <div class="1Video adjustText">
+              <img class="1VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay1">Placeholder</label>
+              <label class="textExtraInformation1">Difícil - Tempo: 8:47</label>
+            </div>
+            <div class="2Video adjustText">
+              <img class="2VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay2">Placeholder</label>
+              <label class="textExtraInformation2">Difícil - Tempo: 12:47</label>
+            </div>
+            <div class="3Video adjustText">
+              <img class="3VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay3">Placeholder</label>
+              <label class="textExtraInformation3">Desafio - Tempo: 4:33</label>
+            </div>
+            <div class="4Video adjustText">
+              <img class="4VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay4">Placeholder</label>
+              <label class="textExtraInformation4">Fácil - Tempo: 2:47</label>
+            </div>
+            <div class="5Video adjustText">
+              <img class="5VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay5">Placeholder</label>
+              <label class="textExtraInformation5">Fácil - Tempo: 18:47</label>
+            </div>
+            <div class="6Video adjustText">
+              <img class="6VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay6">Placeholder</label>
+              <label class="textExtraInformation6">Fácil - Tempo: 48:47</label>
+            </div>
+            <div class="7Video adjustText">
+              <img class="7VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay7">Placeholder</label>
+              <label class="textExtraInformation7">Fácil - Tempo: 38:47</label>
+            </div>
+            <div class="8Video adjustText">
+              <img class="8VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay8">Placeholder</label>
+              <label class="textExtraInformation8">Fácil - Tempo: 1:47</label>
+            </div>
+            <div class="9Video adjustText">
+              <img class="9VideoImage" src="./images/comunicado.png">
+              <label class="textVideoDisplay9">Placeholder</label>
+              <label class="textExtraInformation9">Fácil - Tempo: 2:47</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="videoPlayerTutorial hidding">
+        <div class="videoPlayer">
+          <video>
+            <source src="">
+          </video>
+          <label class="videoInformation"></label>
+          <label class="videoChallenge"></label>
+        </div>
+      </div>
+
+      <!-- <footer>
+        <script>
+            $(function () {
+                $("footer").load("./pages/footer.html");
+            });
+        </script>
+    </footer> -->
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./js/navegacao/nav.js"></script>
+<script src="./js/academy/script.js"></script>
+
+</html>
