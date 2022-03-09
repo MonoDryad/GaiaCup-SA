@@ -31,7 +31,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active">Início</a>
+                  <a class="nav-link" href="./index.html">Início</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./regulamento.html">Regulamento</a>
@@ -44,7 +44,10 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                  <a class="nav-link detectIfIsConnected" href="./login.html">Iníciar Sessão</a>
+                  <a class="nav-link detectIfIsConnected iniciarSessao" href="./login.html">Iníciar Sessão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link detectIfIsConnected cadastrarSe" href="./login.html">Cadastre-se</a>
                 </li>
                 <li class="nav-item dropdown connected">
                   <img class="userImage" width="15%" alt="Your Icon" src="">
@@ -52,7 +55,7 @@
                   </a>
                   <ul class="dropdown-menu meuDropDown" aria-labelledby="offcanvasNavbarDropdown">
                     <li><a class="dropdown-item" href="#">Minha Conta</a></li>
-                    <li><a class="dropdown-item" href="#">Meu Time</a></li>
+                    <li><a class="dropdown-item active" href="./myteam.html">Meu Time</a></li>
                     <li><a class="dropdown-item" href="./academy.html">Academy</a></li>
                     <li>
                       <hr class="dropdown-divider isAdmin">
@@ -76,7 +79,6 @@
         <div class="divNoTeam">
             <div class="divWhatShouldDo">
               <h3 class="btnCreateTeam">Criar Time</h3>
-              <h5 class="h5Or">ou</h5>
               <h3 class="btnSearchTeam">Procurar Time</h3>
             </div>
             <div class="vr" style="height: 200px;"></div>
@@ -84,6 +86,22 @@
               <h2>Crie a sua Equipe!</h2>
               <p>Crie a sua equipe e o gerencie pelo sistema Meu Time da Gaia Cup, dando liberdade para editar, adicionar e remover os jogadores com facilidade!</p>
             </div>
+        </div>
+        <div class="divCreatingTeam">
+          <div class="divCreatingTeamContainer">
+            <h3 class="titleCreatingTeam">Criar Time</h3>
+            <hr>
+            <div class="divSubContainerCreatingTeam">
+              <label class="lblCreateTeam createTeamName">Nome da Organização</label>
+              <input class="inpCreatingTeam inpCreateTeamName" type="text" placeholder="Nome da Organização">
+              <label class="lblCreateTeam createTeamTag">Tag da Organização</label>
+              <input class="inpCreatingTeam inpCreateTeamTag" maxlength="4" type="text" placeholder="Tag da Organização">
+              <label class="lblCreateTeam createTeamLogo">Logo</label>
+              <input class="inpCreatingTeam inpFileCreateTeamLogo" type="file">
+            </div>
+            <label class="inpCreate goCreate">Salvar</label>
+            <label class="inpCreate goBack">Voltar</label>
+          </div>
         </div>
         <div class="divTeam">
             <div class="divTeamHeader">

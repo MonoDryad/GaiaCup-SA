@@ -52,7 +52,13 @@ function callAdmins(addAdmins){
   localStorage.setItem('admin',JSON.stringify(adminAccounts))
 }
 
-
+$('.iniciarSessao, .cadastrarSe').on('click', function(){
+  if($(this).hasClass('iniciarSessao')){
+      localStorage.setItem('Cadastro', '1')
+  }else{
+      localStorage.setItem('Cadastro', '2')
+  }
+})
 
 if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
   $('.connected').show()

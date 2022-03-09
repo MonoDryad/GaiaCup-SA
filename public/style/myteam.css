@@ -4,7 +4,10 @@
 }
 
 body{
-    background-image: url('https://raw.communitydragon.org/12.5/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-void.jpg');
+    background: url('../images/background-shadow_isles.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -127,14 +130,19 @@ body{
 
 .btnCreateTeam, .btnSearchTeam{
     color: white;
-    transition: 1s;
-    font-weight: bolder
+    transition: 0.3s;
+    font-weight: bolder;
+    
+}
+
+.btnSearchTeam{
+    margin-top: 6%;
 }
 
 .btnCreateTeam:hover, .btnSearchTeam:hover{
-    transition: 1s;
+    transition: 0.3s;
     cursor: pointer;
-    color: rgb(255, 116, 116);
+    color: rgb(65, 154, 255);
 }
 
 .MyTeam-Title{
@@ -142,3 +150,56 @@ body{
     text-align: center;
     font-family: OpenSansRegular;
 }
+
+.divCreatingTeam{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    padding: 3%;
+}
+
+.inpCreate{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    border: 1px gray solid;
+    transition: 0.3s;
+    padding: 0.4%;
+    background-color: rgb(2, 74, 156);
+}
+
+.inpCreate:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    color: rgb(65, 154, 255);
+}
+
+.divSubContainerCreatingTeam{
+    display: flex;
+    flex-direction: column;
+}
+
+.inpCreatingTeam{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px gray solid;
+    outline: none;
+}
+
+.lblCreateTeam{
+    color: #707677;
+}
+
+@keyframes input-goup-login {
+    from{
+      margin-top: 2.3%;
+      font-size: 20px;
+    }
+  
+    to{
+      margin-top: 0.5%;
+    }
+  }

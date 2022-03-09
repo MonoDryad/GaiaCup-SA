@@ -29,8 +29,19 @@ $('.btnCadastro').click(function(){
                             registeredUser.icon = `https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon${Math.round(Math.random() * 5267)}.png`
                             allUsers.push(registeredUser)
                             localStorage.setItem('contas', JSON.stringify(allUsers))
-                            $('.register-content-main').hide()
-                            $('.container-login-content').show()
+
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Cadastro realizado com sucesso!',
+                                showConfirmButton: false,
+                                timer: 1500
+                              })
+                            //   setInterval(function () {
+                                $('.register-content-main').hide()
+                                $('.container-login-content').show()
+                                $('.content-title').text('Iníciar Sessão')
+                            //   },1500)
                         }else{
                             $('.inpRegistroConfirmPassword').css('border-bottom', '#b40000 solid 1px')
                             $('.pErrorRegisterConfirmPassword').text('• Senhas incompatíveis')
@@ -124,6 +135,15 @@ $('.inpRegistroConfirmPassword, .inpRegistroPassword, .inpRegistroEmail, .inpReg
     }
 })
 
+if(localStorage.getItem('Cadastro') == '1' || null){
+    $('.content-title').text('Iníciar Sessão')
+    $('.register-content-main').hide()
+    $('.container-login-contentç').show()
+}else if(localStorage.getItem('Cadastro') == '2'){
+    $('.content-title').text('Cadastro')
+    $('.register-content-main').show()
+    $('.container-login-content').hide()
+}
 
 
 $('.pText').hide()
@@ -191,11 +211,6 @@ $('input').focusout(function(){
         $('.pTextPasswordAdmin').hide()
     }
 })
-
-$('.content-title').text('Iníciar Sessão')
-$('.register-content-main').hide()
-$('.login-content-main').show()
-
 
 $('.btnCadastrar').click(function(){
     $('.content-title').text('Cadastro')
@@ -331,8 +346,8 @@ $(document).on('keyup',function(tecla){
         if(isCapsPressed == true){
             return
         }else{        
-        $('.imgCapslock, .imgCapslockAdmin').css('opacity', '0%')
-        isShiftPressed = false
+            $('.imgCapslock, .imgCapslockAdmin').css('opacity', '0%')
+            isShiftPressed = false
         }
     }
 });
