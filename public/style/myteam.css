@@ -180,6 +180,8 @@ body{
 .divSubContainerCreatingTeam{
     display: flex;
     flex-direction: column;
+    position: relative;
+    align-items: center;
 }
 
 .inpCreatingTeam{
@@ -187,19 +189,40 @@ body{
     border: none;
     border-bottom: 1px gray solid;
     outline: none;
+    margin-top: 7%;
 }
 
 .lblCreateTeam{
     color: #707677;
+    position: absolute;
+    margin-top: -2%;
+    width: 100%;
+}
+
+.createTeamLogo{
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+.inpFileCreateTeamLogo{
+    margin-top: 0%;
+}
+
+.middle{
+    margin-top: 4%;
 }
 
 @keyframes input-goup-login {
     from{
-      margin-top: 2.3%;
-      font-size: 20px;
+      margin-top: 4%;
+      font-size: 16px;
     }
   
     to{
-      margin-top: 0.5%;
+      margin-top: -2%;
     }
   }

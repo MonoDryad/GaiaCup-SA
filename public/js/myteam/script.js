@@ -10,6 +10,8 @@ $('.goBack').on('click', function(){
     $('.divCreatingTeam').hide()
 })
 
+$('.createTeamTag, .createTeamName').hide()
+
 // $('.lblCreateTeam').hide()
 
 $('input').focusin(function(){
@@ -19,7 +21,17 @@ $('input').focusin(function(){
         $('.createTeamName').show()
     }else if($(this).hasClass('inpCreateTeamTag')){
         $(this).attr('placeholder', '')
-        $('.pTextPassword').addClass('input-goup-login')
-        $('.pTextPassword').show()
+        $('.createTeamTag').addClass('input-goup-login')
+        $('.createTeamTag').show()
+    }
+})
+
+$('input').focusout(function(){
+    if($(this).hasClass('inpCreateTeamName') && $(this).val().length < 1){
+        $(this).attr('placeholder', 'Nome da Organização')
+        $('.createTeamName').hide()
+    }else if($(this).hasClass('inpCreateTeamTag') && $(this).val().length < 1){
+        $(this).attr('placeholder', 'Tag da Organização')
+        $('.createTeamTag').hide()
     }
 })

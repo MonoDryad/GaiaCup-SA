@@ -92,12 +92,19 @@
             <h3 class="titleCreatingTeam">Criar Time</h3>
             <hr>
             <div class="divSubContainerCreatingTeam">
-              <label class="lblCreateTeam createTeamName">Nome da Organização</label>
-              <input class="inpCreatingTeam inpCreateTeamName" type="text" placeholder="Nome da Organização">
-              <label class="lblCreateTeam createTeamTag">Tag da Organização</label>
-              <input class="inpCreatingTeam inpCreateTeamTag" maxlength="4" type="text" placeholder="Tag da Organização">
-              <label class="lblCreateTeam createTeamLogo">Logo</label>
-              <input class="inpCreatingTeam inpFileCreateTeamLogo" type="file">
+              <div>
+                <label class="lblCreateTeam createTeamName">Nome da Organização</label>
+                <input class="inpCreatingTeam inpCreateTeamName" type="text" placeholder="Nome da Organização">
+              </div>
+              <div class="middle">
+                <label class="lblCreateTeam createTeamTag">Tag da Organização</label>
+                <input class="inpCreatingTeam inpCreateTeamTag" minlength="2" maxlength="4" type="text" placeholder="Tag da Organização">  
+              </div>
+              <div>
+                <label class="lblCreateTeam createTeamLogo">Adicionar Logo</label>
+                <input class="inpCreatingTeam inpFileCreateTeamLogo" type="file">
+              </div>
+
             </div>
             <label class="inpCreate goCreate">Salvar</label>
             <label class="inpCreate goBack">Voltar</label>
