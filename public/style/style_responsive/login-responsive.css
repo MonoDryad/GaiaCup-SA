@@ -54,16 +54,7 @@ input{
     box-shadow: 14px 19px 16px 9px rgba(0,0,0,0.33);
 }
 
-.imgCapslock{
-    margin-top: 4vh;
-    margin-left: 1%;
-    width: 4vh;
-    height: 2vw;
-    position: absolute;
-    opacity: 0;
-}
-
-.content-title{
+.content-title, .content-title-admin{
     font-size: 30px;
     padding-left: 0;
     text-align: center;

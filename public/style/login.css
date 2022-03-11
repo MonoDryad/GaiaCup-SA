@@ -58,15 +58,15 @@ input{
 }
 
 .imgCapslock, .imgCapslockAdmin{
-    margin-top: 4vh;
+    margin-top: 5vh;
     margin-left: 1%;
     width: 4vh;
-    height: 2vw;
+    height: 1vw;
     position: absolute;
     opacity: 0;
 }
 
-.content-title{
+.content-title, .content-title-admin{
     font-size: 30px;
     padding-left: 0;
     text-align: center;

@@ -31,6 +31,9 @@ body{
 
 .teamHeaderImg{
     border-radius: 50%;
+    background-color: #1e383d;
+    height: 68px;
+    width: 68px;
     border: 1px gray solid;
 }
 
