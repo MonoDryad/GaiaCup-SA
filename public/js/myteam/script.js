@@ -86,6 +86,32 @@ function myteam(){
     }
 }
 
+$('.removeTeam').on('click', function(){
+    connectedTeam = null
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let contas = JSON.parse(localStorage.getItem('contas')) || []
+    let contaConectada = JSON.parse(localStorage.getItem('ContaConectada'))
+    contaConectada.team = null
+
+    for(let i = 0; i < contas.length;i++){
+        if(contas[i].username == contaConectada.username){
+            contas.splice(i, 1, contaConectada)
+          localStorage.setItem('contas',JSON.stringify(contas))
+          break
+        }
+      }
+
+    localStorage.setItem('ContaConectada',JSON.stringify(contaConectada))
+
+    for(let i = 0;i < JSON.parse(localStorage.getItem('teams')).length; i++ ){
+        if(JSON.parse(localStorage.getItem('ContaConectada')).team == teams.nomeDaOrg){
+            teams.splice(i, 1)
+            localStorage.setItem('teams',JSON.stringify(teams))
+        }
+    }
+    location.reload(true);
+})
+
 // * // * // * PAGE FUNCTIONALITY * \\ * \\ * \\
 
 $('.creatorConnected, .divTeam, .divCreatingTeam').hide()
