@@ -1,5 +1,5 @@
 // * // * // * SCRIPT * \\ * \\ * \\
-$('.creatorConnected, .divTeam, .divCreatingTeam, .btnRemoverJogador, .creatorConnected-Remove, .divNoTeam').hide()
+$('.creatorConnected, .divTeam, .divCreatingTeam, .btnRemoverJogador, .creatorConnected-Remove, .divNoTeam, .divFindTeam').hide()
 
 $('.goCreate').on('click', function(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
@@ -19,6 +19,16 @@ $('.goCreate').on('click', function(){
     let data = new Date()
     teamObject.dataCriacao = `${data.getDate()}/${(data.getMonth() + 1)}/${data.getFullYear()}`
 
+    for(let i = 0;i < teams.length;i++){
+        if($('.inpCreateTeamName').val() == teams[i].nomeDaOrg){
+            Swal.fire({
+                icon: 'error',
+                title: `${$('.inpCreateTeamName').val()} já está registrado!`,
+                position: 'center',
+            })
+            return
+        }
+    }
     teamObject.nomeDaOrg = $('.inpCreateTeamName').val()
     teamObject.tagDaOrg = $('.inpCreateTeamTag').val().toUpperCase()
     teamObject.logoDaOrg = $('.inpFileCreateTeamLogo').val()
@@ -731,11 +741,69 @@ $('.removeTeam').on('click', function(){
     })
 })
 
+function findTeam() {
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+
+    for(let i = 0; i < teams.length;i++){
+        let teamToFind = i
+        $('.teamsGoHere').append(`
+        <div style="width: 15%;">
+            <div class="${teams[i].nomeDaOrg.replaceAll(' ','')}" style="text-align: center">
+                <img class='imgTeamFind' src='${teams[i].logoDaOrg}' >
+                <h5>${teams[i].nomeDaOrg}</h5>
+                <p>${teams[i].tagDaOrg}</p>
+                <button onclick='seeTeam(${teamToFind})' class="btn btn-dark seeTeam-${i}">Ver Time</button>
+            </div>
+        </div>`)
+
+    }
+}
+
+function seeTeam(teamFinded){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    for(let i = 0; i < teams.length;i++){
+        if($(`.seeTeam-${teamFinded}`).parent().hasClass(`${teams[i].nomeDaOrg.replaceAll(' ','')}`)){
+            $('.customCanvasGoHere').append(`
+            <button class="trigger-${i}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"></button>
+
+            <div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">${teams[i].nomeDaOrg}</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body small">
+                ...
+                </div>
+            </div>`).
+            $(`.trigger-${i}`).trigger('click')
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // * // * // * PAGE FUNCTIONALITY * \\ * \\ * \\
 
 $('.btnCreateTeam').on('click', function(){
     $('.divNoTeam').hide()
     $('.divCreatingTeam').show()
+})
+
+$('.btnSearchTeam').on('click', function(){
+    $('.divNoTeam').hide()
+    $('.divFindTeam').show()
+    findTeam()
 })
 
 $('.goBack').on('click', function(){

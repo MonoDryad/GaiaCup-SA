@@ -264,6 +264,23 @@ body, html{
     display: none !important;
 }
 
+.divFindTeamContainer{
+    background-color: rgb(0, 0, 0);
+}
+
+.imgTeamFind{
+    border-radius: 50%;
+    border: 1px gray solid;
+    width: 7vw;
+    height: 7vw;
+}
+
+.teamsGoHere{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
 @keyframes input-goup-login {
     from{
         margin-top: 4%;
