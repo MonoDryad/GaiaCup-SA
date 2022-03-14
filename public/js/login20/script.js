@@ -16,12 +16,12 @@ $('.btnCadastro').click(function(){
         badge: `<span class="badge bg-info text-dark">User</span>`
     }
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
-    if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val().toLowerCase()}) == undefined){
-        registeredUser.username = $('.inpRegistroUserName').val().toLowerCase()
-        if($('.inpRegistroEmail').val().length > 3  && allUsers.find(function(usuariosExistentes){return usuariosExistentes.email == $('.inpRegistroEmail').val().toLowerCase()}) == undefined){
+    if($('.inpRegistroUserName').val().length > 3 && allUsers.find(function(usuariosExistentes){return usuariosExistentes.username == $('.inpRegistroUserName').val()}) == undefined){
+        registeredUser.username = $('.inpRegistroUserName').val()
+        if($('.inpRegistroEmail').val().length > 3  && allUsers.find(function(usuariosExistentes){return usuariosExistentes.email == $('.inpRegistroEmail').val()}) == undefined){
             if($('.inpRegistroEmail').val().includes('@', 3)){
                 if($('.inpRegistroEmail').val().indexOf('.') > ($('.inpRegistroEmail').val().indexOf('@') + 1) && $('.inpRegistroEmail').val().includes('.', 5)){
-                    registeredUser.email = $('.inpRegistroEmail').val().toLowerCase()
+                    registeredUser.email = $('.inpRegistroEmail').val()
                     if($('.inpRegistroPassword').val().length > 5){
                         if($('.inpRegistroPassword').val() == $('.inpRegistroConfirmPassword').val()){
                             registeredUser.senha = $('.inpRegistroPassword').val()
@@ -70,9 +70,9 @@ $('.btnCadastro').click(function(){
 
 $('.btnEntrar').click(function(){
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
-    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserName').val().toLowerCase()})){
-        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val().toLowerCase()})){
-            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val().toLowerCase()})
+    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserName').val()})){
+        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val()})){
+            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPassword').val() && contasLocais.username == $('.inpUserName').val()})
             loggedAccount.isConnected = true
             localStorage.setItem('ContaConectada',JSON.stringify(loggedAccount))
             window.location.href = "./index.html"
@@ -94,9 +94,9 @@ $('.btnEntrar').click(function(){
 
 $('.btnEntrarAdmin').click(function(){
     const allUsers = JSON.parse(localStorage.getItem('admin')) || []
-    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})){
-        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})){
-            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val().toLowerCase()})
+    if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserNameAdmin').val()})){
+        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val()()})){
+            let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val()})
             loggedAccount.isConnected = true
             localStorage.setItem('ContaConectada',JSON.stringify(loggedAccount))
             window.location.href = "./index.html"

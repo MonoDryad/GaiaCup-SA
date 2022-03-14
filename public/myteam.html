@@ -54,7 +54,7 @@
                   <a class="nav-link dropdown-toggle contaConectada" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </a>
                   <ul class="dropdown-menu meuDropDown" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                    <li><a class="dropdown-item" href="./gerenciarConta.html">Minha Conta</a></li>
                     <li><a class="dropdown-item active" href="./myteam.html">Meu Time</a></li>
                     <li><a class="dropdown-item" href="./academy.html">Academy</a></li>
                     <li>
@@ -76,12 +76,17 @@
       </nav>
       <div class="container-myteam">
         <h1 class="MyTeam-Title">Meu Time</h1>
+        <div class="divNoAccount">
+          <h2 class="needToSignin">Necessário estar conectado!</h2>
+          <h5>você pode se <a class="detectIfIsConnected cadastrarSe" href="./login.html">cadastrar</a> ou entrar com uma <a class="detectIfIsConnected iniciarSessao" href="./login.html">conta existente.</a></h5>   
+        </div>
         <div class="divNoTeam">
             <div class="divWhatShouldDo">
               <h3 class="btnCreateTeam">Criar Time</h3>
               <h3 class="btnSearchTeam">Procurar Time</h3>
             </div>
-            <div class="vr" style="height: 200px;"></div>
+            <div class="vr responsivevr" style="height: 200px;"></div>
+            <hr class="responsivehr">
             <div class="divCreateTeamInformation">
               <h2>Crie a sua Equipe!</h2>
               <p>Crie a sua equipe e o gerencie pelo sistema Meu Time da Gaia Cup, dando liberdade para editar, adicionar e remover os jogadores com facilidade!</p>
@@ -106,8 +111,8 @@
               </div>
 
             </div>
-            <label class="inpCreate goCreate">Salvar</label>
-            <label class="inpCreate goBack">Voltar</label>
+            <label class="inpCreate btn btn-dark goCreate">Salvar</label>
+            <label class="inpCreate btn btn-danger goBack">Voltar</label>
           </div>
         </div>
         <div class="divTeam">
@@ -121,78 +126,110 @@
                     <div class="divPlayers divStaff-1">
                         <img src="" class="perfilImageTecnico-1 perfilImageJogador">
                         <label class="lblPlayers perfilFuncao-1"></label>
-                        <input type="text" class="perfilNomeTecnico-1" readonly placeholder="Staff 1">
+                        <input type="text" class="perfilNomeJogador perfilNomeTecnico-1" readonly placeholder="Staff 1">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverStaff-1">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divStaff-2">
                         <img src="" class="perfilImageTecnico-2 perfilImageJogador">
                         <label class="lblPlayers perfilFuncao-2"></label>
-                        <input type="text" class="perfilNomeTecnico-2" readonly placeholder="Staff 2">
+                        <input type="text" class="perfilNomeJogador perfilNomeTecnico-2" readonly placeholder="Staff 2">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverStaff-2">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divStaff-3">
                         <img src="" class="perfilImageTecnico-3 perfilImageJogador">
                         <label class="lblPlayers perfilFuncao-3"></label>
-                        <input type="text" class="perfilNomeTecnico-3" readonly placeholder="Staff 3">
+                        <input type="text" class="perfilNomeJogador perfilNomeTecnico-3" readonly placeholder="Staff 3">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverStaff-3">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divStaff-4">
                         <img src="" class=" perfilImageTecnico-4 perfilImageJogador">
                         <label class="lblPlayers perfilFuncao-4"></label>
                         <input type="text" class="perfilNomeTecnico-4" readonly placeholder="Staff 4">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverStaff-4">Remover</button>
                     </div>
-                    <hr>
+                    <hr class="divHr">
                     <div class="divPlayers divJogador-1">
                         <img src="" class="perfilImageJogador perfilImageJogador-1">
                         <label class="lblPlayers perfilRotaJogador-1"></label>
-                        <input type="text" class="perfilNomeJogador-1" readonly placeholder="Jogador 1">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogador-1" readonly placeholder="Jogador 1">
+                        <label class="perfilInvocador perfilInvocador-1"></label>
                         <img src="" class="eloInvocadorPerfil-1">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogador-1">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogador-2">
                         <img src="" class="perfilImageJogador perfilImageJogador-2">
                         <label class="lblPlayers perfilRotaJogador-2"></label>
-                        <input type="text" class="perfilNomeJogador-2" readonly placeholder="Jogador 2">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogador-2" readonly placeholder="Jogador 2">
+                        <label class="perfilInvocador perfilInvocador-2"></label>
                         <img src="" class="eloInvocadorPerfil-2">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogador-2">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogador-3">
                         <img src="" class="perfilImageJogador perfilImageJogador-3">
                         <label class="lblPlayers perfilRotaJogador-3"></label>
-                        <input type="text" class="perfilNomeJogador-3" readonly placeholder="Jogador 3">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogador-3" readonly placeholder="Jogador 3">
+                        <label class="perfilInvocador perfilInvocador-3"></label>
                         <img src="" class="eloInvocadorPerfil-3">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogador-3">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogador-4">
                         <img src="" class="perfilImageJogador-4 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogador-4"></label>
-                        <input type="text" class="perfilNomeJogador-4" readonly placeholder="Jogador 4">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogador-4" readonly placeholder="Jogador 4">
+                        <label class="perfilInvocador perfilInvocador-4"></label>
                         <img src="" class="eloInvocadorPerfil-4">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogador-4">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogador-5">
                         <img src="" class="perfilImageJogador-5 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogador-5"></label>
-                        <input type="text" class="perfilNomeJogador-5" readonly placeholder="Jogador 5">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogador-5" readonly placeholder="Jogador 5">
+                        <label class="perfilInvocador perfilInvocador-5"></label>
                         <img src="" class="eloInvocadorPerfil-5">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogador-5">Remover</button>
                     </div>
-                    <hr>
+                    <hr class="divHr">
                     <div class="divPlayers divJogadorReserva-1">
                         <img src="" class="perfilImageJogadorReserva-1 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogadorReserva-1"></label>
-                        <input type="text" class="perfilNomeJogadorReserva-1" readonly placeholder="Jogador Reserva 1">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogadorReserva-1" readonly placeholder="Jogador Reserva 1">
+                        <label class="perfilInvocador perfilInvocadorReserva-1"></label>
                         <img src="" class="eloInvocadorPerfilReserva-1">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogadorReserva-1">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogadorReserva-2">
                         <img src="" class="perfilImageJogadorReserva-2 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogadorReserva-2"></label>
-                        <input type="text" class="perfilNomeJogadorReserva-2" readonly placeholder="Jogador Reserva 2">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogadorReserva-2" readonly placeholder="Jogador Reserva 2">
+                        <label class="perfilInvocador perfilInvocadorReserva-2"></label>
                         <img src="" class="eloInvocadorPerfilReserva-2">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogadorReserva-2">Remover</button>
                     </div>
+                    <hr>
                     <div class="divPlayers divJogadorReserva-3">
                         <img src="" class="perfilImageJogadorReserva-3 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogadorReserva-3"></label>
-                        <input type="text" class="perfilNomeJogadorReserva-3" readonly placeholder="Jogador Reserva 3">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogadorReserva-3" readonly placeholder="Jogador Reserva 3">
+                        <label class="perfilInvocador perfilInvocadorReserva-3"></label>
                         <img src="" class="eloInvocadorPerfilReserva-3">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogadorReserva-3">Remover</button>
                     </div>
-                    <div class="divPlayers divJogadorReserva-1">
+                    <hr>
+                    <div class="divPlayers divJogadorReserva-4">
                         <img src="" class="perfilImageJogadorReserva-4 perfilImageJogador">
                         <label class="lblPlayers perfilRotaJogadorReserva-4"></label>
-                        <input type="text" class="perfilNomeJogadorReserva-4" readonly placeholder="Jogador Reserva 4">
+                        <input type="text" class="perfilNomeJogador perfilNomeJogadorReserva-4" readonly placeholder="Jogador Reserva 4">
+                        <label class="perfilInvocador perfilInvocadorReserva-4"></label>
                         <img src="" class="eloInvocadorPerfilReserva-4">
+                        <button type="button" class="creatorConnected-Remove btn btn-danger btnRemoverJogador btnRemoverJogadorReserva-4">Remover</button>
                     </div>
                 </div>
                 <div class="divTeamInformation">
@@ -204,25 +241,134 @@
                     </div>
                     <hr>
                     <div class="creatorConnected teamTools">
-                        <p class="btnTools addPlayer">• Adicionar Jogadores</p>
-                        <p class="btnTools addReserva">• Adicionar Reserva</p>
-                        <p class="btnTools addStaff">• Adicionar Staff</p>
-                        <hr>
-                        <p class="btnTools removePlayer">• Remover Jogadores</p>
-                        <p class="btnTools removeReserva">• Remover Reserva</p>
-                        <p class="btnTools removeStaff">• Remover Staff</p>
-                        <hr>
-                        <p class="btnTools editInformation">• Editar Informações</p>
-                        <hr>
-                        <p class="btnTools removeTeam">• Apagar Time</p>
+                        <p class="btnTools addPlayer btn btn-dark">Adicionar Jogadores</p>
+                        <p class="btnTools addReserva btn btn-dark">Adicionar Reserva</p>
+                        <p class="btnTools addStaff btn btn-dark">Adicionar Staff</p>
+                        <hr class="myhr">
+                        <p class="btnTools editInformation btn btn-dark" data-bs-toggle="modal" data-bs-target="#editInformation">Editar Informações</p>
+                        <hr class="myhr">
+                        <p class="btnTools removeTeam btn btn-danger">Apagar Time</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="editInformation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Informações</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <label>Nome da Organização</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control editarNome" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <label>Tag da Organização</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control editarTag" minlength="2" maxlength="4" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <label>Logo da Organização</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control editarLogo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary salvarMudancasTeam">Salvar Mudanças</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addPlayer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="exampleModalLabel">Adicionar Jogador</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <label>Nome do Usuário</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control callUser" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <hr>
+            <label>Rota</label>
+            <select class="form-select bg-dark text-white selectPlayerLane" aria-label="Topo">
+              <option class="Rota-1" value="Topo">Topo</option>
+              <option class="Rota-2" value="Selva">Selva</option>
+              <option class="Rota-3" value="Meio">Meio</option>
+              <option class="Rota-4" value="Atirador">Atirador</option>
+              <option class="Rota-5" value="Suporte">Suporte</option>
+            </select>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary callPlayerToTeam">Chamar Jogador</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addStaff" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="exampleModalLabel">Adicionar Staff</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <label>Nome do Usuário</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control callStaffUser" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <hr>
+            <label>Função</label>
+            <select class="form-select bg-dark text-white selectStaffFunction" aria-label="Topo">
+              <option class="Funcao-1" value="Técnico">Técnico</option>
+              <option class="Funcao-2" value="Analista">Analista</option>
+            </select>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary callStaffToTeam">Chamar Staff</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addReserva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="exampleModalLabel">Adicionar Reserva</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <label>Nome do Usuário</label>
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control callReservaUser" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <hr>
+            <label>Rota</label>
+            <select class="form-select bg-dark text-white selectReservaLane" aria-label="Topo">
+              <option class="RotaR-1" value="Topo">Topo</option>
+              <option class="RotaR-2" value="Selva">Selva</option>
+              <option class="RotaR-3" value="Meio">Meio</option>
+              <option class="RotaR-4" value="Atirador">Atirador</option>
+              <option class="RotaR-5" value="Suporte">Suporte</option>
+            </select>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary callReservaToTeam">Chamar Reserva</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./js/navegacao/nav.js"></script>
 <script src="./js/myteam/script.js"></script>
 </html>

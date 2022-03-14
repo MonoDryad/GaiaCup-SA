@@ -48,7 +48,6 @@ function callAdmins(addAdmins){
   for(let i = 0;i < administradores.length;i++){
     adminAccounts.push(administradores[i])
   }
-  console.log(adminAccounts)
   localStorage.setItem('admin',JSON.stringify(adminAccounts))
 }
 
@@ -59,6 +58,21 @@ $('.iniciarSessao, .cadastrarSe').on('click', function(){
       localStorage.setItem('Cadastro', '2')
   }
 })
+
+const completePerfil = Swal.mixin({
+  toast: true,
+  position: 'top-start',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true
+})
+
+if(JSON.parse(localStorage.getItem('ContaConectada')).invocador == null){
+  completePerfil.fire({
+    icon: 'info',
+    title: 'Você ainda não vinculou um invocador à sua conta!'
+  })
+}
 
 if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
   $('.connected').show()
@@ -75,12 +89,10 @@ if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
     for(let i = 0; i < allAccounts.length;i++){
       if(allAccounts[i].username == userAccount.username){
         allAccounts.splice(i, 1, userAccount)
-        console.log(allAccounts)
         localStorage.setItem('contas',JSON.stringify(allAccounts))
         break
       }
     }
-    console.log(allAccounts.indexOf(userAccount.username))
     $('.userImage').attr('src', `${JSON.parse(localStorage.getItem('ContaConectada')).icon}`)
   });
   if(JSON.parse(localStorage.getItem('ContaConectada')).isAdmin == true){
@@ -92,7 +104,15 @@ if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
   $('.connected').hide()
 }
 
+
 $('.disconnectFromAccount').on('click', function(){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+  for(let iC;iC < contas.length; iC++){
+    if(JSON.parse(localStorage.getItem('ContaConectada')).username == contas[iC].username){
+        contas[iC].isConnected = false
+        localStorage.setItem('contas',JSON.stringify(contas))
+    }
+  }
   localStorage.removeItem('ContaConectada')
   location.reload(true);
 })
