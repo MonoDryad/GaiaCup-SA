@@ -1,5 +1,6 @@
 // * // * // * SCRIPT * \\ * \\ * \\
 $('.creatorConnected, .divTeam, .divCreatingTeam, .btnRemoverJogador, .creatorConnected-Remove, .divNoTeam, .divFindTeam').hide()
+$('.divFindTeamContainer').css('height', $(document).height() + 120 + 'px')
 
 $('.goCreate').on('click', function(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []

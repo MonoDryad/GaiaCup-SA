@@ -279,8 +279,6 @@ body, html{
     background: linear-gradient(135deg, #00000055 25%, transparent 25%) -4px 0/ 8px 8px, linear-gradient(225deg, #000000 25%, transparent 25%) -4px 0/ 8px 8px, linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 8px 8px, linear-gradient(45deg, #000000 25%, #090909 25%) 0px 0/ 8px 8px;
     padding-bottom: 0.5%;
     padding-top: 4%;
-    height: 110vh;
-    overflow: hidden;
 }
 
 .imgTeamFind{
