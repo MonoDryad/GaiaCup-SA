@@ -909,7 +909,7 @@ const playerSuccessfully = Swal.mixin({
     timer: 1500,
 })
 
-
+pushTeams()
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
     let time0 = {
@@ -1088,11 +1088,14 @@ function pushTeams(){
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
-    teams.pop()
-    teams.pop()
-    teams.push(time0)
-    teams.push(time1)
-    
+    for(let i = 0; i < teams.length;i++){
+        if(teams[i].nomeDaOrg == time0.nomeDaOrg){
+            teams.splice(i, 1, time0)
+        }else if(teams[i].nomeDaOrg == time1.nomeDaOrg){
+            teams.splice(i, 1, time1)
+        }
+    }
+
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
