@@ -157,7 +157,7 @@ body, html{
 }
 
 .MyTeam-Title{
-    margin-top: 4%;
+    margin-top: 2%;
     text-align: center;
     font-family: OpenSansRegular;
 }
@@ -265,7 +265,9 @@ body, html{
 }
 
 .divFindTeamContainer{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(34, 34, 34);
+    padding-bottom: 4%;
+    padding-top: 4%;
 }
 
 .imgTeamFind{
@@ -350,6 +352,19 @@ body, html{
 
 .playerRotaSee{
     color: #868686;
+}
+
+.titleFindTeam{
+    text-align: center;
+}
+
+.letItBeResponsive{
+    border: 1px rgb(44, 44, 44) solid;
+    padding: 0.4%;
+}
+
+.divSeeTeamInfo{
+    background-color: #2b2c2c !important;
 }
 
 @keyframes input-goup-login {
@@ -468,6 +483,24 @@ body, html{
 }
 
 @media screen and (max-width: 733px) {
+
+    .divSeeTeamInfo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divSubSeeTeamInfo{
+        width: 100%;
+        /* border: 1px red solid; */
+    }
+
+    .offcanvas-bottom{
+        height: 100% !important;
+    }
+
+    .SeeTeamHeader{
+        height: 20%;
+    }
 
     .teamsGoHere{
         display: flex;

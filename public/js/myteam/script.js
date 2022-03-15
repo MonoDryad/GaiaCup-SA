@@ -774,8 +774,8 @@ function seeTeam(teamFinded){
             $('.customCanvasGoHere').append(`
             <button class="trigger-${i} removeIt " type="button" data-bs-toggle="offcanvas" data-bs-target="#${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-controls="offcanvasBottom"></button>
 
-            <div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-labelledby="offcanvasBottomLabel">
-                <div class="offcanvas-header">
+            <div class="offcanvas offcanvas-bottom bg-dark" data-bs-scroll="false" tabindex="-1" id="${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header SeeTeamHeader">
                     <img class='imgTeamFind-offcanvas' src='${teams[i].logoDaOrg}'>
                     <label class="offcanvas-title bigText-TeamName" id="offcanvasBottomLabel">${teams[i].nomeDaOrg} <label class="smallText-TagTeam"> ${teams[i].tagDaOrg}</label></label>
                     <button type="button" class="btn-close  btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
