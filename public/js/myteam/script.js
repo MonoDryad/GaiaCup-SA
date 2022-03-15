@@ -987,14 +987,113 @@ function pushTeams(){
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
         ],
-        reservas: [],
+        reservas: 
+        [
+            {
+                username: 'Raphael',
+                email: 'raphael@gmail.com',
+                senha: 'raphael',
+                invocador: 'Raphael da UFES',
+                rota: 'Suporte',
+                codigo: 510,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon2098.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
         criadoPor: 'Mono Dryad',
         userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
         dataCriacao: '14/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
+    let time1 = {
+        nomeDaOrg: 'Equipe 7 Gaming',
+        tagDaOrg: 'E7',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/5d945835-931f-45d0-882a-e09545fbde93/e7%20(1).png',
+        staff: [],
+        jogadores: 
+        [
+            {
+                username: '2noé',
+                email: '2noé@gmail.com',
+                senha: '2noé',
+                invocador: '2noé',
+                rota: 'Topo',
+                codigo: 600,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon1386.png',
+                isAdmin: false,
+                team: 'Equipe 7 Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Divine Itachi',
+                email: 'DivineItachi@gmail.com',
+                senha: 'DivineItachi',
+                invocador: 'Divine Itachi',
+                rota: 'Meio',
+                codigo: 602,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon4902.png',
+                isAdmin: false,
+                team: 'Equipe 7 Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Lee Gumayusi',
+                email: 'LeeGumayusi@gmail.com',
+                senha: 'LeeGumayusi',
+                invocador: 'Lee Gumayusi',
+                rota: 'Atirador',
+                codigo: 603,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon709.png',
+                isAdmin: false,
+                team: 'Equipe 7 Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'E7Jorgerous',
+                email: 'E7Jorgerous@gmail.com',
+                senha: 'E7Jorgerous',
+                invocador: 'E7 Jorgerous',
+                rota: 'Suporte',
+                codigo: 604,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon4860.png',
+                isAdmin: false,
+                team: 'Equipe 7 Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: 
+        [
+            {
+                username: 'come to 1v1',
+                email: 'cometo1v1@gmail.com',
+                senha: 'cometo1v1',
+                invocador: 'come to 1v1',
+                rota: 'Indefinido',
+                codigo: 510,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon4552.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '15/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
+    teams.pop()
     teams.pop()
     teams.push(time0)
+    teams.push(time1)
     
     localStorage.setItem('teams', JSON.stringify(teams))
 }
