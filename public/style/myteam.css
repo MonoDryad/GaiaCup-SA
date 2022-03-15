@@ -278,7 +278,78 @@ body, html{
 .teamsGoHere{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 3%;
+    margin-top: 2%;
+}
+
+.removeIt{
+    opacity: 0%;
+    display: none;
+}
+
+.imgTeamFind-offcanvas{
+    border-radius: 50%;
+    border: 1px gray solid;
+    width: 64px;
+    height: 64px;
+}
+
+.smallText-TagTeam{
+    font-size: 14px !important;
+    color: gray;
+}
+
+.tagFindTeams{
+    color: gray;
+}
+
+.bigText-TeamName{
+    font-size: 24px !important;
+}
+
+.offcanvas-bottom{
+    height: 90% !important;
+}
+
+.divSeeTeamInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.divSubSeeTeamInfo{
+    width: 33%;
+    /* border: 1px red solid; */
+}
+
+.seeTitleSide{
+    text-align: center;
+}
+
+.seePlayersShowing{
+    display: flex;
+    flex-direction: column;
+}
+
+.myIconSeeTeam{
+    width: 15%;
+    border-radius: 50%;
+    border: 1px gray solid;
+    margin-right: 4%;
+}
+
+.playerUsernameSee{
+    font-size: larger
+}
+
+.playerRotaSee, .playerInvocadorSee{
+    margin-left: 13%;
+
+}
+
+.playerRotaSee{
+    color: #868686;
 }
 
 @keyframes input-goup-login {
@@ -397,6 +468,25 @@ body, html{
 }
 
 @media screen and (max-width: 733px) {
+
+    .teamsGoHere{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        margin-top: 2%;
+    }
+
+    .letItBeResponsive{
+        width: 30% !important;
+        margin-top: 4%;
+    }
+
+    .imgTeamFind{
+        width: 64px;
+        height: 64px;
+    }
 
     .responsivevr{
         display: none !important;

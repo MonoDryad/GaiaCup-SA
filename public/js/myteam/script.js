@@ -73,7 +73,8 @@ let connectedTeam
 
 $(document).ready(function(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
-
+    $('.divNoAccount').hide()
+    $('.divNoTeam').show()
     if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
         $('.divNoAccount').hide()
         $('.divNoTeam').show()
@@ -86,9 +87,12 @@ $(document).ready(function(){
             }
         }
     }else{
-        $('.divNoAccount').show()
+        $('.divNoAccount').hide()
+        $('.divNoTeam').show()
     }
 })
+
+// MUDAR ACIMA!!!!
 
 function myteam(){
     for(let i = 0;i < JSON.parse(localStorage.getItem('teams')).length; i++ ){
@@ -747,50 +751,108 @@ function findTeam() {
     for(let i = 0; i < teams.length;i++){
         let teamToFind = i
         $('.teamsGoHere').append(`
-        <div style="width: 15%;">
+        <div class="letItBeResponsive" style="width: 15%; margin: 1%;">
             <div class="${teams[i].nomeDaOrg.replaceAll(' ','')}" style="text-align: center">
                 <img class='imgTeamFind' src='${teams[i].logoDaOrg}' >
                 <h5>${teams[i].nomeDaOrg}</h5>
-                <p>${teams[i].tagDaOrg}</p>
+                <p class="tagFindTeams">${teams[i].tagDaOrg}</p>
                 <button onclick='seeTeam(${teamToFind})' class="btn btn-dark seeTeam-${i}">Ver Time</button>
             </div>
         </div>`)
-
     }
 }
 
 function seeTeam(teamFinded){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
+
     for(let i = 0; i < teams.length;i++){
         if($(`.seeTeam-${teamFinded}`).parent().hasClass(`${teams[i].nomeDaOrg.replaceAll(' ','')}`)){
+            console.log($(`.removeIt`).hasClass(`trigger-${i}`))
+            if($(`.removeIt`).hasClass(`trigger-${i}`) ){
+                $(`.trigger-${i}`).trigger('click')
+                return
+            }
             $('.customCanvasGoHere').append(`
-            <button class="trigger-${i}" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"></button>
+            <button class="trigger-${i} removeIt " type="button" data-bs-toggle="offcanvas" data-bs-target="#${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-controls="offcanvasBottom"></button>
 
-            <div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-labelledby="offcanvasBottomLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">${teams[i].nomeDaOrg}</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <img class='imgTeamFind-offcanvas' src='${teams[i].logoDaOrg}'>
+                    <label class="offcanvas-title bigText-TeamName" id="offcanvasBottomLabel">${teams[i].nomeDaOrg} <label class="smallText-TagTeam"> ${teams[i].tagDaOrg}</label></label>
+                    <button type="button" class="btn-close  btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body small">
-                ...
+                <label style="text-align: center;">Criado por: ${teams[i].criadoPor} ${teams[i].userBadge} - ${teams[i].dataCriacao}</label>
+                <hr>
+                <div class="offcanvas-body divSeeTeamInfo large">
+                    <div class="divSubSeeTeamInfo divSeePlayers">
+                        <hr>
+                        <h5 class="seeTitleSide">Jogadores</h5>
+                        <hr>
+                        ${callPlayer(teams[i].jogadores.length, i)}
+                    </div>
+                    <div class="divSubSeeTeamInfo divSeeReservas">
+                        <hr>
+                        <h5 class="seeTitleSide">Reservas</h5>
+                        <hr>
+                        ${callReservas(teams[i].reservas.length, i)}
+                    </div>
+                    <div class="divSubSeeTeamInfo divSeeStaffs">
+                        <hr>
+                        <h5 class="seeTitleSide">Staff</h5>
+                        <hr>
+                        ${callStaff(teams[i].staff.length, i)}
+                    </div>
                 </div>
-            </div>`).
+            </div>`)
             $(`.trigger-${i}`).trigger('click')
         }
     }
 }
 
+function callPlayer(teamSize, teamPosition){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let whatWillGoToAppend = ``
 
+    for(let i = 0; i < teamSize; i++){
+        whatWillGoToAppend += `<div class="seePlayersShowing player-${i}"> \n`
+        whatWillGoToAppend += `<label class="playerRotaSee player-${i}-rota">${teams[teamPosition].jogadores[i].rota}</label> \n`
+        whatWillGoToAppend += `<label class="player-${i}-username playerUsernameSee"><img class="player-${i}-icon myIconSeeTeam" src="${teams[teamPosition].jogadores[i].icon}">${teams[teamPosition].jogadores[i].username}</label> \n`
+        whatWillGoToAppend += `<label class="playerInvocadorSee player-${i}-invocador">${teams[teamPosition].jogadores[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].jogadores[i].invocador}">League of Graphs</a></label> \n`
+        whatWillGoToAppend += `</div>
+        <hr>`
+    }
+    return whatWillGoToAppend
+}
 
+function callReservas(teamSize, teamPosition){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let whatWillGoToAppend = ``
 
+    for(let i = 0; i < teamSize; i++){
+        whatWillGoToAppend += `<div class="seePlayersShowing reserva-${i}"> \n`
+        whatWillGoToAppend += `<label class="playerRotaSee reserva-${i}-rota">${teams[teamPosition].reservas[i].rota}</label> \n`
+        whatWillGoToAppend += `<label class="reserva-${i}-username playerUsernameSee"><img class="reserva-${i}-icon myIconSeeTeam" src="${teams[teamPosition].reservas[i].icon}">${teams[teamPosition].reservas[i].username}</label> \n`
+        whatWillGoToAppend += `<label class="playerInvocadorSee reserva-${i}-invocador">${teams[teamPosition].reservas[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].reservas[i].invocador}">League of Graphs</a></label> \n`
+        whatWillGoToAppend += `</div>
+        <hr>`
+    }
+    return whatWillGoToAppend
+}
 
+function callStaff(teamSize, teamPosition){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let whatWillGoToAppend = ``
 
-
-
-
-
-
-
+    for(let i = 0; i < teamSize; i++){
+        whatWillGoToAppend += `<div class="seePlayersShowing staff-${i}"> \n`
+        whatWillGoToAppend += `<label class="playerRotaSee staff-${i}-rota">${teams[teamPosition].staff[i].rota}</label> \n`
+        whatWillGoToAppend += `<label class="staff-${i}-username playerUsernameSee"><img class="staff-${i}-icon myIconSeeTeam" src="${teams[teamPosition].staff[i].icon}">${teams[teamPosition].staff[i].username}</label> \n`
+        whatWillGoToAppend += `<label style="opacity: 0%" class="playerInvocadorSee reserva-${i}-invocador">${teams[teamPosition].reservas[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].reservas[i].invocador}">League of Graphs</a></label> \n`
+        whatWillGoToAppend += `</div>
+        <hr>`
+    }
+    return whatWillGoToAppend
+}
 
 
 // * // * // * PAGE FUNCTIONALITY * \\ * \\ * \\
@@ -848,3 +910,96 @@ const playerSuccessfully = Swal.mixin({
     showConfirmButton: false,
     timer: 1500,
 })
+
+pushTeams()
+function pushTeams(){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let time0 = {
+        nomeDaOrg: 'KINGSMAN EsportS',
+        tagDaOrg: 'KNS',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/3b528993-be69-414c-b3e5-ba6e75de2fc5/Logo.png',
+        staff: [],
+        jogadores: 
+        [
+            {
+                username: 'Geterwin',
+                email: 'geterwin@gmail.com',
+                senha: 'geterwin',
+                invocador: 'Geterwin',
+                rota: 'Topo',
+                codigo: 500,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon654.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Dioniso',
+                email: 'dioniso@gmail.com',
+                senha: 'dioniso',
+                invocador: 'Dioniso',
+                rota: 'Selva',
+                codigo: 501,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5229.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Tyrantrum',
+                email: 'tyrantrum@gmail.com',
+                senha: 'tyrantrum',
+                invocador: 'Tyrantrum',
+                rota: 'Meio',
+                codigo: 502,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon3152.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Hearth Moon',
+                email: 'hearthMoon@gmail.com',
+                senha: 'hearthMoon',
+                invocador: 'Hearth Moon',
+                rota: 'Atirador',
+                codigo: 503,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon4618.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Piveta',
+                email: 'Piveta@gmail.com',
+                senha: 'Piveta',
+                invocador: 'Piveta',
+                rota: 'Suporte',
+                codigo: 504,
+                isConnected: false,
+                icon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon4631.png',
+                isAdmin: false,
+                team: 'KINGSMAN EsportS',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '14/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+    for(let i = 0; i < teams.length;i++){
+        if(teams[i].nomeDaOrg != time0){
+            
+        }else{
+            teams.push(time0)
+        }
+    }
+    
+    localStorage.setItem('teams', JSON.stringify(teams))
+}
