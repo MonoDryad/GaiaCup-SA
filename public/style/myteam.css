@@ -7,7 +7,7 @@ body{
 }
 
 ::-webkit-scrollbar{
-    display: none;
+    opacity: 0%;
 }
 
 body, html{
@@ -36,6 +36,10 @@ body, html{
     align-items: flex-end;
     gap: 1%;
     border-bottom: 1px grey solid;
+}
+
+.FindTeam-Title{
+    text-align: center;
 }
 
 .h2TeamHeaderName{
@@ -269,9 +273,14 @@ body, html{
 }
 
 .divFindTeamContainer{
-    background-color: rgb(34, 34, 34);
-    padding-bottom: 4%;
+    background-color: #090909;
+    background-color: #090909;
+    opacity: 1;
+    background: linear-gradient(135deg, #00000055 25%, transparent 25%) -4px 0/ 8px 8px, linear-gradient(225deg, #000000 25%, transparent 25%) -4px 0/ 8px 8px, linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 8px 8px, linear-gradient(45deg, #000000 25%, #090909 25%) 0px 0/ 8px 8px;
+    padding-bottom: 0.5%;
     padding-top: 4%;
+    height: 110vh;
+    overflow: hidden;
 }
 
 .imgTeamFind{
@@ -288,7 +297,6 @@ body, html{
     align-items: center;
     justify-content: center;
     gap: 3%;
-    margin-top: 2%;
 }
 
 .removeIt{

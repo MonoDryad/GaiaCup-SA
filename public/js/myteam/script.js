@@ -863,6 +863,8 @@ $('.btnCreateTeam').on('click', function(){
 $('.btnSearchTeam').on('click', function(){
     $('.divNoTeam').hide()
     $('.divFindTeam').show()
+    $('.MyTeam-Title').hide()
+    $('.container-myteam').hide()
     findTeam()
 })
 
@@ -1099,8 +1101,8 @@ function pushTeams(){
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
-$(document).ready(function(){
+setInterval(function () {
     $('.container-myteam').css('opacity', '100%')
-    $('::-webkit-scrollbar').css('display', `block`)
+    $('::-webkit-scrollbar').css('opacity', `100%`)
     $('.loading').hide()
-})
+}, 2000)
