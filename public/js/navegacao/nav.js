@@ -67,14 +67,24 @@ const completePerfil = Swal.mixin({
   timerProgressBar: true
 })
 
-if(JSON.parse(localStorage.getItem('ContaConectada')).invocador == null){
+let conectada
+
+try{
+  conectada = JSON.parse(localStorage.getItem('ContaConectada')) || {}
+}catch{
+  conectada.invocador = null
+  conectada.isConnected = false
+}
+
+
+if(conectada.invocador == null){
   completePerfil.fire({
     icon: 'info',
     title: 'Você ainda não vinculou um invocador à sua conta!'
   })
 }
 
-if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
+if(conectada.isConnected == true){
   $('.connected').show()
   $('.detectIfIsConnected').hide()
   $('.contaConectada').html(`${JSON.parse(localStorage.getItem('ContaConectada')).username} ${JSON.parse(localStorage.getItem('ContaConectada')).badge}`)

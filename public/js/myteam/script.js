@@ -73,9 +73,8 @@ let connectedTeam
 
 $(document).ready(function(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
-    $('.divNoAccount').hide()
-    $('.divNoTeam').show()
-    if(JSON.parse(localStorage.getItem('ContaConectada')).isConnected == true){
+    let contaConectada = JSON.parse(localStorage.getItem('ContaConectada')) || false
+    if(contaConectada.isConnected == true){
         $('.divNoAccount').hide()
         $('.divNoTeam').show()
         for(let i = 0; i < teams.length;i++){
@@ -911,6 +910,7 @@ const playerSuccessfully = Swal.mixin({
     timer: 1500,
 })
 
+
 pushTeams()
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
@@ -993,13 +993,8 @@ function pushTeams(){
         dataCriacao: '14/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
-    for(let i = 0; i < teams.length;i++){
-        if(teams[i].nomeDaOrg != time0){
-            
-        }else{
-            teams.push(time0)
-        }
-    }
+    teams.pop()
+    teams.push(time0)
     
     localStorage.setItem('teams', JSON.stringify(teams))
 }
