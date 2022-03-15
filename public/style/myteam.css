@@ -6,6 +6,10 @@ body{
     background-size: cover;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 body, html{
     padding: 0;
     margin: 0;
@@ -162,7 +166,7 @@ body, html{
     font-family: OpenSansRegular;
 }
 
-.divCreatingTeam{
+.divCreatingTeam, .loading{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -210,7 +214,7 @@ body, html{
     color: #707677;
     position: absolute;
     margin-top: -2%;
-    margin-left: -7%;
+    margin-left: -5%;
     width: 100%;
 }
 
@@ -275,6 +279,7 @@ body, html{
     border: 1px gray solid;
     width: 7vw;
     height: 7vw;
+    background-color: #868686;
 }
 
 .teamsGoHere{
@@ -289,6 +294,7 @@ body, html{
 .removeIt{
     opacity: 0%;
     display: none;
+    position: absolute;
 }
 
 .imgTeamFind-offcanvas{
@@ -296,6 +302,7 @@ body, html{
     border: 1px gray solid;
     width: 64px;
     height: 64px;
+    background-color: #b9b9b9;
 }
 
 .smallText-TagTeam{
@@ -313,6 +320,11 @@ body, html{
 
 .offcanvas-bottom{
     height: 90% !important;
+    width: auto;
+}
+
+.offcanvas-bottom ::-webkit-scrollbar{
+    display: none;
 }
 
 .divSeeTeamInfo{
@@ -359,8 +371,9 @@ body, html{
 }
 
 .letItBeResponsive{
-    border: 1px rgb(44, 44, 44) solid;
+    border: 1px rgb(65, 65, 65) solid;
     padding: 0.4%;
+    background-color: #2c2c2c;
 }
 
 .divSeeTeamInfo{
@@ -375,7 +388,7 @@ body, html{
   
     to{
         margin-top: -2%;
-        margin-left: -7%;
+        margin-left: -5%;
     }
 }
 

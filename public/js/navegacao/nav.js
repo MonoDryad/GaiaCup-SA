@@ -9,7 +9,7 @@ function callAdmins(addAdmins){
         username: 'monodryad' ,
         email: 'rair2544@gmail.com',
         senha: 'sudoadmin',
-        invocador: null,
+        invocador: 'null',
         codigo: 1,
         isConnected: false,
         icon: null,
@@ -72,12 +72,12 @@ let conectada
 try{
   conectada = JSON.parse(localStorage.getItem('ContaConectada')) || {}
 }catch{
-  conectada.invocador = null
+  conectada.invocador = 'null'
   conectada.isConnected = false
 }
 
 
-if(conectada.invocador == null){
+if(conectada.invocador == 'null'){
   completePerfil.fire({
     icon: 'info',
     title: 'Você ainda não vinculou um invocador à sua conta!'

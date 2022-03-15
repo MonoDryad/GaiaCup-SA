@@ -846,7 +846,6 @@ function callStaff(teamSize, teamPosition){
         whatWillGoToAppend += `<div class="seePlayersShowing staff-${i}"> \n`
         whatWillGoToAppend += `<label class="playerRotaSee staff-${i}-rota">${teams[teamPosition].staff[i].rota}</label> \n`
         whatWillGoToAppend += `<label class="staff-${i}-username playerUsernameSee"><img class="staff-${i}-icon myIconSeeTeam" src="${teams[teamPosition].staff[i].icon}">${teams[teamPosition].staff[i].username}</label> \n`
-        whatWillGoToAppend += `<label style="opacity: 0%" class="playerInvocadorSee reserva-${i}-invocador">${teams[teamPosition].reservas[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].reservas[i].invocador}">League of Graphs</a></label> \n`
         whatWillGoToAppend += `</div>
         <hr>`
     }
@@ -911,7 +910,6 @@ const playerSuccessfully = Swal.mixin({
 })
 
 
-pushTeams()
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
     let time0 = {
@@ -1097,3 +1095,9 @@ function pushTeams(){
     
     localStorage.setItem('teams', JSON.stringify(teams))
 }
+
+$(document).ready(function(){
+    $('.container-myteam').css('opacity', '100%')
+    $('::-webkit-scrollbar').css('display', `block`)
+    $('.loading').hide()
+})

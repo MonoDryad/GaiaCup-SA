@@ -7,7 +7,7 @@ $('.btnCadastro').click(function(){
         username: null,
         email: null,
         senha: null,
-        invocador: null,
+        invocador: 'null',
         codigo: null,
         isConnected: false,
         icon: null,
