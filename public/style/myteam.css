@@ -10,6 +10,8 @@ body{
     opacity: 0%;
 }
 
+.noScroll::-webkit-scrollbar-track
+
 body, html{
     padding: 0;
     margin: 0;
@@ -40,6 +42,7 @@ body, html{
 
 .FindTeam-Title{
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .h2TeamHeaderName{
@@ -84,6 +87,11 @@ body, html{
 .divTeamBody{
     display: flex;
     justify-content: space-between
+}
+
+.offcanvas-bottom{
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
 .perfilImageJogador{
@@ -281,6 +289,10 @@ body, html{
     padding-top: 4%;
 }
 
+.goSeeTeamBack{
+    text-align: center;
+}
+
 .imgTeamFind{
     border-radius: 50%;
     border: 1px gray solid;
@@ -291,7 +303,7 @@ body, html{
 
 .teamsGoHere{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap ;
     align-items: center;
     justify-content: center;
     gap: 3%;
@@ -300,7 +312,6 @@ body, html{
 .removeIt{
     opacity: 0%;
     display: none;
-    position: absolute;
 }
 
 .imgTeamFind-offcanvas{
@@ -329,7 +340,7 @@ body, html{
     width: auto;
 }
 
-.offcanvas-bottom ::-webkit-scrollbar{
+.offcanvas-bottom{
     display: none;
 }
 
@@ -374,6 +385,7 @@ body, html{
 
 .titleFindTeam{
     text-align: center;
+    margin: 2%;
 }
 
 .letItBeResponsive{

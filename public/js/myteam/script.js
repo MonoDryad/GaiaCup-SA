@@ -751,7 +751,7 @@ function findTeam() {
     for(let i = 0; i < teams.length;i++){
         let teamToFind = i
         $('.teamsGoHere').append(`
-        <div class="letItBeResponsive" style="width: 15%; margin: 1%;">
+        <div class="letItBeResponsive" style="width: 20%; margin-bottom: 2%;">
             <div class="${teams[i].nomeDaOrg.replaceAll(' ','')}" style="text-align: center">
                 <img class='imgTeamFind' src='${teams[i].logoDaOrg}' >
                 <h5>${teams[i].nomeDaOrg}</h5>
@@ -775,7 +775,7 @@ function seeTeam(teamFinded){
             $('.customCanvasGoHere').append(`
             <button class="trigger-${i} removeIt " type="button" data-bs-toggle="offcanvas" data-bs-target="#${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-controls="offcanvasBottom"></button>
 
-            <div class="offcanvas offcanvas-bottom bg-dark" data-bs-scroll="false" tabindex="-1" id="${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-labelledby="offcanvasBottomLabel">
                 <div class="offcanvas-header SeeTeamHeader">
                     <img class='imgTeamFind-offcanvas' src='${teams[i].logoDaOrg}'>
                     <label class="offcanvas-title bigText-TeamName" id="offcanvasBottomLabel">${teams[i].nomeDaOrg} <label class="smallText-TagTeam"> ${teams[i].tagDaOrg}</label></label>
@@ -850,6 +850,7 @@ function callStaff(teamSize, teamPosition){
         whatWillGoToAppend += `</div>
         <hr>`
     }
+    $('body, hmtl').toggleClass("noScroll")
     return whatWillGoToAppend
 }
 
