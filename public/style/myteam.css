@@ -6,6 +6,16 @@ body{
     background-size: cover;
 }
 
+.background-dark{
+    background-color: #0a0a0a48;
+    position: fixed;
+    top: 0;
+    z-index: 1400;
+    width: 100vw;
+    height: 100vh;
+}
+
+
 ::-webkit-scrollbar{
     opacity: 0%;
 }
@@ -178,7 +188,7 @@ body, html{
     font-family: OpenSansRegular;
 }
 
-.divCreatingTeam, .loading{
+.divCreatingTeam, .loading, .searchTeamLoading{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -290,7 +300,18 @@ body, html{
 }
 
 .goSeeTeamBack{
-    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.onlyAdmin{
+    width: 15%;
+    margin-top: 1% !important;
+    margin-bottom: 1%;
+    margin: auto;
 }
 
 .imgTeamFind{

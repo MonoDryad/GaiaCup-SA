@@ -1,6 +1,6 @@
 // * // * // * SCRIPT * \\ * \\ * \\
+$('.customBackground').hide()
 $('.creatorConnected, .divTeam, .divCreatingTeam, .btnRemoverJogador, .creatorConnected-Remove, .divNoTeam, .divFindTeam').hide()
-$('.divFindTeamContainer').css('height', $(document).height() + 120 + 'px')
 
 $('.goCreate').on('click', function(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
@@ -764,14 +764,22 @@ function findTeam() {
 
 function seeTeam(teamFinded){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
+    $('.customBackground').show()
 
     for(let i = 0; i < teams.length;i++){
         if($(`.seeTeam-${teamFinded}`).parent().hasClass(`${teams[i].nomeDaOrg.replaceAll(' ','')}`)){
-            console.log($(`.removeIt`).hasClass(`trigger-${i}`))
+            console.log('d')
             if($(`.removeIt`).hasClass(`trigger-${i}`) ){
                 $(`.trigger-${i}`).trigger('click')
+                $('.customBackground').hide()
+                console.log('v')
                 return
             }
+        }
+    }
+    for(let i = 0; i < teams.length;i++){
+        if($(`.seeTeam-${teamFinded}`).parent().hasClass(`${teams[i].nomeDaOrg.replaceAll(' ','')}`)){
+            console.log($(`.removeIt`).hasClass(`trigger-${i}`))
             $('.customCanvasGoHere').append(`
             <button class="trigger-${i} removeIt " type="button" data-bs-toggle="offcanvas" data-bs-target="#${teams[i].nomeDaOrg.replaceAll(' ','')}" aria-controls="offcanvasBottom"></button>
 
@@ -779,9 +787,11 @@ function seeTeam(teamFinded){
                 <div class="offcanvas-header SeeTeamHeader">
                     <img class='imgTeamFind-offcanvas' src='${teams[i].logoDaOrg}'>
                     <label class="offcanvas-title bigText-TeamName" id="offcanvasBottomLabel">${teams[i].nomeDaOrg} <label class="smallText-TagTeam"> ${teams[i].tagDaOrg}</label></label>
+
                     <button type="button" class="btn-close  btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <label style="text-align: center;">Criado por: ${teams[i].criadoPor} ${teams[i].userBadge} - ${teams[i].dataCriacao}</label>
+                <p class="btn btn-danger onlyAdmin">Remover Time</p>
                 <hr>
                 <div class="offcanvas-body divSeeTeamInfo large">
                     <div class="divSubSeeTeamInfo divSeePlayers">
@@ -804,8 +814,28 @@ function seeTeam(teamFinded){
                     </div>
                 </div>
             </div>`)
-            $(`.trigger-${i}`).trigger('click')
+            if($(`.removeIt`).hasClass(`trigger-${i}`) ){
+                $(`.trigger-${i}`).trigger('click')
+                $('.customBackground').hide()
+                console.log('v')
+                return
+            }
         }
+    }
+
+    let conectada
+
+    try{
+      conectada = JSON.parse(localStorage.getItem('ContaConectada')) || {}
+    }catch{
+        conectada.isAdmin = false
+        $('.onlyAdmin').hide()
+    }
+
+    if(conectada.isAdmin){
+        $('.onlyAdmin').show()
+    }else{
+        $('.onlyAdmin').hide()
     }
 }
 
@@ -867,12 +897,21 @@ $('.btnSearchTeam').on('click', function(){
     $('.divFindTeam').show()
     $('.MyTeam-Title').hide()
     $('.container-myteam').hide()
+    pushTeams()
     findTeam()
 })
 
 $('.goBack').on('click', function(){
     $('.divNoTeam').show()
     $('.divCreatingTeam').hide()
+})
+
+$('.goSeeTeamBack').on('click', function(){
+    $('.divNoTeam').show()
+    $('.divFindTeam').hide()
+    $('.MyTeam-Title').show()
+    $('.container-myteam').show()
+    $('.teamsGoHere').children().remove()
 })
 
 $('.createTeamTag, .createTeamName, .createTeamLogo').hide()
@@ -913,7 +952,7 @@ const playerSuccessfully = Swal.mixin({
     timer: 1500,
 })
 
-pushTeams()
+
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams')) || []
     let time0 = {
@@ -1097,9 +1136,15 @@ function pushTeams(){
             teams.splice(i, 1, time0)
         }else if(teams[i].nomeDaOrg == time1.nomeDaOrg){
             teams.splice(i, 1, time1)
+        }else if(teams[i].nomeDaOrg != time0.nomeDaOrg || teams[i].nomeDaOrg != time1.nomeDaOrg){
+
+            break
+        }else{
+
         }
     }
-
+    teams.push(time0)
+    teams.push(time1)
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 

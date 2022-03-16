@@ -1,3 +1,23 @@
+$('.divAlterarEmail, .divAlterarSenha, .divVincularInvocador').hide()
+
+$('.alterarEmail').on('click', function(){
+  $('.divAlterarEmail').show()
+  $('.divAlterarSenha').hide()
+  $('.divVincularInvocador').hide()
+})
+
+$('.alterarSenha').on('click', function(){
+  $('.divAlterarSenha').show()
+  $('.divAlterarEmail').hide()
+  $('.divVincularInvocador').hide()
+})
+
+$('.alterarInvocador').on('click', function(){
+  $('.divVincularInvocador').show()
+  $('.divAlterarSenha').hide()
+  $('.divAlterarEmail').hide()
+})
+
 function alterarSenha(){
 
     let conta = JSON.parse(localStorage.getItem('ContaConectada'))

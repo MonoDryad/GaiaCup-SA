@@ -20,13 +20,46 @@ body,html{
 .userGerenciamentoDeContas{
     display: flex;
     flex-direction: row;
-    background-color: rgb(46, 46, 46);
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.rightDisplayUser{
+    background-color: #222222;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.4px, #222222 0, #222222 50%);
+    width: 40%;
 }
 
 .leftDisplayUser{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #060606;
+    opacity: 1;
+    background-image: linear-gradient(45deg, #000000 50%, #060606 50%);
+    background-size: 4px 4px;
     padding-top: 2%;
     padding-bottom: 2%;
+    width: 30%;
+}
+
+.myBtn{
+    background-color: #060606;
+    opacity: 0.9;
+    background-image: linear-gradient(45deg, #131111 50%, #060606 50%);
+    background-size: 4px 4px;
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+
+.divAlterarEmail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.informationTitle{
+    text-align: center !important;
 }
