@@ -95,7 +95,7 @@ $('.btnEntrar').click(function(){
 $('.btnEntrarAdmin').click(function(){
     const allUsers = JSON.parse(localStorage.getItem('admin')) || []
     if(allUsers.find(function(contasLocais){return contasLocais.username == $('.inpUserNameAdmin').val()})){
-        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val()()})){
+        if(allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val()})){
             let loggedAccount = allUsers.find(function(contasLocais){return contasLocais.senha == $('.inpPasswordAdmin').val() && contasLocais.username == $('.inpUserNameAdmin').val()})
             loggedAccount.isConnected = true
             localStorage.setItem('ContaConectada',JSON.stringify(loggedAccount))
