@@ -1,8 +1,11 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('https://raw.communitydragon.org/12.3/plugins/rcp-fe-lol-clash/global/default/assets/images/background/background-worlds2021.jpg');
-    background-size: auto;
+    background-image: url('../images/background-shadow_isles.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body, html{
@@ -51,7 +54,7 @@ input{
     border-left: none;
     border-radius: 0px 10px 10px 0px;
     width: 40%;
-    background-image: url('../images/bg.gif');  
+    background-image: url('https://cdnportal.mobalytics.gg/production/2021/06/64779e0a-league-of-legends-game-bg.png');  
     background-repeat: no-repeat;
     background-size: cover;  
     padding: 2%;
@@ -156,18 +159,36 @@ input{
     z-index: 2;
 }
 
+.sideway-admin-textbottom{
+    background-color: rgb(255, 53, 53);
+    padding: 2%;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sideway-admin-textbottom:hover{
+    background-color: rgb(255, 29, 29);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.leagueoflegendsLogo{
+    width: 53%;
+}
+
+.logoLeague{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .container-admin-content{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
-    height: 25.5rem;
-}
-
-.sideway-admin-textbottom{
-    position: absolute;
-    bottom: 0;
+    margin-top: 50%;
 }
 
 .container-admin-invert{

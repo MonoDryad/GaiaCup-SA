@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <link rel="stylesheet" type="text/css" href="./style/gerenciamento.css">
-    <link rel="stylesheet" type="text/css" href="./style/nav.css">
-    <link rel="stylesheet" type="text/css" href="./style/global.css">
+    <link rel="stylesheet" href="./style/gerenciamento.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/global.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="shortcut icon" href="./images/New_logo.png" type="image/.png">
-
-
-    
-
-    <link rel="stylesheet" href="./gerenciamento.css">
     <title>Minha Conta | Gaia Cup</title>
 </head>
 <body>
@@ -80,42 +75,69 @@
           </div>
         </div>
     </nav>
+    <div class="divNoAccount">
+      <h2 class="needToSignin">Necessário estar conectado!</h2>
+      <h5>você pode se <a class="detectIfIsConnected cadastrarSe" href="./login.html">cadastrar</a> ou entrar com uma <a class="detectIfIsConnected iniciarSessao" href="./login.html">conta existente.</a></h5>   
+    </div>
     <div class="containerGerenciamentoDeContas-User">
-        <h2 class="account-Title">Gerenciamento de Conta</h2>
         <div class="userGerenciamentoDeContas">
             <div class="leftDisplayUser">
-                <a class="btn myBtn alterarEmail">Alterar E-mail</a>
-                <a class="btn myBtn alterarSenha">Alterar Senha</a>
-                <a class="btn myBtn vincularInvocador">Invocador</a>
-                <label for="informacao"><input type="checkbox" id="caixinha" name="informacao">Receber notícias da Gaia Cup no seu E-mail</label>
+              <h2 class="gerenciamento-Title">Gerenciamento de Conta</h2>
+              <hr>
+              <a class="myBtn alterarEmail">Alterar E-mail</a>
+              <hr>
+              <a class="myBtn alterarSenha">Alterar Senha</a>
+              <hr>
+              <a class="myBtn vincularInvocador">Invocador</a>
+              <hr>
+              <a class="myBtnAdmin adminOnly findUsers">Usuários registrados</a>
+              <hr class="adminOnly">
+              <label class="receiveEmailGaiaCup"><input type="checkbox" class="receiveEmailGaiaCup">Receber notícias da Gaia Cup no seu E-mail</label>
             </div>
             <div class="rightDisplayUser">
                 <div class="divAlterarEmail">
                   <div class="informations myEmail">
                     <h5 class="informationTitle">Trocar E-mail</h5>
-                    <p>E-mail atual</p>
-                    <input readonly class="actualEmail">
-                    <p>Novo E-mail</p>
-                    <input readonly class="newEmail">
+                    <label>E-mail atual</label>
+                    <input readonly class="inpChangeAccount actualEmail">
+                    <label>Novo E-mail</label>
+                    <input class="inpChangeAccount newEmail">
+                    <label class="btn btn-primary changeEmail">Confirmar mudanças</label>
                   </div>
                 </div>
                 <div class="divAlterarSenha">
-                  <div class="informations myEmail">
-                    
+                  <div class="informations myPassword">
+                    <h5 class="informationTitle">Trocar Senha</h5>
+                    <label>Senha atual</label>
+                    <input type="password" readonly class="inpChangeAccount actualPassword">
+                    <label>Nova senha</label>
+                    <input type="password" class="inpChangeAccount newPassword">
+                    <label>Confirme a nova senha</label>
+                    <input type="password" class="inpChangeAccount confirmNewPassword">
+                    <div class="showPassword" >
+                      <label class="seePasswordCheckboxlabel"><input class="seePasswordCheckbox" type="checkbox">Mostrar senha</label>
+                    </div>
+                    <p class="btn btn-primary changePassword">Confirmar mudanças</p>
                   </div>
                 </div>
                 <div class="divVincularInvocador">
-                  <div class="informations myEmail">
-                    
+                  <div class="informations mySummoner">
+                    <h5 class="informationTitle">Invocador</h5>
+                    <label>Invocador atual</label>
+                    <input readonly class="inpChangeAccount actualSummoner">
+                    <label>Novo invocador</label>
+                    <input class="inpChangeAccount newSummoner">
+                    <p class="btn btn-primary changeSummoner">Confirmar mudanças</p>
                   </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="./js/gerenciamentoContas/gerenciamento.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script src="./js/gerenciamentoContas/gerenciamento.js"></script>
 <script src="./js/navegacao/nav.js"></script>
 </html>
