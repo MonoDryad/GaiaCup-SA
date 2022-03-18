@@ -282,6 +282,7 @@ function seeUser(contaEncontrada){
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
               <button type="button" class="btn btn-primary" onclick="saveUser(${i})">Salvar Mudanças</button>
+              <button type="button" class="btn btn-danger" onclick="deleteUser(${i})" data-bs-dismiss="modal">Remover Usuário</button>
             </div>
           </div>
         </div>
@@ -321,17 +322,28 @@ function callAccountError(contaErro){
 
 function saveUser(contaModificada){
   let contas = JSON.parse(localStorage.getItem('contas')) || []
+    contas[contaModificada].username = $('.inputModifyUsername').val()
+    contas[contaModificada].email = $('.inputModifyEmail').val()
+    contas[contaModificada].senha = $('.inputModifyPassword').val()
+    contas[contaModificada].invocador = $('.inputModifySummoner').val()
 
-  for(let i = 0; i < contas.length;i++){
-    console.log(i, contaModificada)
-    if(contas[i].username == contas[contaModificada].username){
-      contas[i].username = $('.inputModifyUsername').val()
-      contas[i].email = $('.inputModifyEmail').val()
-      contas[i].senha = $('.inputModifyPassword').val()
-      contas[i].invocador = $('.inputModifySummoner').val()
+    localStorage.setItem('contas', JSON.stringify(contas))
+    location.reload(true)
+}
 
+function deleteUser(contaDeletada){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+  Swal.fire({
+    title: `Deletar o usuário ${contas[contaDeletada].username}?`,
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: 'Deletar',
+    denyButtonText: `Não deletar`,
+  }).then((result) => {
+    if (result.isConfirmed) { 
+      contas.splice(contaDeletada, 1)
       localStorage.setItem('contas', JSON.stringify(contas))
-      location.reload(true);
+      location.reload(true)
     }
-  }
+  })
 }

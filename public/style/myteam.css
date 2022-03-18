@@ -1,0 +1,740 @@
+body{
+    background: url('../images/background-shadow_isles.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.background-dark{
+    background-color: #0a0a0a48;
+    position: fixed;
+    top: 0;
+    z-index: 1400;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+::-webkit-scrollbar{
+    opacity: 0%;
+}
+
+.noScroll::-webkit-scrollbar-track
+
+body, html{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container-myteam{
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+}
+
+.divTeam{
+    margin-top: 3%;    
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px grey solid;
+    background: linear-gradient(118deg, #181818, #000000);
+    background-size: 800% 800%;
+}
+
+.divTeamHeader{
+    display: flex;
+    align-items: flex-end;
+    gap: 1%;
+    border-bottom: 1px grey solid;
+}
+
+.FindTeam-Title{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.h2TeamHeaderName{
+    font-family: OpenSansRegular;
+}
+
+.h3TagHeaderName{
+    font-size: 16px;
+    color: rgb(139, 139, 139);
+}
+
+.teamHeaderImg{
+    border-radius: 50%;
+    background-color: #1e383d;
+    margin: 0.4%;
+    height: 68px;
+    width: 68px;
+    border: 1px gray solid;
+}
+
+.divTeamMain{
+    background: linear-gradient(-118deg, #303030, #000000);
+    background-size: 800% 800%;
+    width: 70%;
+}
+
+.divPlayers{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 100%;
+    position: relative;
+}
+
+.divPlayers input{
+    background-color: transparent;
+    margin-top: 0.8%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.divTeamBody{
+    display: flex;
+    justify-content: space-between
+}
+
+.offcanvas-bottom{
+    width: 100% !important;
+    overflow-x: hidden;
+}
+
+.perfilImageJogador{
+    width: 8%;
+    border-radius: 50%;
+    border: 1px gray solid;
+}
+
+.divTeamInformation{
+    width: 30%;
+    border-left: grey 1px solid;
+    background: linear-gradient(118deg, #181818, #000000);
+    background-size: 800% 800%;
+}  
+
+.lblPlayers{
+    position: absolute;
+    color: rgb(117, 117, 117);
+    margin-top: -0.3%;
+}
+
+.divCreatedBy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.imgCreatedByUser{
+    border-radius: 50%;
+    border: 1px gray solid;
+}
+
+.dateCreated{
+    border-bottom: 1px grey solid;
+}
+
+.nameCreatedBy{
+    margin-top: 4%;
+}
+
+.btnTools{
+    cursor: pointer;
+}
+
+.removeTeam{
+    color: rgb(212, 29, 29);
+}
+
+.divNoTeam{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.divWhatShouldDo, .divCreateTeamInformation{
+    width: 30%;
+    padding: 1%;
+}
+
+.btnCreateTeam, .btnSearchTeam{
+    color: white;
+    transition: 0.3s;
+    font-weight: bolder;
+    
+}
+
+.btnSearchTeam{
+    margin-top: 6%;
+}
+
+.btnCreateTeam:hover, .btnSearchTeam:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    color: rgb(65, 154, 255);
+}
+
+.MyTeam-Title{
+    margin-top: 2%;
+    text-align: center;
+    font-family: OpenSansRegular;
+}
+
+.divCreatingTeam, .loading, .searchTeamLoading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    padding: 3%;
+    width: 30%;
+}
+
+.inpCreate{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    border: 1px gray solid;
+    transition: 0.3s;
+    padding: 0.4%;
+    background-color: rgb(2, 74, 156);
+}
+
+.inpCreate:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    color: rgb(65, 154, 255);
+}
+
+.divSubContainerCreatingTeam{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.inpCreatingTeam{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px gray solid;
+    outline: none;
+    margin-top: 7%;
+    width: 120%;
+    margin-left: -10%;
+}
+
+.lblCreateTeam{
+    color: #707677;
+    position: absolute;
+    margin-top: -2%;
+    margin-left: -5%;
+    width: 100%;
+}
+
+.middle{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.teamTools{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.myhr{
+    width: 100%;
+}
+
+.btnRemoverJogador{
+    position: absolute;
+    right: 5%;
+}
+
+.divHr{
+    background-color: rgb(0, 60, 255) !important;
+}
+
+.divNoAccount{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.perfilInvocador{
+    position: absolute;
+    left: 8.5%;
+    top: 60%;
+    color: #8d8d8d;
+}
+
+.divJogadorReserva-4{
+    margin-bottom: 2%;
+}
+
+.responsivevr{
+    display: inline !important;
+}
+
+.responsivehr{
+    display: none !important;
+}
+
+.divFindTeamContainer{
+    background-color: #090909;
+    opacity: 1;
+    background-image: linear-gradient(45deg, #000000 50%, #090909 50%);
+    background-size: 4px 4px;
+    padding-bottom: 0.5%;
+    padding-top: 4%;
+}
+
+.goSeeTeamBack{
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.onlyAdmin{
+    width: 15%;
+    margin-top: 1% !important;
+    margin-bottom: 1%;
+    margin: auto;
+}
+
+.imgTeamFind{
+    border-radius: 50%;
+    border: 1px gray solid;
+    width: 7vw;
+    height: 7vw;
+    background-color: #868686;
+}
+
+.teamsGoHere{
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.removeIt{
+    opacity: 0%;
+    display: none;
+}
+
+.imgTeamFind-offcanvas{
+    border-radius: 50%;
+    border: 1px gray solid;
+    width: 64px;
+    height: 64px;
+    background-color: #b9b9b9;
+}
+
+.smallText-TagTeam{
+    font-size: 14px !important;
+    color: gray;
+}
+
+.tagFindTeams{
+    color: gray;
+}
+
+.bigText-TeamName{
+    font-size: 24px !important;
+}
+
+.offcanvas-bottom{
+    height: 90% !important;
+    width: auto;
+}
+
+.offcanvas-bottom{
+    display: none;
+}
+
+.divSeeTeamInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.divSubSeeTeamInfo{
+    width: 33%;
+    /* border: 1px red solid; */
+}
+
+.seeTitleSide{
+    text-align: center;
+}
+
+.seePlayersShowing{
+    display: flex;
+    flex-direction: column;
+}
+
+.myIconSeeTeam{
+    width: 15%;
+    border-radius: 50%;
+    border: 1px gray solid;
+    margin-right: 4%;
+}
+
+.playerUsernameSee{
+    font-size: larger
+}
+
+.playerRotaSee, .playerInvocadorSee{
+    margin-left: 13%;
+
+}
+
+.playerRotaSee{
+    color: #868686;
+}
+
+.titleFindTeam{
+    text-align: center;
+    margin: 2%;
+}
+
+.letItBeResponsive{
+    border: 1px rgb(65, 65, 65) solid;
+    padding: 0.4%;
+    background-color: #2c2c2c;
+}
+
+.divSeeTeamInfo{
+    background-color: #2b2c2c !important;
+}
+
+@keyframes input-goup-login {
+    from{
+        margin-top: 4%;
+        font-size: 16px;
+    }
+  
+    to{
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .imgCreatedByUser{
+        border-radius: 50%;
+        border: 1px gray solid;
+        width: 10%;
+    }
+
+    .divTeam{
+        margin-top: 3%;
+        background-color: rgb(27, 27, 27);
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 15px 15px 0px 0px;
+        border: 1px grey solid;
+    }
+
+    .divTeamHeader{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        gap: 1%;
+        border-bottom: 1px grey solid;
+    }
+    
+    .h2TeamHeaderName{
+        font-family: OpenSansRegular;
+        font-size: 230%;
+        position: relative;
+
+    }
+    
+    .h3TagHeaderName{
+        font-size: 155%;
+        color: rgb(139, 139, 139);
+        position: relative;
+        left: -5%
+    }
+    
+    .teamHeaderImg{
+        border-radius: 50%;
+        background-color: #1e383d;
+        height: 88px;
+        width: 88px;
+        border: 1px gray solid;
+    }
+
+    .divTeamBody{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .divTeamInformation{
+        width: 100%;
+        border-left: none;
+        border-top: grey 1px solid;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .divTeamMain{
+        background-color: rgb(29, 29, 29);
+        width: 100%;
+    }
+
+    .lblPlayers{
+        position: absolute;
+        color: rgb(117, 117, 117);
+        font-size: 18px;
+        top: -24%;
+        left: 5%;
+    }
+
+    .btnRemoverJogador{
+        position: absolute;
+        top: 1%;
+    }
+
+    .perfilInvocador{
+        font-size: 125%;
+        position: absolute;
+        color: rgb(117, 117, 117);
+        top: 65%;
+        left: 5%;
+    }
+
+    .divPlayers{
+        position: relative;
+    }
+
+    .perfilImageJogador{
+        width: 6%;
+        border-radius: 50%;
+        margin-left: -1%;
+        border: 1px gray solid;
+    }
+
+    .perfilNomeJogador{
+        position: absolute;
+        margin: 0%;
+
+    }
+}
+
+@media screen and (max-width: 733px) {
+
+    .divSeeTeamInfo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divSubSeeTeamInfo{
+        width: 100%;
+        /* border: 1px red solid; */
+    }
+
+    .offcanvas-bottom{
+        height: 100% !important;
+    }
+
+    .SeeTeamHeader{
+        height: 20%;
+    }
+
+    .teamsGoHere{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        margin-top: 2%;
+    }
+
+    .letItBeResponsive{
+        width: 30% !important;
+        margin-top: 4%;
+    }
+
+    .imgTeamFind{
+        width: 64px;
+        height: 64px;
+    }
+
+    .responsivevr{
+        display: none !important;
+    }
+
+    .responsivehr{
+        display: inline !important;
+    }
+
+    .divNoTeam{
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: normal;
+        text-align: justify;
+        justify-content: center;
+        width: 100%;
+        gap: 1%;
+    }
+    .divWhatShouldDo, .divCreateTeamInformation{
+        width: 100%;
+        padding: 1%;
+        text-align: center;
+    }
+
+    .container-myteam{
+        margin-bottom: 5%;
+        padding-bottom: 1%;
+    }
+
+    .divCreatingTeam{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 600;
+        padding: 3%;
+        width: 95%;
+    }
+
+    .lblCreateTeam{
+        color: #707677;
+        position: absolute;
+        margin-top: -2%;
+        margin-left: -6.5%;
+        width: 100%;
+    }
+
+    .divTeam{
+        margin-top: 3%;
+        background-color: rgb(27, 27, 27);
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 15px 15px 0px 0px;
+        border: 1px grey solid;
+    }
+
+    .divTeamHeader{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        gap: 1%;
+        border-bottom: 1px grey solid;
+    }
+    
+    .h2TeamHeaderName{
+        font-family: OpenSansRegular;
+        font-size: 230%;
+        position: relative;
+
+    }
+    
+    .h3TagHeaderName{
+        font-size: 155%;
+        color: rgb(139, 139, 139);
+        position: relative;
+
+    }
+    
+    .teamHeaderImg{
+        border-radius: 50%;
+        background-color: #1e383d;
+        height: 88px;
+        width: 88px;
+        border: 1px gray solid;
+    }
+
+    .divTeamBody{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .divTeamInformation{
+        width: 100%;
+        border-left: none;
+        border-top: grey 1px solid;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .divTeamMain{
+        background-color: rgb(29, 29, 29);
+        width: 100%;
+    }
+
+    .lblPlayers{
+        position: absolute;
+        color: rgb(117, 117, 117);
+        font-size: 90%;
+        top: -23%;
+        left: 9%;
+    }
+
+    .btnRemoverJogador{
+        position: absolute;
+        top: 1%;
+    }
+
+    .perfilInvocador{
+        font-size: 125%;
+        position: absolute;
+        color: rgb(117, 117, 117);
+        top: 65%;
+        left: 9%;
+    }
+
+    .divPlayers{
+        position: relative;
+    }
+
+    .perfilImageJogador{
+        width: 10%;
+        border-radius: 50%;
+        margin-left: -1%;
+        border: 1px gray solid;
+    }
+
+    .perfilNomeJogador{
+        position: absolute;
+        margin: 0%;
+        top: 0.4vw;
+    }
+    
+
+    @keyframes input-goup-login {
+        from{
+          margin-top: 4%;
+          font-size: 16px;
+        }
+      
+        to{
+          margin-top: -2%;
+          margin-left: -6.5%;
+        }
+    }
+
+    .goSeeTeamBack{
+        top: none;
+        left: 40%;
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+
+    }
+}
