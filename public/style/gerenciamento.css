@@ -128,3 +128,45 @@ body,html{
 .inpChangeAccount{
     margin-bottom: 5%;
 }
+
+.usersGoHere{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6%;
+    width: 100%;
+}
+
+.imgUserFind{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.letItBeResponsive{
+    margin-left: 1%;
+    border: 1px solid grey;
+    padding: 2%;
+}
+
+.removeIt{
+    display: none;
+}
+
+.divShowUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.divShowUser input{
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px gray solid;
+}
+
+.divShowUser{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

@@ -13,6 +13,11 @@ body, html{
     width: 100%;
 }
 
+.copyright{
+    color: #c0c0c0 !important;
+    font-size: smaller;
+}
+
 *{
     font-family: OpenSansLight;
 }
@@ -160,6 +165,7 @@ input{
 }
 
 .sideway-admin-textbottom{
+    margin-top: 40%;
     background-color: rgb(255, 53, 53);
     padding: 2%;
     border-radius: 5px;
@@ -167,7 +173,7 @@ input{
 }
 
 .sideway-admin-textbottom:hover{
-    background-color: rgb(255, 29, 29);
+    background-color: rgb(104, 1, 1);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -184,11 +190,10 @@ input{
 
 .container-admin-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
-    margin-top: 50%;
 }
 
 .container-admin-invert{

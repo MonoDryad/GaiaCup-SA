@@ -1,4 +1,4 @@
-$('.divAlterarEmail, .divAlterarSenha, .divVincularInvocador, .divNoAccount, .adminOnly').hide()
+$('.divAlterarEmail, .divAlterarSenha, .divVincularInvocador, .divNoAccount, .adminOnly, .divUsers').hide()
 
 let contaUsuário
 let allAccounts
@@ -20,28 +20,26 @@ if(JSON.parse(localStorage.getItem('ContaConectada')).isAdmin == true){
   allAccounts = JSON.parse(localStorage.getItem('contas'))
   console.log('kk')
 }
-  
-$('.receiveEmailGaiaCup').on('click', function(){
-
-})
-
 
 $('.alterarEmail').on('click', function(){
   $('.divAlterarEmail').show()
   $('.divAlterarSenha').hide()
   $('.divVincularInvocador').hide()
+  $('.divUsers').hide()
 })
 
 $('.alterarSenha').on('click', function(){
   $('.divAlterarSenha').show()
   $('.divAlterarEmail').hide()
   $('.divVincularInvocador').hide()
+  $('.divUsers').hide()
 })
 
 $('.vincularInvocador').on('click', function(){
   $('.divVincularInvocador').show()
   $('.divAlterarSenha').hide()
   $('.divAlterarEmail').hide()
+  $('.divUsers').hide()
 })
 
 $('.changeEmail').on('click', function(){
@@ -68,11 +66,19 @@ $('.changeEmail').on('click', function(){
           for(let i = 0; i < allAccounts.length;i++){
             console.log(i)
             if(allAccounts[i].email == contaUsuário.email){
-              contaUsuário.email = $('.newEmail').val()
-              localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
-              allAccounts.splice(i, 1, contaUsuário)
-              localStorage.setItem('contas',JSON.stringify(allAccounts))
-              location.reload(true);
+              if(contaUsuário.isAdmin == true){
+                contaUsuário.email = $('.newEmail').val()
+                localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+                allAccounts.splice(i, 1, contaUsuário)
+                localStorage.setItem('admin',JSON.stringify(allAccounts))
+                location.reload(true);
+              }else{
+                contaUsuário.email = $('.newEmail').val()
+                localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+                allAccounts.splice(i, 1, contaUsuário)
+                localStorage.setItem('contas',JSON.stringify(allAccounts))
+                location.reload(true);
+              }
             }
           }
         }else{
@@ -122,11 +128,19 @@ $('.changePassword').on('click', function(){
           for(let i = 0; i < allAccounts.length;i++){
             console.log(i)
             if(allAccounts[i].username == contaUsuário.username){
-              contaUsuário.senha = $('.newPassword').val()
-              localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
-              allAccounts.splice(i, 1, contaUsuário)
-              localStorage.setItem('contas',JSON.stringify(allAccounts))
-              location.reload(true);
+              if(contaUsuário.isAdmin == true){
+                contaUsuário.senha = $('.newPassword').val()
+                localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+                allAccounts.splice(i, 1, contaUsuário)
+                localStorage.setItem('admin',JSON.stringify(allAccounts))
+                location.reload(true);
+              }else{
+                contaUsuário.senha = $('.newPassword').val()
+                localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+                allAccounts.splice(i, 1, contaUsuário)
+                localStorage.setItem('contas',JSON.stringify(allAccounts))
+                location.reload(true);
+              }
             }
           }
         }else{
@@ -164,11 +178,19 @@ $('.changeSummoner').on('click', function(){
         for(let i = 0; i < allAccounts.length;i++){
           console.log(i)
           if(allAccounts[i].username == contaUsuário.username){
-            contaUsuário.invocador = $('.newSummoner').val()
-            localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
-            allAccounts.splice(i, 1, contaUsuário)
-            localStorage.setItem('contas',JSON.stringify(allAccounts))
-            location.reload(true);
+            if(contaUsuário.isAdmin == true){
+              contaUsuário.invocador = $('.newSummoner').val()
+              localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+              allAccounts.splice(i, 1, contaUsuário)
+              localStorage.setItem('admin',JSON.stringify(allAccounts))
+              location.reload(true);
+            }else{
+              contaUsuário.invocador = $('.newSummoner').val()
+              localStorage.setItem('ContaConectada', JSON.stringify(contaUsuário))
+              allAccounts.splice(i, 1, contaUsuário)
+              localStorage.setItem('contas',JSON.stringify(allAccounts))
+              location.reload(true);
+            }
           }
         }
       }else{
@@ -179,3 +201,137 @@ $('.changeSummoner').on('click', function(){
     }
   })
 })
+
+$('.findUsers').one('click', function(){
+  $('.divVincularInvocador').hide()
+  $('.divAlterarSenha').hide()
+  $('.divAlterarEmail').hide()
+  $('.divUsers').show()
+
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+
+  for(let i = 0; i < contas.length;i++){
+    let accountsToFind = i
+    $('.usersGoHere').append(`
+    <div class="letItBeResponsive" style="width: 23%; margin-bottom: 2%;">
+        <div class="${contas[i].username.replaceAll(' ','')}" style="text-align: center">
+            <img class='imgUserFind iconUser-${i}' src='${contas[i].icon}' >
+            <h5>${contas[i].username}</h5>
+            <p class="tagFindUser">${contas[i].invocador}</p>
+            <button onclick='seeUser(${accountsToFind})' class="btn btn-dark seeUser-${i}">Usuário</button>
+        </div>
+    </div>`)
+    if(contas[i].icon == null){
+      callAccountError(i)
+    }
+  }
+})
+
+$('.findUsers').on('click', function(){
+  $('.divVincularInvocador').hide()
+  $('.divAlterarSenha').hide()
+  $('.divAlterarEmail').hide()
+  $('.divUsers').show()
+})
+
+function seeUser(contaEncontrada){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+
+  for(let i = 0; i < contas.length;i++){
+      if($(`.seeUser-${contaEncontrada}`).parent().hasClass(`${contas[i].username.replaceAll(' ','')}`)){
+          console.log('d')
+          if($(`.removeIt`).hasClass(`trigger-${i}`) ){
+            $(`.botao-${i}`).trigger('click')
+              console.log('v')
+              return
+          }
+      }
+  }
+  for(let i = 0; i < contas.length;i++){
+    if($(`.seeUser-${contaEncontrada}`).parent().hasClass(`${contas[i].username.replaceAll(' ','')}`)){
+      console.log($(`.removeIt`).hasClass(`botao-${i}`))
+      console.log(i)
+      $('.customModalGoHere').append(`
+      <button type="button" class="botao-${i} removeIt" data-bs-toggle="modal" data-bs-target="#user-${i}"></button>
+  
+      <div class="modal fade" id="user-${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar usuário:  <img class="imgUserFind iconUser${i}" src="${contas[i].icon}"> ${contas[i].username}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="user-${i}" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="${contas[i].username}-name divShowUser">
+                <label>Nome do Usuário</label>
+                <input class="${contas[i].username}-inpName inputModifyUsername" value="${contas[i].username}">
+              </div>
+              <div class="${contas[i].email}-email divShowUser">
+                <label>E-mail</label>
+                <input class="${contas[i].email}-inpEmail inputModifyEmail" value="${contas[i].email}">
+              </div>
+              <div class="${contas[i].senha}-senha divShowUser">
+              <label>Senha</label>
+              <input class="${contas[i].senha}-inpSenha inputModifyPassword" value="${contas[i].senha}">
+            </div>
+              <div class="${contas[i].invocador}-invocador divShowUser">
+                <label>Invocador</label>
+                <input class="${contas[i].invocador}-inpInvocador inputModifySummoner" value="${contas[i].invocador}">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="saveUser(${i})">Salvar Mudanças</button>
+            </div>
+          </div>
+        </div>
+      </div>`)
+      if($(`.removeIt`).hasClass(`botao-${i}`) ){
+        $(`.botao-${i}`).trigger('click')
+        console.log('s')
+        return
+      }
+    }
+  }
+} 
+
+$('.imgUserFind').on('error', function(){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+
+  for(let i = 0; i < contas.length;i++){
+    if($(this).hasClass(`iconUser-${i}`)){
+      contas[i].icon = `https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon${Math.round(Math.random() * 5268)}.png`
+      localStorage.setItem('contas', JSON.stringify(contas))
+      location.reload(true);
+    }
+  }
+})
+
+function callAccountError(contaErro){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+
+  for(let i = 0; i < contas.length;i++){
+    if(contas[i].username == contas[contaErro].username){
+      contas[i].icon = `https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon${Math.round(Math.random() * 5268)}.png`
+      localStorage.setItem('contas', JSON.stringify(contas))
+      location.reload(true);
+    }
+  }
+}
+
+function saveUser(contaModificada){
+  let contas = JSON.parse(localStorage.getItem('contas')) || []
+
+  for(let i = 0; i < contas.length;i++){
+    console.log(i, contaModificada)
+    if(contas[i].username == contas[contaModificada].username){
+      contas[i].username = $('.inputModifyUsername').val()
+      contas[i].email = $('.inputModifyEmail').val()
+      contas[i].senha = $('.inputModifyPassword').val()
+      contas[i].invocador = $('.inputModifySummoner').val()
+
+      localStorage.setItem('contas', JSON.stringify(contas))
+      location.reload(true);
+    }
+  }
+}

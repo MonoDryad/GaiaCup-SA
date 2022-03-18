@@ -1,7 +1,5 @@
 $('.connected').hide()
 
-callAdmins()
-
 function callAdmins(addAdmins){
 
   let administradores = [
@@ -39,10 +37,6 @@ function callAdmins(addAdmins){
       badge: `<span class="badge bg-danger text-dark">Admin</span>`
     }
   ]
-
-  if(addAdmins == 1){
-    
-  }
 
   let adminAccounts =  []
   for(let i = 0;i < administradores.length;i++){
