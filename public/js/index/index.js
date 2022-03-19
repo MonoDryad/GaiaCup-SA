@@ -1,6 +1,37 @@
 $(".winners-upper-video-loop").hide();
 $(".second-container-main").css("opacity", "0%");
 
+let goToMyTeam = 0
+$(".img-last-video").on('click', function(){
+  try{
+    JSON.parse(localStorage.getItem('ContaConectada')).isConnected
+    goToMyTeam = 1
+  }catch{
+    localStorage.setItem('Cadastro', '2')
+    goToMyTeam = 0
+  }
+  if(goToMyTeam == 1){
+    window.location.href = "./myteam.html"
+  }else{
+    window.location.href = "./login.html"
+  }
+})
+
+
+
+$(".img-last-video").hover(
+  function () {
+    $(this).attr("src", function (index, attr) {
+      return attr.replace(".png", "-hover.png");
+    });
+  },
+  function () {
+    $(this).attr("src", function (index, attr) {
+      return attr.replace("-hover.png", ".png");
+    });
+  }
+);
+
 $(".arrow-left, .arrow-right").hover(
   function () {
     $(this).attr("src", function (index, attr) {
@@ -16,15 +47,6 @@ $(".arrow-left, .arrow-right").hover(
 
 videoFinalizado = false;
 segundoVideoFinalizado = false;
-
-// $(".video-texto-promo").click(function () {
-//   window.location.href = "./inscricao-times-teredi.html";
-//   // if (localStorage.getItem("Conectado") == true) {
-//   //   window.location.href = "./sobre.html";
-//   // } else {
-//   //   window.location.href = "./isessao.html";
-//   // }
-// });
 
 let videoPrincipal = document.getElementById("videoP");
 let currentTimePrincipal = videoPrincipal.currentTime;

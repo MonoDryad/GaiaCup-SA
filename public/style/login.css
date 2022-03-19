@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('../images/background-shadow_isles.jpg');
+    background: url('https://raw.communitydragon.org/12.5/game/assets/ux/loadingscreen/clash_ls_bg_1024x512.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -108,21 +108,29 @@ input{
 .btnDecision{
     margin-top: 10%;
     cursor: pointer;
-    border: 1px solid black;
     border-radius: 5px;
     font-size: larger;
     height: 50px;
     font-family: OpenSansRegular;
     border: 1px rgb(116, 116, 116) solid;
+    background: rgb(34, 34, 34) !important;
 }
+
+
 
 .lbl-forgot-something{
     cursor: pointer;
 }
 
 .btnEntrar, .btnCadastro, .btnEntrarAdmin{
-    background: black;
     width: 100%;
+    transition: 0.2s;
+}
+
+.btnDecision:hover{
+    transition: 0.2s;
+    background: rgb(59, 59, 59) !important;
+    color: #008cff;
 }
 
 .btnCadastrar, .btnIsessao{

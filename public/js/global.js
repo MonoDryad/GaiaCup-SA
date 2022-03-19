@@ -1,3 +1,5 @@
+localStorage.setItem('Cadastro', '1')
+
 function callTestUsers(){
     const allUsers = JSON.parse(localStorage.getItem('contas')) || []
 

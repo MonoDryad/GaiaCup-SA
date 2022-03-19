@@ -118,6 +118,17 @@ $('.btnEntrarAdmin').click(function(){
 // -- // -- // -- // LOCALSTORAGE FUNCTIONALITY \\ -- \\ -- \\ -- \\ 
 
 // -- // -- // -- // PAGE FUNCTIONALITY \\ -- \\ -- \\ -- \\
+
+if(localStorage.getItem('Cadastro') == '1' || localStorage.getItem('Cadastro') == null){
+    $('.content-title').text('Iníciar Sessão')
+    $('.register-content-main').hide()
+    $('.container-login-contentç').show()
+}else if(localStorage.getItem('Cadastro') == '2'){
+    $('.content-title').text('Cadastro')
+    $('.register-content-main').show()
+    $('.container-login-content').hide()
+}
+
 $('.inpRegistroConfirmPassword, .inpRegistroPassword, .inpRegistroEmail, .inpRegistroUserName, .inpUserName, .inpPassword').on('keyup',function(){
     $(this).css('border-bottom', '#797979 solid 1px')
     if($(this).hasClass('inpRegistroUserName')){
@@ -134,17 +145,6 @@ $('.inpRegistroConfirmPassword, .inpRegistroPassword, .inpRegistroEmail, .inpReg
         $('.pErrorPassword').text('')
     }
 })
-
-if(localStorage.getItem('Cadastro') == '1' || null){
-    $('.content-title').text('Iníciar Sessão')
-    $('.register-content-main').hide()
-    $('.container-login-contentç').show()
-}else if(localStorage.getItem('Cadastro') == '2'){
-    $('.content-title').text('Cadastro')
-    $('.register-content-main').show()
-    $('.container-login-content').hide()
-}
-
 
 $('.pText').hide()
 
