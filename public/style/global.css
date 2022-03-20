@@ -102,6 +102,10 @@ a {
   }
 }
 
+footer{
+  margin-top: 4%;
+}
+
 @keyframes rank-show {
   from{
     opacity: 0%;

@@ -791,7 +791,9 @@ function seeTeam(teamFinded){
                     <button type="button" class="btn-close  btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <label style="text-align: center;">Criado por: ${teams[i].criadoPor} ${teams[i].userBadge} - ${teams[i].dataCriacao}</label>
-                <p class="btn btn-danger onlyAdmin">Remover Time</p>
+                <div class="RemoveThisAlready">
+                    ${callAdminFunction(i)}
+                </div>
                 <hr>
                 <div class="offcanvas-body divSeeTeamInfo large">
                     <div class="divSubSeeTeamInfo divSeePlayers">
@@ -821,21 +823,6 @@ function seeTeam(teamFinded){
                 return
             }
         }
-    }
-
-    let conectada
-
-    try{
-      conectada = JSON.parse(localStorage.getItem('ContaConectada')) || {}
-    }catch{
-        conectada.isAdmin = false
-        $('.onlyAdmin').hide()
-    }
-
-    if(conectada.isAdmin){
-        $('.onlyAdmin').show()
-    }else{
-        $('.onlyAdmin').hide()
     }
 }
 
@@ -884,6 +871,26 @@ function callStaff(teamSize, teamPosition){
     return whatWillGoToAppend
 }
 
+function callAdminFunction(teamPosition){
+    let contaConectada = JSON.parse(localStorage.getItem('ContaConectada'))
+    if(contaConectada == null){
+        contaConectada = {isAdmin: false}
+    }
+    if(contaConectada.isAdmin == true){
+        console.log('Entrou!')
+        return `<p class="deleteTeam deleteTeam${teamPosition} btn btn-danger" onclick="removeTeam(${teamPosition})">Remover Time</p>`
+    }else{
+        return ``
+    }
+}
+function removeTeam(time){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+
+    teams.splice(time, 1)
+    localStorage.setItem('teams', JSON.stringify(teams))
+    location.reload(true)
+}
+
 
 // * // * // * PAGE FUNCTIONALITY * \\ * \\ * \\
 
@@ -897,7 +904,29 @@ $('.btnSearchTeam').on('click', function(){
     $('.divFindTeam').show()
     $('.MyTeam-Title').hide()
     $('.container-myteam').hide()
-    pushTeams()
+    $('body').css('background', 'none')
+    $('body').css('background-image', 'linear-gradient(45deg, #000000 50%, #090909 50%)')
+    $('body').css('background-size', '4px 4px')
+    let teams = JSON.parse(localStorage.getItem('teams'))
+    if(teams == null){
+        pushTeams()
+        findTeam()
+        return
+    }
+    let detectIndex = 0
+
+    for(let i = 0; i < teams.length;i++){
+        detectIndex++
+        if(teams[i].nomeDaOrg == "KINGSMAN EsportS"){
+            findTeam()
+            return  
+        }
+        if(detectIndex == teams.length){
+            pushTeams()
+            findTeam()
+            return
+        }
+    }
     findTeam()
 })
 
@@ -907,11 +936,15 @@ $('.goBack').on('click', function(){
 })
 
 $('.goSeeTeamBack').on('click', function(){
-    $('.divNoTeam').show()
-    $('.divFindTeam').hide()
-    $('.MyTeam-Title').show()
-    $('.container-myteam').show()
-    $('.teamsGoHere').children().remove()
+    location.reload(true)
+    // $('.divNoTeam').show()
+    // $('.divFindTeam').hide()
+    // $('.MyTeam-Title').show()
+    // $('.container-myteam').show()
+    // $('body').css('background-image', 'none')
+    // $('body').css('background', `url('../../images/background-shadow_isles.jpg') no-repeat center center fixed`)
+    // $('body').css('background-size', 'cover')
+    // $('.teamsGoHere').children().remove()
 })
 
 $('.createTeamTag, .createTeamName, .createTeamLogo').hide()
@@ -1129,19 +1162,6 @@ function pushTeams(){
         userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
         dataCriacao: '15/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
-    }
-
-    for(let i = 0; i < teams.length;i++){
-        if(teams[i].nomeDaOrg == time0.nomeDaOrg){
-            teams.splice(i, 1, time0)
-        }else if(teams[i].nomeDaOrg == time1.nomeDaOrg){
-            teams.splice(i, 1, time1)
-        }else if(teams[i].nomeDaOrg != time0.nomeDaOrg || teams[i].nomeDaOrg != time1.nomeDaOrg){
-
-            break
-        }else{
-
-        }
     }
     teams.push(time0)
     teams.push(time1)

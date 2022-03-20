@@ -39,8 +39,7 @@ body, html{
     margin-right: 5%;
     border-radius: 15px 15px 0px 0px;
     border: 1px grey solid;
-    background: linear-gradient(118deg, #181818, #000000);
-    background-size: 800% 800%;
+    background-color: #090909;
 }
 
 .divTeamHeader{
@@ -48,11 +47,6 @@ body, html{
     align-items: flex-end;
     gap: 1%;
     border-bottom: 1px grey solid;
-}
-
-.FindTeam-Title{
-    text-align: center;
-    margin-bottom: 2%;
 }
 
 .h2TeamHeaderName{
@@ -66,7 +60,7 @@ body, html{
 
 .teamHeaderImg{
     border-radius: 50%;
-    background-color: #1e383d;
+    background-color: #3d0000;
     margin: 0.4%;
     height: 68px;
     width: 68px;
@@ -300,6 +294,7 @@ body, html{
 }
 
 .goSeeTeamBack{
+    margin-top: 4%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -307,8 +302,14 @@ body, html{
     position: relative;
 }
 
-.onlyAdmin{
-    width: 15%;
+.btnUserTools{
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.RemoveThisAlready{
     margin-top: 1% !important;
     margin-bottom: 1%;
     margin: auto;
