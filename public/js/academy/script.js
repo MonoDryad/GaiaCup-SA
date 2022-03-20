@@ -69,7 +69,7 @@ function chamarVideo(video){
     $('.videosToWatch').append(`
     <button type="button" class="removeIt openVideo-${video}" data-bs-toggle="modal" data-bs-target="#openVideo-${video}"></button>
     <div class="modal fade" id="openVideo-${video}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
             <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Video: ${allVideos[video].titulo}</h5>

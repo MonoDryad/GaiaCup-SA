@@ -164,3 +164,16 @@ h2{
 .videosFooter{
     margin-top: 0% !important;
 }
+
+@media screen and (max-width:900px) {
+    .videos{
+        border: 1px gray solid;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2%;
+        background-color: #212529;
+        transition: 0.3s;
+        width: 48%;
+    }
+}
