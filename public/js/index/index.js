@@ -59,7 +59,6 @@ let currentTimeultimoVideo = ultimoVideo.currentTime;
 
 $(window).on("scroll", function () {
   if ($(window).scrollTop() >= $(".divisor").offset().top + $(".divisor").outerHeight() - window.innerHeight) {
-    $(".video")[currentTimePrincipal].pause();
     if (videoFinalizado == false) {
       $(".second-container-main").css("opacity", "100%");
       $(".winners-video")[0].play();
@@ -68,13 +67,6 @@ $(window).on("scroll", function () {
       $(".wrapper-winners, .winners-primeiro, .winners-posicao-primeiro, .winners-primeiro-info").removeClass("slide-animacao");
       changeCurrentWinner();
     }
-  }else{
-    $(".video")[currentTimePrincipal].play();
-  }
-  if ( $(window).scrollTop() >= $(".barra-rank").offset().top + $(".barra-rank").outerHeight() - window.innerHeight) {
-    $(".final-video")[currentTimeultimoVideo].play();
-  } else {
-    $(".final-video")[currentTimeultimoVideo].pause();
   }
   if ($(window).scrollTop() >= $(".elos-container").offset().top + $(".elos-container").outerHeight() - window.innerHeight){
     $(".winners-upper-video-loop")[currentTimeSegundoLoop].pause();

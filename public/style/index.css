@@ -59,7 +59,6 @@ body {
 
 .news {
   margin-top: 10%;
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -146,6 +145,7 @@ footer{
   z-index: 1;
 }
 
+
 .winners-background {
   position: relative;
   width: 100%;
@@ -208,11 +208,18 @@ footer{
 }
 
 .ranks-all{
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.verso-1,.verso-2,.verso-3,.verso-4{
+  display: none;
 }
 
 .show-elos-title{
-  margin-top: 9%;
+  margin-top: 3%;
   text-align: center;
   opacity: 0;
   font-weight: bolder;
@@ -228,33 +235,32 @@ footer{
 }
 
 .rank-platinum{
-  width: 20%
+  width: 20%;
 }
 
 .barra-rank{
   width: 0;
   border-radius: 60%;
-  height: 6px;
+  height: 2px;
   background-color: gray;
   margin:0 auto;
-
 }
 
-.verso-1,.verso-2,.verso-3,.verso-4{
-  position: absolute;
-  opacity: 0;
-  left: 50%;
-  width: auto;
-  transform: translate(-50%, 0);
+.rank-show{
+  display: block;
+}
+
+.poema-rank{
+  text-align: center;
   margin-top: 5%;
-  font-size: 150%;
+  font-style: OpenSansRegular;
   font-weight: bold;
-  margin-bottom: 15%;
+  font-size: 2.6vw;
 }
 
 .final-container{
   position: relative;
-  margin-top: 13%;
+  margin-top: 6%;
 
 }
 
@@ -274,7 +280,6 @@ footer{
   height: 100%;
   top: 0;
   left: 0;
-
 }
 
 .img-last-video:hover{
@@ -302,11 +307,11 @@ footer{
   }
   
   .video-container-child{
-    position: absolute;
-    top: 70%;
+    position: relative;
     text-align: center;
-    width: 80%;
-    left: 10%;
+    top: 0%;
+    width: 100%;
+    left: 0%;
   }
   
   .video-titulo-tier3 {
@@ -347,8 +352,7 @@ footer{
   }
   
   .news {
-    margin-top: 10%;
-    position: relative;
+    margin-top: 0%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -493,11 +497,18 @@ footer{
   }
   
   .ranks-all{
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  .verso-1,.verso-2,.verso-3,.verso-4{
+    display: none;
+    white-space: nowrap;
   }
   
   .show-elos-title{
-    margin-top: 9%;
+    margin-top: 3%;
     text-align: center;
     opacity: 0;
     font-weight: bolder;
@@ -513,34 +524,25 @@ footer{
   }
   
   .rank-platinum{
-    width: 20%
+    width: 20%;
   }
   
-  .barra-rank{
-    width: 0;
-    border-radius: 60%;
-    height: 6px;
-    background-color: gray;
-    margin:0 auto;
-  
+  .rank-show{
+    display: block;
   }
   
-  .verso-1,.verso-2,.verso-3,.verso-4{
-    position: absolute;
-    opacity: 0;
-    left: 50%;
-    width: auto;
-    transform: translate(-50%, 0);
-    margin-top: 5%;
-    font-size: 150%;
+  .poema-rank{
+    text-align: center;
+    margin-top: 2%;
+    font-style: OpenSansRegular;
     font-weight: bold;
-    margin-bottom: 15%;
+    font-size: 2.5vw;
   }
   
   .final-container{
     position: relative;
-    margin-top: 13%;
-    margin-bottom: 0;
+    margin-top: 10%;
+  
   }
   
   .jornada-start{
@@ -548,6 +550,17 @@ footer{
     margin-top: -30%;
     left: 50%;
     transform: translate(-50%, 0);
+  
+  }
+  
+  .last-video-shadow{
+    -webkit-box-shadow: inset 0px 23px 17px -6px #000000; 
+    box-shadow: inset 0px 23px 17px -6px #000000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -568,15 +581,15 @@ footer{
   }
   
   .video-container-child{
-    position: absolute;
-    top: 75%;
+    position: relative;
     text-align: center;
-    width: 80%;
-    left: 10%;
+    top: 0%;
+    width: 100%;
+    left: 0%;
   }
   
   .video-titulo-tier3 {
-    margin-top: 10%;
+    margin-top: 0%;
     position: relative;
     text-align: center;
     font-size: 3vh;
@@ -586,7 +599,7 @@ footer{
   
   .video-texto-tier3 {
     position: relative;
-    font-size: 2vh;
+    font-size: 1.6vh;
     width: 100%;
   }
   
@@ -614,8 +627,7 @@ footer{
   }
   
   .news {
-    margin-top: 10%;
-    position: relative;
+    margin-top: 0%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -782,15 +794,6 @@ footer{
     width: 20%
   }
   
-  .barra-rank{
-    width: 0;
-    border-radius: 60%;
-    height: 6px;
-    background-color: gray;
-    margin:0 auto;
-  
-  }
-  
   .verso-1,.verso-2,.verso-3,.verso-4{
     position: absolute;
     opacity: 0;
@@ -817,7 +820,11 @@ footer{
   }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:490px) {
+  .news{
+    margin-top: 0%;
+  }
+
   .rank{
     width: 7%;
     opacity: 0;
@@ -902,7 +909,7 @@ footer{
   
   .winners-upper-video-start,
   .winners-upper-video-loop {
-    display: none;
+    display: none !important;
     position: absolute;
     left: 16vw;
     top: 9%;
@@ -938,8 +945,7 @@ footer{
   }
 
   .news {
-    margin-top: 50%;
-    position: relative;
+    margin-top: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
