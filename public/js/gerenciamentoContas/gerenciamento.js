@@ -264,19 +264,19 @@ function seeUser(contaEncontrada){
             <div class="modal-body">
               <div class="${contas[i].username}-name divShowUser">
                 <label>Nome do Usuário</label>
-                <input class="${contas[i].username}-inpName inputModifyUsername" value="${contas[i].username}">
+                <input class="${contas[i].username}-inpName inputModifyUsername-${contas[i].username}" value="${contas[i].username}">
               </div>
               <div class="${contas[i].email}-email divShowUser">
                 <label>E-mail</label>
-                <input class="${contas[i].email}-inpEmail inputModifyEmail" value="${contas[i].email}">
+                <input class="${contas[i].email}-inpEmail inputModifyEmail-${contas[i].username}" value="${contas[i].email}">
               </div>
               <div class="${contas[i].senha}-senha divShowUser">
               <label>Senha</label>
-              <input class="${contas[i].senha}-inpSenha inputModifyPassword" value="${contas[i].senha}">
+              <input class="${contas[i].senha}-inpSenha inputModifyPassword-${contas[i].username}" value="${contas[i].senha}">
             </div>
               <div class="${contas[i].invocador}-invocador divShowUser">
                 <label>Invocador</label>
-                <input class="${contas[i].invocador}-inpInvocador inputModifySummoner" value="${contas[i].invocador}">
+                <input class="${contas[i].invocador}-inpInvocador inputModifySummoner-${contas[i].username}" value="${contas[i].invocador}">
               </div>
             </div>
             <div class="modal-footer">
@@ -322,10 +322,10 @@ function callAccountError(contaErro){
 
 function saveUser(contaModificada){
   let contas = JSON.parse(localStorage.getItem('contas')) || []
-    contas[contaModificada].username = $('.inputModifyUsername').val()
-    contas[contaModificada].email = $('.inputModifyEmail').val()
-    contas[contaModificada].senha = $('.inputModifyPassword').val()
-    contas[contaModificada].invocador = $('.inputModifySummoner').val()
+    contas[contaModificada].username = $(`.inputModifyUsername-${contas[contaModificada].username}`).val()
+    contas[contaModificada].email = $(`.inputModifyEmail-${contas[contaModificada].username}`).val()
+    contas[contaModificada].senha = $(`.inputModifyPassword-${contas[contaModificada].username}`).val()
+    contas[contaModificada].invocador = $(`.inputModifySummoner-${contas[contaModificada].username}`).val()
 
     localStorage.setItem('contas', JSON.stringify(contas))
     location.reload(true)
