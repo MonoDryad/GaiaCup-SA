@@ -322,10 +322,10 @@ function callAccountError(contaErro){
 
 function saveUser(contaModificada){
   let contas = JSON.parse(localStorage.getItem('contas')) || []
-    contas[contaModificada].username = $(`.inputModifyUsername-${contas[contaModificada].username}`).val()
     contas[contaModificada].email = $(`.inputModifyEmail-${contas[contaModificada].username}`).val()
     contas[contaModificada].senha = $(`.inputModifyPassword-${contas[contaModificada].username}`).val()
     contas[contaModificada].invocador = $(`.inputModifySummoner-${contas[contaModificada].username}`).val()
+    contas[contaModificada].username = $(`.inputModifyUsername-${contas[contaModificada].username}`).val()
 
     localStorage.setItem('contas', JSON.stringify(contas))
     location.reload(true)
