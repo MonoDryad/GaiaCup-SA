@@ -1,5 +1,9 @@
 $('.connected').hide()
 
+if(JSON.parse(localStorage.getItem('admin')) == null){
+  callAdmins()
+}
+
 function callAdmins(addAdmins){
 
   let administradores = [
