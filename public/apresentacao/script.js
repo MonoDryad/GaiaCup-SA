@@ -3,6 +3,11 @@ $(document).ready(function(){
     $('body').css(`background-size`, `cover`)
 })
 
+for(i = 1; i == 8;i++){
+    $('body').append(`<img src="./img/slide${i}.jpg" style="display: none;">`)
+}
+
+
 let slideN = 1
 
 $('body').keydown(function(e) {
