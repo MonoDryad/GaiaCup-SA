@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('body').append(`<img class="changeSlide" src="./img/slide1.jpg">`)
+    $('body').css(`background`, `url(./img/slide1.jpg) no-repeat center center fixed`)
+    $('body').css(`background-size`, `cover`)
 })
 
 let slideN = 1
@@ -20,10 +21,9 @@ $('body').keydown(function(e) {
     }
     if(slideN == 3){
         $('body').append(`<video class="pitch" src="./pitch.mp4" controls type="video/mp4">`)
-        $('.changeSlide').hide()
     }else{
         $('.pitch').hide()
-        $('.changeSlide').show()
-        $('.changeSlide').attr('src', `./img/slide${slideN}.jpg`)
+        $('body').css(`background`, `url(./img/slide${slideN}.jpg) no-repeat center center fixed`)
+        $('body').css(`background-size`, `cover`)
     }
 })
