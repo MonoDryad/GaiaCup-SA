@@ -25,7 +25,7 @@ $('body').keydown(function(e) {
             slideN--
         }
     }
-    if(slideN == 3){
+    if(slideN == 2){
         $('body').append(`<video class="pitch" src="./pitch.mp4" controls type="video/mp4">`)
     }else{
         $('.pitch').hide()
