@@ -104,6 +104,7 @@ a {
 
 footer{
   margin-top: 4%;
+  z-index: 800;
 }
 
 @keyframes rank-show {

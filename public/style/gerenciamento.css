@@ -63,6 +63,10 @@ body,html{
     border-right: none;
 }
 
+footer{
+    margin-top: 6.5% !important;
+}
+
 .showPassword{
     width: 100%;
 }

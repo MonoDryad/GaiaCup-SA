@@ -89,6 +89,10 @@ h2{
     animation: backgroundAcademy 21s ease infinite;
 }
 
+footer{
+    margin-top: 8.2%;
+}
+
 @-webkit-keyframes backgroundAcademy {
     0%{background-position:29% 0%}
     50%{background-position:72% 100%}
