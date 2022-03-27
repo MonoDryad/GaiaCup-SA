@@ -6,10 +6,6 @@ body{
     background-size: cover;
 }
 
-.secao{
-    display: none;
-}
-
 .inscricaoBody{
     padding: 2%;
     margin: auto;
@@ -27,4 +23,9 @@ input{
     outline: none;
     border: none;
     border-bottom: 1px gray solid;
+}
+
+hr{
+    margin-top: 6% !important;
+    margin-bottom: 6% !important;
 }
