@@ -21,6 +21,20 @@ $('.btnAnterior').on('click', function(){
     callPage()
 })
 
+$('.btnEnviar').on('click', function(){
+    if($("#email").is(':valid')){
+            Swal.fire({
+            icon: 'success',
+            title: 'Inscrição - Quarta Edição',
+            text: 'O formulário do seu time foi enviado com sucesso!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+            window.location.href = './index.html'
+            }
+        })  
+    }
+})
+
 function callPage(){
 
     $('.page').text(`Página ${pagina}/12`)
