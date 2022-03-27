@@ -1,5 +1,5 @@
 body{
-    background: url('https://raw.communitydragon.org/12.5/game/assets/ux/loadingscreen/trueshot/trueshot_cities.trueshot.png')  no-repeat center center fixed;
+    background: url('../images/background_tematic.png')  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
