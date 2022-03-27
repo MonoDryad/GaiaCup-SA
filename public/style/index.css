@@ -37,13 +37,39 @@ body {
 
 .video-texto-promo {
   position: absolute;
-  top: 55%;
-  right: 4%;
-  font-size: 1.5vw;
-  background-color: transparent;
-  padding: 5px;
+  top: 60%;
+  right: 8%;
+  width: 18%;
+  text-align: center;
+  font-size: 1.7vw;
+  background: url('../images/background_tematic.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: bolder;
+  color: #3b3b3b !important;
+  border: 1px gray solid;
+  transition: 0.3s;
+}
+
+.video-texto-promo:hover {
+  transition: 0.3s;
+  width: 20%;
+  font-size: 1.8vw;
+  background: url('../images/background_tematic.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #f84a4a !important;
+  border: 1px #742f2f solid;
 }
 
 .video-shadow {
@@ -324,18 +350,6 @@ footer{
     width: 100%;
   }
   
-  .video-texto-promo {
-    position: absolute;
-    top: 48%;
-    right: 4%;
-    font-size: 1.5vw;
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: none;
-  }
-  
   .video-shadow {
     position: absolute;
     width: 100%;
@@ -597,18 +611,6 @@ footer{
     position: relative;
     font-size: 1.6vh;
     width: 100%;
-  }
-  
-  .video-texto-promo {
-    position: absolute;
-    top: 48%;
-    right: 4%;
-    font-size: 1.5vw;
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: none;
   }
   
   .video-shadow {

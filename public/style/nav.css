@@ -39,40 +39,5 @@ a:hover {
 }
 
 .brandnav{
-  position: absolute !important;
-  margin-top: -4%;
   width: 6rem
-}
-
-@media screen and (min-width: 433px) {
-  .brandnav{
-    position: absolute !important;
-    margin-top: -2.6%;
-    width: 6rem
-  }
-}
-
-@media screen and (min-width: 733px) {
-  .brandnav{
-    position: absolute !important;
-    margin-top: -2%;
-    width: 6rem
-  }
-}
-
-@media screen and (min-width: 1036px) {
-  .brandnav{
-    position: absolute !important;
-    margin-top: -1.7%;
-    width: 6rem
-  }
-}
-
-
-@media screen and (min-width: 1336px) {
-  .brandnav{
-    position: absolute !important;
-    margin-top: -1.2%;
-    width: 6rem
-  }
 }

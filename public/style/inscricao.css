@@ -1,0 +1,30 @@
+body{
+    background: url('https://raw.communitydragon.org/12.5/game/assets/ux/loadingscreen/trueshot/trueshot_cities.trueshot.png')  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.secao{
+    display: none;
+}
+
+.inscricaoBody{
+    padding: 2%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    text-align: center;
+    width: 50%;
+    border: 1px gray solid;
+    border-radius: 10px;
+    background: rgba(85, 85, 85, 0.719);
+}
+
+input{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px gray solid;
+}
