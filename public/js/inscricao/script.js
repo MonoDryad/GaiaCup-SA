@@ -60,8 +60,10 @@ function callPage(){
             $('.Jogador-3').css('display', 'none')
             $('.Jogador-4').css('display', 'block')
             $('.Jogador-5').css('display', 'none')
+            $('.btnEnviar').attr('disabled',true)
             break
         case 8:
+            $('.btnEnviar').attr('disabled',false)
             $('.Jogador-4').css('display', 'none')
             $('.Jogador-5').css('display', 'block')
             $('.Reserva-1').css('display', 'none')
