@@ -1163,8 +1163,112 @@ function pushTeams(){
         dataCriacao: '15/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
+
+
+    let time3 = {
+        nomeDaOrg: 'NAOKI WHITE',
+        tagDaOrg: 'NKIW - <label><a href="https://twitter.com/NAOKIESPORT">Twitter</a> | <a href="https://discord.gg/GcEa9fqy">Discord</a> | <a href="https://www.twitch.tv/bruuxao19">Twitch</a></label>',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+        staff: [
+            {
+                username: 'NKI Bruxão#0197',
+                email: 'NKIBruxão@gmail.com',
+                senha: 'NKIBruxão',
+                invocador: 'NKI Bruxão',
+                rota: 'Dono',
+                codigo: 700,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        jogadores: 
+        [
+            {
+                username: 'Dkjr#8810',
+                email: 'Dkjr@gmail.com',
+                senha: 'Dkjr',
+                invocador: 'I DKjr I',
+                elo: detectPointsPerElo('Platina 3'),
+                rota: 'Topo',
+                codigo: 700,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: '! Lucas#8631',
+                email: 'Lucas@gmail.com',
+                senha: 'Lucas',
+                invocador: 'nki baiano',
+                elo: detectPointsPerElo('Ouro 2'),
+                rota: 'Selva',
+                codigo: 701,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Tikinho#1835',
+                email: 'Tikinho@gmail.com',
+                senha: 'Tikinho',
+                invocador: 'Tiikas',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Selva',
+                codigo: 702,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Gabriel W M Oliveira#7151',
+                email: 'Gabriel@gmail.com',
+                senha: 'Gabriel',
+                invocador: 'akiii',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Atirador',
+                codigo: 703,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'NKI Dark Fairy#8807',
+                email: 'Dark@gmail.com',
+                senha: 'Dark',
+                invocador: 'NKI Dark Fairy',
+                elo: detectPointsPerElo('Ouro 1'),
+                rota: 'Suporte',
+                codigo: 704,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: 
+        [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '15/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
+
     teams.push(time0)
     teams.push(time1)
+    teams.push(time3)
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
