@@ -1214,7 +1214,7 @@ function pushTeams(){
                 senha: 'Tikinho',
                 invocador: 'Tiikas',
                 elo: detectPointsPerElo('Ouro 4'),
-                rota: 'Selva',
+                rota: 'Meio',
                 codigo: 702,
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
@@ -1314,7 +1314,7 @@ function pushTeams(){
                 senha: 'ggelos',
                 invocador: 'HuskyPocket',
                 elo: detectPointsPerElo('Ouro 1'),
-                rota: 'Dono',
+                rota: 'Meio',
                 codigo: 803,
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
@@ -1328,7 +1328,7 @@ function pushTeams(){
                 senha: 'NKIBruxão',
                 invocador: 'NKI Bruxão',
                 elo: detectPointsPerElo('Ouro 4'),
-                rota: 'Dono',
+                rota: 'Atirador',
                 codigo: 804,
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
@@ -1358,7 +1358,7 @@ function pushTeams(){
                 senha: 'QuirinoLL',
                 invocador: 'chivador',
                 elo: detectPointsPerElo('Ouro 4'),
-                rota: 'Suporte',
+                rota: 'Não registrado',
                 codigo: 811,
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
@@ -1373,10 +1373,110 @@ function pushTeams(){
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
+    let time5 = {
+        nomeDaOrg: 'Tnoway verde',
+        tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+        staff: [
+            {
+                username: 'CandyS2#0917',
+                email: 'CandyS2@gmail.com',
+                senha: 'CandyS2',
+                invocador: 'CandyS2',
+                rota: 'Dono',
+                codigo: 900,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        jogadores: 
+        [
+            {
+                username: 'Scorpion#6455',
+                email: 'Scorpion@gmail.com',
+                senha: 'Scorpion',
+                invocador: 'TNW Pimpeu',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Topo',
+                codigo: 901,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'LeKiffer#3350',
+                email: 'LeKiffer@gmail.com',
+                senha: 'LeKiffer',
+                invocador: 'TNW Frenesi',
+                elo: detectPointsPerElo('Prata 2'),
+                rota: 'Selva',
+                codigo: 902,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'QUIETIN#6711',
+                email: 'QUIETIN@gmail.com',
+                senha: 'QUIETIN',
+                invocador: 'TNW Quietin',
+                elo: detectPointsPerElo('Prata 2'),
+                rota: 'Meio',
+                codigo: 903,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Sïnistro#9009',
+                email: 'Sïnistro@gmail.com',
+                senha: 'Sïnistro',
+                invocador: 'TNW Sinistro',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Atirador',
+                codigo: 904,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'l0rdkillerPB#1980',
+                email: 'l0rdkillerPB@gmail.com',
+                senha: 'l0rdkillerPB',
+                invocador: 'l0rdkillerPB',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Suporte',
+                codigo: 905,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '28/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
     teams.push(time0)
     teams.push(time1)
     teams.push(time3)
     teams.push(time4)
+    teams.push(time5)
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
