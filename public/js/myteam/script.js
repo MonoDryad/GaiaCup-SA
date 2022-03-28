@@ -615,6 +615,13 @@ $('.callReservaToTeam').on('click', function(){
     location.reload(true);
 })
 
+$('.resetTeams').on('click', function(){
+    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    teams = []
+    localStorage.setItem('teams',JSON.stringify(teams))
+    location.reload(true);
+})
+
 $('.removeTeam').on('click', function(){
 
     Swal.fire({
@@ -834,7 +841,7 @@ function callPlayer(teamSize, teamPosition){
         whatWillGoToAppend += `<div class="seePlayersShowing player-${i}"> \n`
         whatWillGoToAppend += `<label class="playerRotaSee player-${i}-rota">${teams[teamPosition].jogadores[i].rota}</label> \n`
         whatWillGoToAppend += `<label class="player-${i}-username playerUsernameSee"><img class="player-${i}-icon myIconSeeTeam" src="${teams[teamPosition].jogadores[i].icon}">${teams[teamPosition].jogadores[i].username}</label> \n`
-        whatWillGoToAppend += `<label class="playerInvocadorSee player-${i}-invocador">${teams[teamPosition].jogadores[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].jogadores[i].invocador}">League of Graphs</a></label> \n`
+        whatWillGoToAppend += `<label class="playerInvocadorSee player-${i}-invocador">${teams[teamPosition].jogadores[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].jogadores[i].invocador}">League of Graphs</a> - ${teams[teamPosition].jogadores[i].elo}</label> \n`
         whatWillGoToAppend += `</div>
         <hr>`
     }
@@ -908,25 +915,12 @@ $('.btnSearchTeam').on('click', function(){
     $('body').css('background-image', 'linear-gradient(45deg, #000000 50%, #090909 50%)')
     $('body').css('background-size', '4px 4px')
     let teams = JSON.parse(localStorage.getItem('teams'))
-    if(teams == null){
+    if(teams == null || teams == [] || teams.length == 0){
         pushTeams()
         findTeam()
         return
     }
-    let detectIndex = 0
 
-    for(let i = 0; i < teams.length;i++){
-        detectIndex++
-        if(teams[i].nomeDaOrg == "KINGSMAN EsportS"){
-            findTeam()
-            return  
-        }
-        if(detectIndex == teams.length){
-            pushTeams()
-            findTeam()
-            return
-        }
-    }
     findTeam()
 })
 
@@ -987,7 +981,7 @@ const playerSuccessfully = Swal.mixin({
 
 
 function pushTeams(){
-    let teams = JSON.parse(localStorage.getItem('teams')) || []
+    let teams = JSON.parse(localStorage.getItem('teams'))
     let time0 = {
         nomeDaOrg: 'KINGSMAN EsportS',
         tagDaOrg: 'KNS',
@@ -1261,14 +1255,128 @@ function pushTeams(){
         [],
         criadoPor: 'Mono Dryad',
         userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
-        dataCriacao: '15/03/2022',
+        dataCriacao: '28/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
+    let time4 = {
+        nomeDaOrg: 'NAOKI E-SPORTS',
+        tagDaOrg: 'NKI - <label><a href="https://twitter.com/NAOKIESPORT">Twitter</a> | <a href="https://discord.gg/GcEa9fqy">Discord</a> | <a href="https://www.twitch.tv/bruuxao19">Twitch</a></label>',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+        staff: [
+            {
+                username: 'NKI Bruxão#0197',
+                email: 'NKIBruxão@gmail.com',
+                senha: 'NKIBruxão',
+                invocador: 'NKI Bruxão',
+                rota: 'Dono',
+                codigo: 800,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        jogadores: 
+        [
+            {
+                username: 'Feijas Soca Fofo#8731',
+                email: 'Feijas@gmail.com',
+                senha: 'Feijas',
+                invocador: 'É o Feijas',
+                elo: detectPointsPerElo('Diamante 4'),
+                rota: 'Topo',
+                codigo: 801,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Whitelopes#7900',
+                email: 'Whitelopes@gmail.com',
+                senha: 'Whitelopes',
+                invocador: 'El Blanco Lopes',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Selva',
+                codigo: 802,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'ggelos#2910#0197',
+                email: 'ggelos@gmail.com',
+                senha: 'ggelos',
+                invocador: 'HuskyPocket',
+                elo: detectPointsPerElo('Ouro 1'),
+                rota: 'Dono',
+                codigo: 803,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'NKI Bruxão#0197',
+                email: 'NKIBruxão@gmail.com',
+                senha: 'NKIBruxão',
+                invocador: 'NKI Bruxão',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Dono',
+                codigo: 804,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Lemonz#7518',
+                email: 'Lemonz@gmail.com',
+                senha: 'Lemonz',
+                invocador: 'Lemonzord',
+                elo: detectPointsPerElo('Diamante 3'),
+                rota: 'Suporte',
+                codigo: 805,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [
+            {
+                username: 'QuirinoLL#9624',
+                email: 'QuirinoLL@gmail.com',
+                senha: 'QuirinoLL',
+                invocador: 'chivador',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Suporte',
+                codigo: 811,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/ade37233-0887-4424-8326-d76feb3a95ff/NKI%20(16).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '28/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
 
     teams.push(time0)
     teams.push(time1)
     teams.push(time3)
+    teams.push(time4)
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
