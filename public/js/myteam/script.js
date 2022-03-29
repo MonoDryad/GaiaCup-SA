@@ -1392,7 +1392,7 @@ function pushTeams(){
 
     let time6 = {
         nomeDaOrg: 'Orange Kingdom',
-        tagDaOrg: 'OK - <label><a href="https://twitter.com/OrangeKingdomBR">Twitter</a> | <a href="https://discord.gg/6xnnHDnG6A">Discord</a>',
+        tagDaOrg: 'OK - <label><a href="https://twitter.com/OrangeKingdomBR">Twitter</a> | <a href="https://discord.gg/6xnnHDnG6A">Discord</a></label>',
         logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
         staff: [
             {
@@ -1535,6 +1535,7 @@ function pushTeams(){
     teams.push(time4)
     teams.push(time5)
     teams.push(time6)
+    // teams.push(time7)
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
