@@ -4,7 +4,7 @@ function detectPointsPerElo(eloUsuario){
             case 'Bronze':
                 return `[I] ${eloUsuario} - 1,0p`
         case 'Prata':
-            return `${eloUsuario} - 2,0p`
+            return `[I] ${eloUsuario} - 2,0p`
         case 'Ouro 4':
             case 'Ouro 3':
                 return `[I] ${eloUsuario} - 3,5p`
