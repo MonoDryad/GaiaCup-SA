@@ -33,7 +33,7 @@ function newStreamScreen(){
     new Twitch.Embed("twitch-embed", {
         width: screenWSize,
         height: screenHSize,
-        channel: "wassab",
+        channel: "monodryad",
         autoplay: true,
         allowfullscreen: true,
     });
