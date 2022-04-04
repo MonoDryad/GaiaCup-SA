@@ -982,6 +982,101 @@ const playerSuccessfully = Swal.mixin({
 
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams'))
+    let time1 = {
+        nomeDaOrg: 'Eight Divine Ways',
+        tagDaOrg: 'EDW',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+        staff: [],
+        jogadores: 
+        [
+            {
+                username: 'EDW Duck',
+                email: 'EDWDuck@gmail.com',
+                senha: 'EDW Duck',
+                invocador: 'EDW Duck',
+                rota: 'Topo',
+                codigo: 400,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'EDW Sena',
+                email: 'EDWSena@gmail.com',
+                senha: 'EDW Sena',
+                invocador: 'EDW Sena',
+                rota: 'Selva',
+                codigo: 401,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'EDW Nallu',
+                email: 'EDWNallu@gmail.com',
+                senha: 'EDW Nallu',
+                invocador: 'EDW Nallu',
+                rota: 'Meio',
+                codigo: 402,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'EDW Ikaika',
+                email: 'EDWIkaika@gmail.com',
+                senha: 'EDW Ikaika',
+                invocador: 'EDW Ikaika',
+                rota: 'Atirador',
+                codigo: 403,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'EDW Ylang',
+                email: 'EDWYlang@gmail.com',
+                senha: 'EDW Ylang',
+                invocador: 'EDW Ylang',
+                rota: 'Atirador',
+                codigo: 404,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: 
+        [
+            {
+                username: 'Zuif',
+                email: 'Zuif@gmail.com',
+                senha: 'Zuif',
+                invocador: 'Zuif',
+                rota: 'Smurf - EDW Ylang',
+                codigo: 404,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '14/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
     let time2 = {
         nomeDaOrg: 'KINGSMAN EsportS',
         tagDaOrg: 'KNS',
@@ -1529,13 +1624,13 @@ function pushTeams(){
         dataCriacao: '28/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
-
+    teams.push(time1)
     teams.push(time2)
     teams.push(time3)
     teams.push(time4)
     teams.push(time5)
     teams.push(time6)
-    // teams.push(time7)
+
     localStorage.setItem('teams', JSON.stringify(teams))
 }
 
