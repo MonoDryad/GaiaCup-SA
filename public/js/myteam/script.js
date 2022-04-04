@@ -982,7 +982,7 @@ const playerSuccessfully = Swal.mixin({
 
 function pushTeams(){
     let teams = JSON.parse(localStorage.getItem('teams'))
-    let time0 = {
+    let time2 = {
         nomeDaOrg: 'KINGSMAN EsportS',
         tagDaOrg: 'KNS',
         logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/3b528993-be69-414c-b3e5-ba6e75de2fc5/Logo.png',
@@ -1530,7 +1530,7 @@ function pushTeams(){
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
-    teams.push(time0)
+    teams.push(time2)
     teams.push(time3)
     teams.push(time4)
     teams.push(time5)
