@@ -1389,7 +1389,7 @@ function pushTeams(){
     let time5 = {
         nomeDaOrg: 'Tnoway verde',
         tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
-        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+        logoDaOrg: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
         staff: [
             {
                 username: 'CandyS2#0917',
@@ -1399,7 +1399,7 @@ function pushTeams(){
                 rota: 'Dono',
                 codigo: 900,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
@@ -1416,21 +1416,21 @@ function pushTeams(){
                 rota: 'Topo',
                 codigo: 901,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
-                username: 'LeKiffer#3350',
-                email: 'LeKiffer@gmail.com',
-                senha: 'LeKiffer',
-                invocador: 'TNW Frenesi',
+                username: 'Splinter#8636',
+                email: 'MTSplinter42@gmail.com',
+                senha: 'MTSplinter42',
+                invocador: 'MTSplinter42',
                 elo: detectPointsPerElo('Prata'),
                 rota: 'Selva',
                 codigo: 902,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
@@ -1444,7 +1444,7 @@ function pushTeams(){
                 rota: 'Meio',
                 codigo: 903,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
@@ -1458,7 +1458,7 @@ function pushTeams(){
                 rota: 'Atirador',
                 codigo: 904,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
@@ -1472,7 +1472,7 @@ function pushTeams(){
                 rota: 'Suporte',
                 codigo: 905,
                 isConnected: false,
-                icon: 'https://d33wubrfki0l68.cloudfront.net/28a1952a-3ed2-4878-b3bb-7d9d360a338f/WhatsApp%20Image%202022-01-14%20at%2015.41.16.jpeg',
+                icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
                 team: 'Tnoway verde',
                 badge: `<span class="badge bg-info text-dark">User</span>`
