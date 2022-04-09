@@ -797,7 +797,7 @@ function seeTeam(teamFinded){
 
                     <button type="button" class="btn-close  btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <label style="text-align: center;">Criado por: ${teams[i].criadoPor} ${teams[i].userBadge} - ${teams[i].dataCriacao}</label>
+                <label style="text-align: center;">Criado por: ${teams[i].criadoPor} ${teams[i].userBadge} - ${teams[i].dataCriacao} - Pontuação: ${calculateAllPoints(teams[i].jogadores[0].elo) + calculateAllPoints(teams[i].jogadores[1].elo) + calculateAllPoints(teams[i].jogadores[2].elo) + calculateAllPoints(teams[i].jogadores[3].elo) + calculateAllPoints(teams[i].jogadores[4].elo)}</label>
                 <div class="RemoveThisAlready">
                     ${callAdminFunction(i)}
                 </div>
@@ -1624,12 +1624,196 @@ function pushTeams(){
         dataCriacao: '28/03/2022',
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
+
+    let time7 = {
+        nomeDaOrg: 'NEO Akihabara',
+        tagDaOrg: 'AKH - <label><a href="https://twitter.com/theneoteam">Twitter</a> | <a href="https://discord.gg/PNph25qtya">Discord</a></label>',
+        logoDaOrg: '../images/png-akiha.png',
+        staff: [
+            {
+                username: 'Soviético#3929',
+                email: 'Soviético@gmail.com',
+                senha: 'Soviético',
+                invocador: 'Soviético',
+                rota: 'Dono',
+                codigo: 1100,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Deretch',
+                email: 'Deretch@gmail.com',
+                senha: 'Deretch',
+                invocador: 'Deretch',
+                rota: 'Coach¹',
+                codigo: 1101,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Lorita',
+                email: 'Lorita@gmail.com',
+                senha: 'Lorita',
+                invocador: 'Lorita',
+                rota: 'Coach²',
+                codigo: 1101,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                team: 'Orange Kingdom',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        jogadores: 
+        [
+            {
+                username: 'Dragooni#2500',
+                email: 'Dragooni@gmail.com',
+                senha: 'Dragooni',
+                invocador: 'Dragooni',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Topo',
+                codigo: 1110,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Gusta#2078',
+                email: 'Gusta@gmail.com',
+                senha: 'Gusta',
+                invocador: 'Banguêla',
+                elo: detectPointsPerElo('Diamante 2'),
+                rota: 'Selva',
+                codigo: 1111,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Yami#4182',
+                email: 'Yami@gmail.com',
+                senha: 'Yami',
+                invocador: 'Ashes of Hell',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Meio',
+                codigo: 1112,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Fafa#3340',
+                email: 'Fafa@gmail.com',
+                senha: 'Fafa',
+                invocador: 'KYT Gumayusi',
+                elo: detectPointsPerElo('Platina 3'),
+                rota: 'Atirador',
+                codigo: 1112,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'zebailin#4784',
+                email: 'zebailin@gmail.com',
+                senha: 'zebailin',
+                invocador: 'zebailin',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Suporte',
+                codigo: 1113,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [
+            {
+                username: 'Baliana#5898',
+                email: 'Baliana@gmail.com',
+                senha: 'Baliana',
+                invocador: 'Bali Boreas',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Suporte',
+                codigo: 1120,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Nicola Grudinsky#4830',
+                email: 'NicolaGrudinsky@gmail.com',
+                senha: 'NicolaGrudinsky',
+                invocador: 'Bis Limão',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Suporte',
+                codigo: 1121,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Th#8979',
+                email: 'Th@gmail.com',
+                senha: 'Th',
+                invocador: 'OLY Baki',
+                elo: detectPointsPerElo('Prata'),
+                rota: 'Suporte',
+                codigo: 1122,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'DragananK#7193',
+                email: 'DragananK@gmail.com',
+                senha: 'DragananK',
+                invocador: 'DragananK',
+                elo: detectPointsPerElo('Diamante 3'),
+                rota: 'Suporte',
+                codigo: 1123,
+                isConnected: false,
+                icon: '../images/png-akiha.png',
+                isAdmin: false,
+                team: 'NEO Akihabara',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '09/04/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
     teams.push(time1)
     teams.push(time2)
     teams.push(time3)
     teams.push(time4)
     teams.push(time5)
     teams.push(time6)
+    teams.push(time7)
 
     localStorage.setItem('teams', JSON.stringify(teams))
 }
