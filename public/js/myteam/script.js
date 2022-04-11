@@ -1842,6 +1842,105 @@ function pushTeams(){
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
+    let time8 = {
+        nomeDaOrg: 'Team Suits',
+        tagDaOrg: 'TSS - <label><a href="https://twitter.com/TSSJKG">Twitter</a> | <a href="https://discord.gg/sjx33aCr">Discord</a></label>',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+        staff: [
+            {
+                username: 'JKG#3501',
+                email: 'JKG@gmail.com',
+                senha: 'JKG',
+                invocador: 'JKG',
+                rota: 'Dono',
+                codigo: 1200,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        jogadores: 
+        [
+            {
+                username: 'geng#6594',
+                email: 'geng@gmail.com',
+                senha: 'geng',
+                invocador: 'geng',
+                elo: detectPointsPerElo('Platina 1'),
+                rota: 'Topo',
+                codigo: 1210,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Yorgan#3703',
+                email: 'Yorgan@gmail.com',
+                senha: 'Yorgan',
+                invocador: 'Yorgan',
+                elo: detectPointsPerElo('Platina 3'),
+                rota: 'Selva',
+                codigo: 1211,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'JKG#3501',
+                email: 'JKG@gmail.com',
+                senha: 'JKG',
+                invocador: 'JKG',
+                elo: detectPointsPerElo('Platina 3'),
+                rota: 'Meio',
+                codigo: 1212,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'duarte#6127',
+                email: 'duarte@gmail.com',
+                senha: 'duarte',
+                invocador: 'DK ad1',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Atirador',
+                codigo: 1213,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Mighty#5336',
+                email: 'Mighty@gmail.com',
+                senha: 'Mighty',
+                invocador: 'Mighty',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Suporte',
+                codigo: 1214,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/a0b36dc3-bc7a-40f1-9371-372102df4743/Logo-02.jpg',
+                isAdmin: false,
+                team: 'Team Suits',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '11/04/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
     teams.push(time1)
     teams.push(time2)
     teams.push(time3)
@@ -1849,6 +1948,7 @@ function pushTeams(){
     teams.push(time5)
     teams.push(time6)
     teams.push(time7)
+    teams.push(time8)
 
     localStorage.setItem('teams', JSON.stringify(teams))
 }
