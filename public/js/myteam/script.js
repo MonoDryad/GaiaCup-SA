@@ -856,7 +856,7 @@ function callReservas(teamSize, teamPosition){
         whatWillGoToAppend += `<div class="seePlayersShowing reserva-${i}"> \n`
         whatWillGoToAppend += `<label class="playerRotaSee reserva-${i}-rota">${teams[teamPosition].reservas[i].rota}</label> \n`
         whatWillGoToAppend += `<label class="reserva-${i}-username playerUsernameSee"><img class="reserva-${i}-icon myIconSeeTeam" src="${teams[teamPosition].reservas[i].icon}">${teams[teamPosition].reservas[i].username}</label> \n`
-        whatWillGoToAppend += `<label class="playerInvocadorSee reserva-${i}-invocador">${teams[teamPosition].reservas[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].reservas[i].invocador}">League of Graphs</a></label> \n`
+        whatWillGoToAppend += `<label class="playerInvocadorSee reserva-${i}-invocador">${teams[teamPosition].reservas[i].invocador} - <a href="https://www.leagueofgraphs.com/summoner/br/${teams[teamPosition].reservas[i].invocador}">League of Graphs</a> - ${teams[teamPosition].reservas[i].elo}</label> \n`
         whatWillGoToAppend += `</div>
         <hr>`
     }
@@ -986,7 +986,21 @@ function pushTeams(){
         nomeDaOrg: 'Eight Divine Ways',
         tagDaOrg: 'EDW',
         logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
-        staff: [],
+        staff: [
+            {
+                username: 'Matheus UE#9601',
+                email: 'MATHEUS UE@gmail.com',
+                senha: 'MATHEUS UE',
+                invocador: 'MATHEUS UE',
+                rota: 'Dono',
+                codigo: 300,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
+                isAdmin: false,
+                team: 'Eight Divine Ways',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
         jogadores: 
         [
             {
@@ -996,6 +1010,7 @@ function pushTeams(){
                 invocador: 'EDW Duck',
                 rota: 'Topo',
                 codigo: 400,
+                elo: detectPointsPerElo('Diamante 3'),
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
@@ -1009,6 +1024,7 @@ function pushTeams(){
                 invocador: 'EDW Sena',
                 rota: 'Selva',
                 codigo: 401,
+                elo: detectPointsPerElo('Platina 2'),
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
@@ -1022,6 +1038,7 @@ function pushTeams(){
                 invocador: 'EDW Nallu',
                 rota: 'Meio',
                 codigo: 402,
+                elo: detectPointsPerElo('Platina 4'),
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
@@ -1036,6 +1053,7 @@ function pushTeams(){
                 rota: 'Atirador',
                 codigo: 403,
                 isConnected: false,
+                elo: detectPointsPerElo('Ouro 3'),
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
                 team: 'Eight Divine Ways',
@@ -1049,6 +1067,7 @@ function pushTeams(){
                 rota: 'Atirador',
                 codigo: 404,
                 isConnected: false,
+                elo: detectPointsPerElo('Ouro 1'),
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
                 team: 'Eight Divine Ways',
@@ -1065,6 +1084,7 @@ function pushTeams(){
                 rota: 'Smurf - EDW Ylang',
                 codigo: 404,
                 isConnected: false,
+                elo: detectPointsPerElo('Ouro 4'),
                 icon: 'https://d33wubrfki0l68.cloudfront.net/4d128470-0269-4e59-8422-1974dca68351/EDW.jpg',
                 isAdmin: false,
                 team: 'Eight Divine Ways',
@@ -1265,7 +1285,22 @@ function pushTeams(){
             },
         ],
         reservas: 
-        [],
+        [            
+            {
+                username: 'Silas#1487',
+                email: 'Efort@gmail.com',
+                senha: 'Efort',
+                invocador: 'Efort',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Atirador',
+                codigo: 711,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/95729c27-a47d-4bb8-9a2c-39ac1dd201a4/NKI%20(8).png',
+                isAdmin: false,
+                team: 'NAOKI WHITE',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
         criadoPor: 'Mono Dryad',
         userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
         dataCriacao: '28/03/2022',
