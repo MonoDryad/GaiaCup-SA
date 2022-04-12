@@ -1422,7 +1422,7 @@ function pushTeams(){
     }
 
     let time5 = {
-        nomeDaOrg: 'Tnoway verde',
+        nomeDaOrg: 'Tnoway Ciano',
         tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
         logoDaOrg: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
         staff: [
@@ -1436,7 +1436,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             }
         ],
@@ -1453,7 +1453,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1467,7 +1467,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1481,7 +1481,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1495,7 +1495,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1509,7 +1509,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
                 isAdmin: false,
-                team: 'Tnoway verde',
+                team: 'Tnoway Ciano',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
         ],
@@ -1521,7 +1521,7 @@ function pushTeams(){
     }
 
     let time6 = {
-        nomeDaOrg: 'Orange Kingdom',
+        nomeDaOrg: 'Orange Kingdom - Owari',
         tagDaOrg: 'OK - <label><a href="https://twitter.com/OrangeKingdomBR">Twitter</a> | <a href="https://discord.gg/6xnnHDnG6A">Discord</a></label>',
         logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
         staff: [
@@ -1535,7 +1535,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1548,7 +1548,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1561,7 +1561,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             }
         ],
@@ -1578,7 +1578,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1592,7 +1592,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1606,7 +1606,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1620,7 +1620,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             },
             {
@@ -1650,7 +1650,7 @@ function pushTeams(){
                 isConnected: false,
                 icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
                 isAdmin: false,
-                team: 'Orange Kingdom',
+                team: 'Orange Kingdom - Owari',
                 badge: `<span class="badge bg-info text-dark">User</span>`
             }
         ],
@@ -1941,6 +1941,316 @@ function pushTeams(){
         userBadge: '<span class="badge bg-danger text-dark">System</span>',
     }
 
+    let time9 = {
+        nomeDaOrg: 'Phoenix Warriors Gaming',
+        tagDaOrg: 'PWG',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+        staff: [
+            {
+                username: 'Shelby#4462',
+                email: 'Shelby@gmail.com',
+                senha: 'Shelby',
+                invocador: 'Shelby',
+                rota: 'Dono',
+                codigo: 1300,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        jogadores: 
+        [
+            {
+                username: 'HugoBOSS#6554',
+                email: 'HugoBOSS@gmail.com',
+                senha: 'HugoBOSS',
+                invocador: 'mcHUGOBOSS',
+                elo: detectPointsPerElo('Prata'),
+                rota: 'Topo',
+                codigo: 1310,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Shelby#4462',
+                email: 'Shelby@gmail.com',
+                senha: 'Shelby',
+                invocador: 'PWG Shelby',
+                elo: detectPointsPerElo('Prata'),
+                rota: 'Selva',
+                codigo: 1311,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'PWG Morango 🍓🌹#2472',
+                email: 'Morango@gmail.com',
+                senha: 'Morango',
+                invocador: 'PWG Morango',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Meio',
+                codigo: 1312,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: '0Zero#1059',
+                email: '0Zero@gmail.com',
+                senha: '0Zero',
+                invocador: 'PWG Zero',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Atirador',
+                codigo: 1313,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Ƙαlу#3012',
+                email: 'Ƙαlу@gmail.com',
+                senha: 'Ƙαlу',
+                invocador: 'Rainha Kaly',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Suporte',
+                codigo: 1314,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/0ace242e-0215-47e5-9a64-fc0f2e106661/PWG.jpg',
+                isAdmin: false,
+                team: 'Phoenix Warriors Gaming',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '12/04/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
+    let time10 = {
+        nomeDaOrg: 'Orange Kingdom - Umayyad',
+        tagDaOrg: 'OK - <label><a href="https://twitter.com/OrangeKingdomBR">Twitter</a> | <a href="https://discord.gg/6xnnHDnG6A">Discord</a></label>',
+        logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+        staff: [
+            {
+                username: 'Alybaff#9168',
+                email: 'Alybaff@gmail.com',
+                senha: 'Alybaff',
+                invocador: 'Alybaff',
+                rota: 'Dono',
+                codigo: 1400,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Klaus',
+                email: 'Klaus@gmail.com',
+                senha: 'Klaus',
+                invocador: 'Klaus',
+                rota: 'Coach¹',
+                codigo: 1401,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        jogadores: 
+        [
+            {
+                username: 'llfreitas#91289',
+                email: 'llfreitas@gmail.com',
+                senha: 'llfreitas',
+                invocador: 'GPC Freitas',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Topo',
+                codigo: 1411,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Ragnar#7307',
+                email: 'Ragnar@gmail.com',
+                senha: 'Ragnar',
+                invocador: '7w Ragnar',
+                elo: detectPointsPerElo('Prata'),
+                rota: 'Selva',
+                codigo: 1411,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Ragnar#7307',
+                email: 'Ragnar@gmail.com',
+                senha: 'Ragnar',
+                invocador: '7w Ragnar',
+                elo: detectPointsPerElo('Prata'),
+                rota: 'Meio',
+                codigo: 1413,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'OK NSync#2758',
+                email: 'NSync@gmail.com',
+                senha: 'NSync',
+                invocador: 'OK NSync Mec Rj',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Atirador',
+                codigo: 1414,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'Xpikle#5606',
+                email: 'Xpikle@gmail.com',
+                senha: 'Xpikle',
+                invocador: 'IKench',
+                elo: detectPointsPerElo('Ouro 4'),
+                rota: 'Suporte',
+                codigo: 1415,
+                isConnected: false,
+                icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+                isAdmin: false,
+                team: 'Orange Kingdom - Umayyad',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '12/04/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+    
+    let time11 = {
+        nomeDaOrg: 'Tnoway Laranja',
+        tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
+        logoDaOrg: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+        staff: [
+            {
+                username: 'CandyS2#0917',
+                email: 'CandyS2@gmail.com',
+                senha: 'CandyS2',
+                invocador: 'CandyS2',
+                rota: 'Dono',
+                codigo: 1500,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            }
+        ],
+        jogadores: 
+        [
+            {
+                username: 'P̶a̶u̶l̶ã̶o̶#4503',
+                email: 'P̶a̶u̶l̶ã̶o̶@gmail.com',
+                senha: 'P̶a̶u̶l̶ã̶o̶ ',
+                invocador: 'TNW Paulo Bomba',
+                elo: detectPointsPerElo('Ouro 3'),
+                rota: 'Topo',
+                codigo: 901,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'CandyS2#0917',
+                email: 'CandyS2@gmail.com',
+                senha: 'CandyS2',
+                invocador: 'TNW Milla',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Selva',
+                codigo: 902,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'LeGenDary 86',
+                email: 'LeGenDary@gmail.com',
+                senha: 'LeGenDary',
+                invocador: 'LeGenDary 86',
+                elo: detectPointsPerElo('Platina 3'),
+                rota: 'Meio',
+                codigo: 903,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'zRuth#7626',
+                email: 'zRuth@gmail.com',
+                senha: 'zRuth',
+                invocador: 'TNW Lumbriga',
+                elo: detectPointsPerElo('Platina 4'),
+                rota: 'Atirador',
+                codigo: 904,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+            {
+                username: 'pedu#0274',
+                email: 'pedu@gmail.com',
+                senha: 'pedu',
+                invocador: 'golden years',
+                elo: detectPointsPerElo('Diamante 1'),
+                rota: 'Suporte',
+                codigo: 905,
+                isConnected: false,
+                icon: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
+                isAdmin: false,
+                team: 'Tnoway Laranja',
+                badge: `<span class="badge bg-info text-dark">User</span>`
+            },
+        ],
+        reservas: [],
+        criadoPor: 'Mono Dryad',
+        userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
+        dataCriacao: '28/03/2022',
+        userBadge: '<span class="badge bg-danger text-dark">System</span>',
+    }
+
     teams.push(time1)
     teams.push(time2)
     teams.push(time3)
@@ -1949,6 +2259,10 @@ function pushTeams(){
     teams.push(time6)
     teams.push(time7)
     teams.push(time8)
+    teams.push(time9)
+    teams.push(time10)
+    teams.push(time11)
+
 
     localStorage.setItem('teams', JSON.stringify(teams))
 }
