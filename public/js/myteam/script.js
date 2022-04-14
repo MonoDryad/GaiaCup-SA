@@ -1099,7 +1099,7 @@ function pushTeams(){
 
     let time2 = {
         nomeDaOrg: 'KINGSMAN EsportS',
-        tagDaOrg: 'KNS',
+        tagDaOrg: 'KGS',
         logoDaOrg: 'https://d33wubrfki0l68.cloudfront.net/3b528993-be69-414c-b3e5-ba6e75de2fc5/Logo.png',
         staff: [],
         jogadores: 
@@ -1423,7 +1423,7 @@ function pushTeams(){
 
     let time5 = {
         nomeDaOrg: 'Tnoway Ciano',
-        tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
+        tagDaOrg: 'TNWC - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
         logoDaOrg: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
         staff: [
             {
@@ -2154,7 +2154,7 @@ function pushTeams(){
     
     let time11 = {
         nomeDaOrg: 'Tnoway Laranja',
-        tagDaOrg: 'TNV - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
+        tagDaOrg: 'TWN - <label><a href="https://discord.gg/vquHQKeH">Discord</a></label>',
         logoDaOrg: 'https://media.discordapp.net/attachments/935531218978615347/963237508601233439/Whatsapp_laranja_1.png',
         staff: [
             {
