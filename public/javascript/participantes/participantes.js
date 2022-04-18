@@ -614,19 +614,6 @@ let time6 = {
             team: 'Orange Kingdom - Owari',
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
-        {
-            username: 'Padrasto',
-            email: 'Padrasto@gmail.com',
-            senha: 'Padrasto',
-            invocador: 'Padrasto',
-            rota: 'Coach²',
-            codigo: 1000,
-            isConnected: false,
-            icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
-            isAdmin: false,
-            team: 'Orange Kingdom - Owari',
-            badge: `<span class="badge bg-info text-dark">User</span>`
-        }
     ],
     jogadores: 
     [
@@ -716,6 +703,20 @@ let time6 = {
             team: 'Orange Kingdom - Owari',
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
+        {
+            username: 'Padrasto',
+            email: 'Padrasto@gmail.com',
+            senha: 'Padrasto',
+            invocador: 'Monster babby',
+            elo: detectPointsPerElo('Ouro 2'),
+            rota: 'Top',
+            codigo: 1000,
+            isConnected: false,
+            icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+            isAdmin: false,
+            team: 'Orange Kingdom - Owari',
+            badge: `<span class="badge bg-info text-dark">User</span>`
+        }
     ],
     criadoPor: 'Mono Dryad',
     userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
