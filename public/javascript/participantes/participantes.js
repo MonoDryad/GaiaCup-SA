@@ -1153,10 +1153,10 @@ let time10 = {
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
         {
-            username: 'Ragnar#7307',
-            email: 'Ragnar@gmail.com',
-            senha: 'Ragnar',
-            invocador: '7w Ragnar',
+            username: 'I God Of Tris I',
+            email: 'God@gmail.com',
+            senha: 'God',
+            invocador: 'I God Of Tris I',
             elo: detectPointsPerElo('Prata'),
             rota: 'Selva',
             codigo: 1411,
@@ -1195,21 +1195,36 @@ let time10 = {
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
         {
-            username: 'Xpikle#5606',
-            email: 'Xpikle@gmail.com',
-            senha: 'Xpikle',
-            invocador: 'IKench',
+            username: 'l0rdkillerPB#1980',
+            email: 'l0rdkillerPB@gmail.com',
+            senha: 'l0rdkillerPB',
+            invocador: 'l0rdkillerPB',
             elo: detectPointsPerElo('Ouro 4'),
             rota: 'Suporte',
-            codigo: 1415,
+            codigo: 905,
             isConnected: false,
-            icon: 'https://d33wubrfki0l68.cloudfront.net/415c04dc-83c8-4057-a27f-0177e929db3f/okempo.png',
+            icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
             isAdmin: false,
-            team: 'Orange Kingdom - Umayyad',
+            team: 'Tnoway Ciano',
             badge: `<span class="badge bg-info text-dark">User</span>`
-        },
+        }
     ],
-    reservas: [],
+    reservas: [
+        {
+            username: 'Tokoyaml',
+            email: 'Tokoyaml@gmail.com',
+            senha: 'Tokoyaml',
+            invocador: 'Tokoyaml',
+            elo: detectPointsPerElo('Platina 3'),
+            rota: 'Meio',
+            codigo: 905,
+            isConnected: false,
+            icon: 'https://cdn.discordapp.com/attachments/935531218978615347/962063243042488360/a18a15bf7ae6495c89478ef2447dbcd1_3.png',
+            isAdmin: false,
+            team: 'Tnoway Ciano',
+            badge: `<span class="badge bg-info text-dark">User</span>`
+        }
+    ],
     criadoPor: 'Mono Dryad',
     userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
     dataCriacao: '12/04/2022',
