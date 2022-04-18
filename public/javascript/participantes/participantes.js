@@ -631,10 +631,10 @@ let time6 = {
     jogadores: 
     [
         {
-            username: 'fernandesz#5829',
-            email: 'fernandesz@gmail.com',
-            senha: 'fernandesz',
-            invocador: 'fernandesz c10',
+            username: 'OK Procurando',
+            email: 'Procurando@gmail.com',
+            senha: 'Procurando',
+            invocador: 'OK Procurando',
             elo: detectPointsPerElo('Diamante 1'),
             rota: 'Topo',
             codigo: 1001,
