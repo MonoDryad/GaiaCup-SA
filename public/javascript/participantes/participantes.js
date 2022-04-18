@@ -715,7 +715,7 @@ let time6 = {
             isAdmin: false,
             team: 'Orange Kingdom - Owari',
             badge: `<span class="badge bg-info text-dark">User</span>`
-        }
+        },
     ],
     criadoPor: 'Mono Dryad',
     userIcon: 'https://raw.communitydragon.org/12.5/game/assets/ux/summonericons/profileicon5081.png',
