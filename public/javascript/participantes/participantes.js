@@ -635,7 +635,7 @@ let time6 = {
             email: 'fernandesz@gmail.com',
             senha: 'fernandesz',
             invocador: 'fernandesz c10',
-            elo: detectPointsPerElo('Ouro 1'),
+            elo: detectPointsPerElo('Diamante 1'),
             rota: 'Topo',
             codigo: 1001,
             isConnected: false,
@@ -927,11 +927,11 @@ let time8 = {
     jogadores: 
     [
         {
-            username: 'geng#6594',
-            email: 'geng@gmail.com',
-            senha: 'geng',
-            invocador: 'geng',
-            elo: detectPointsPerElo('Platina 1'),
+            username: 'Kildraky',
+            email: 'Kildraky@gmail.com',
+            senha: 'Kildraky',
+            invocador: 'Kildraky',
+            elo: detectPointsPerElo('Platina 2'),
             rota: 'Topo',
             codigo: 1210,
             isConnected: false,
