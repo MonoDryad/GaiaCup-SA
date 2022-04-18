@@ -12,7 +12,7 @@ let times = [
           tag: 'PWG',
           logo: './images/Logos/Sem Fundo/PWG.png',
           grupo: 'A',
-          vitoria: 0,
+          vitoria:  0    ,
           derrota: 0,
      },
      {
