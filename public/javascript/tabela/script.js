@@ -13,15 +13,15 @@ let times = [
           logo: './images/Logos/Sem Fundo/PWG.png',
           grupo: 'A',
           vitoria:  0    ,
-          derrota: 0,
+          derrota: 2,
      },
      {
           nome: 'PHOENIX GAMING ACADEMY',
           tag: 'PHXA',
           logo: './images/Logos/Sem Fundo/PHXA.png',
           grupo: 'A',
-          vitoria: 0,
-          derrota: 0,
+          vitoria: 1,
+          derrota: 1,
      },
      {
           nome: 'PHOENIX GAMING GALAXY',
@@ -83,7 +83,7 @@ let times = [
           tag: 'EDW',
           logo: './images/Logos/Sem Fundo/EDW.png',
           grupo: 'A',
-          vitoria: 0,
+          vitoria: 2,
           derrota: 0,
      },     {
           nome: 'BLACK DIAMOND E-SPORTS',
