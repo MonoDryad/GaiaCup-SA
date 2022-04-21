@@ -150,10 +150,10 @@ let time2 = {
     jogadores: 
     [
         {
-            username: 'eu estou nervoso#5865',
-            email: 'nervoso@gmail.com',
-            senha: 'nervoso',
-            invocador: 'Euestounervoso',
+            username: 'Lkz',
+            email: 'Lkz@gmail.com',
+            senha: 'Lkz',
+            invocador: 'ïm ok',
             rota: 'Topo',
             codigo: 500,
             isConnected: false,
@@ -178,17 +178,17 @@ let time2 = {
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
         {
-            username: 'Haeng#5106',
-            email: 'Haeng@gmail.com',
-            senha: 'Haeng',
-            invocador: 'Haeng',
+            username: 'Old Muri',
+            email: 'Old Muri@gmail.com',
+            senha: 'Old Muri',
+            invocador: 'Old Muri',
             rota: 'Meio',
             codigo: 502,
             isConnected: false,
             icon: './images/Logos/Sem Fundo/logo-black-diamond.png',
             isAdmin: false,
             team: 'KINGSMAN EsportS',
-            elo: detectPointsPerElo('Platina 1'),
+            elo: detectPointsPerElo('Ouro 2'),
             badge: `<span class="badge bg-info text-dark">User</span>`
         },
         {
