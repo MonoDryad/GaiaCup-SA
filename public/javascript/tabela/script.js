@@ -53,7 +53,7 @@ let times = [
           logo: './images/Logos/Sem Fundo/KNIWhite.png',
           grupo: 'B',
           vitoria: 0,
-          derrota: 0,
+          derrota: 2,
      },
      {
           nome: 'TNOWAY CIANO',
@@ -68,8 +68,8 @@ let times = [
           tag: 'OKO',
           logo: './images/Logos/Sem Fundo/okempo.png',
           grupo: 'B',
-          vitoria: 0,
-          derrota: 0,
+          vitoria: 1,
+          derrota: 1,
      },
      {
           nome: 'ORANGE KINGDOM - UMAYYAD',
@@ -90,7 +90,7 @@ let times = [
           tag: 'BDD',
           logo: './images/Logos/Sem Fundo/logo-black-diamond.png',
           grupo: 'B',
-          vitoria: 0,
+          vitoria: 2,
           derrota: 0,
      },
 ]
