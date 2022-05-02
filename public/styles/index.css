@@ -1,0 +1,112 @@
+.inicio{
+     margin-left: 5%;
+}
+
+.infocontainerGCUP{
+     display: flex;
+     transition: 0.2s;
+
+}
+
+.divAGCUP{
+     position: relative;
+     z-index: 50;
+     font-family: OpenRegular;
+     padding: 2%;
+     padding-bottom: 0%;
+     width: 60%;
+     background: white;
+}
+
+.titleAGCUP{
+     text-align: center;
+     margin-bottom: 2%;
+     font-size: 50px;
+     animation: show-medium 2s;
+     font-weight: bolder;
+}
+
+.subtitleAGCUP{
+     margin-bottom: 6%;
+     text-align: center;
+     font-size: 30px;
+     animation: show-medium 2s;
+     font-weight: 700;
+}
+
+.textAGCUP{
+     font-family: OpenRegular;
+     font-size: 24px;
+     animation: show-medium 2s;
+
+}
+
+.inviteAGCUP{
+     margin-top: 2%;
+     font-size: 20px;
+     animation: show-medium 2s;
+     font-weight: bolder;
+}
+
+.intro-gaiacup{
+     width: 45%;
+}
+
+.incricaoGCUP{
+     background: rgb(255, 208, 0);
+     padding: 1%;
+     margin-top: 1%;
+     margin-left: -4%;
+     margin-right: -4%;
+}
+
+.incricaoGCUP a{
+     color: black;
+}
+
+.upperbodycontainerGCUP{
+     position: relative;
+     z-index: 100;
+     display: flex;
+     background: rgb(214, 214, 214);
+}
+
+.upperbodycontainerGCUP div{
+     padding: 3%;
+     width: 33%;
+}
+
+.upperbodycontainerGCUP div i{
+     margin: auto;
+     margin-bottom: 10%;
+}
+
+.infosobreGCUP{
+     text-align: center;
+     padding-top: 5%;
+     background-color: white;
+     padding-bottom: 3%;
+     -webkit-box-shadow: 0px 0px 9px 40px #000000; 
+     box-shadow: 0px 0px 9px 40px #000000;
+}
+
+.sistemaporeloinfoGCUP{
+     text-align:start;
+     width: 70%;
+     margin-left: 15%;
+}
+
+.participantesTerceiraEdicaoGCUP{
+     margin-top: 5%;
+     padding-bottom: 5%;
+     margin-left: 10%;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15%;
+}
+
+.participantesTerceiraEdicaoGCUP img{
+     margin-top: 4%;
+     border-bottom: 1px gray solid;
+}
+
