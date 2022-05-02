@@ -37,14 +37,14 @@ let times = [
           logo: './images/Logos/Sem Fundo/SUITS.png',
           grupo: 'D',
           vitoria: 1,
-          derrota: 2,
+          derrota: 3,
      },
      {
           nome: 'NEO AKIHABARA',
           tag: 'AKH',
           logo: './images/Logos/Sem Fundo/png-akiha.png',
           grupo: 'D',
-          vitoria: 3,
+          vitoria: 4,
           derrota: 0,
      },
      {
