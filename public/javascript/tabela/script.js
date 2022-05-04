@@ -32,9 +32,9 @@ let times = [
           derrota: 1,
      },
      {
-          nome: 'TEAM SUITS',
-          tag: 'TSS',
-          logo: './images/Logos/Sem Fundo/SUITS.png',
+          nome: 'Orange Kingdom Ming',
+          tag: 'OKM',
+          logo: './images/Logos/Sem Fundo/okempo.png',
           grupo: 'D',
           vitoria: 1,
           derrota: 3,
