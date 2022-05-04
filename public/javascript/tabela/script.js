@@ -16,8 +16,8 @@ let times = [
           derrota: 2,
      },
      {
-          nome: 'PHOENIX GAMING ACADEMY',
-          tag: 'PHXA',
+          nome: 'Knave Fury Black E-sport',
+          tag: 'KFS',
           logo: './images/Logos/Sem Fundo/PHXA.png',
           grupo: 'A',
           vitoria: 1,
