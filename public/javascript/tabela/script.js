@@ -24,8 +24,8 @@ let times = [
           derrota: 3,
      },
      {
-          nome: 'PHOENIX GAMING GALAXY',
-          tag: 'PHX',
+          nome: 'Lotus Galaxy',
+          tag: 'LG',
           logo: './images/Logos/Sem Fundo/PHXG.png',
           grupo: 'C',
           vitoria: 3,
