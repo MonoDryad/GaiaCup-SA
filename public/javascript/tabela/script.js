@@ -5,7 +5,7 @@ let times = [
           logo: './images/Logos/Sem Fundo/darktenacity.png',
           grupo: 'D',
           vitoria: 1,
-          derrota: 3,
+          derrota: 5,
      },
      {
           nome: 'PHOENIX WARRIORS GAMING',
@@ -28,7 +28,7 @@ let times = [
           tag: 'LG',
           logo: './images/Logos/Sem Fundo/PHXG.png',
           grupo: 'C',
-          vitoria: 3,
+          vitoria: 5,
           derrota: 1,
      },
      {
@@ -36,7 +36,7 @@ let times = [
           tag: 'OKM',
           logo: './images/Logos/Sem Fundo/okempo.png',
           grupo: 'D',
-          vitoria: 1,
+          vitoria: 3,
           derrota: 3,
      },
      {
@@ -44,8 +44,8 @@ let times = [
           tag: 'AKH',
           logo: './images/Logos/Sem Fundo/png-akiha.png',
           grupo: 'D',
-          vitoria: 4,
-          derrota: 0,
+          vitoria: 5,
+          derrota: 1,
      },
      {
           nome: 'NAOKI WHITE',
@@ -53,22 +53,22 @@ let times = [
           logo: './images/Logos/Sem Fundo/KNIWhite.png',
           grupo: 'B',
           vitoria: 1,
-          derrota: 3,
+          derrota: 5,
      },
      {
           nome: 'Team NoWay',
           tag: 'TNW',
           logo: './images/Logos/Sem Fundo/TNWC.png',
           grupo: 'C',
-          vitoria: 0,
-          derrota: 4,
+          vitoria: 1,
+          derrota: 5,
      },
      {
           nome: 'ORANGE KINGDOM - OWARI',
           tag: 'OKO',
           logo: './images/Logos/Sem Fundo/okempo.png',
           grupo: 'B',
-          vitoria: 3,
+          vitoria: 5,
           derrota: 1,
      },
      {
@@ -77,7 +77,7 @@ let times = [
           logo: './images/Logos/Sem Fundo/okempo.png',
           grupo: 'C',
           vitoria: 3,
-          derrota: 1,
+          derrota: 3,
      },     {
           nome: 'EIGHT DIVINE WAYS',
           tag: 'EDW',
@@ -86,12 +86,69 @@ let times = [
           vitoria: 4,
           derrota: 0,
      },     {
-          nome: 'BLACK DIAMOND E-SPORTS',
-          tag: 'BDD',
-          logo: './images/Logos/Sem Fundo/logo-black-diamond.png',
+          nome: 'Eight Divine Ways Black',
+          tag: 'EDWB',
+          logo: './images/Logos/Sem Fundo/EDW.png',
           grupo: 'B',
-          vitoria: 2,
-          derrota: 2,
+          vitoria: 3,
+          derrota: 3,
+     },
+]
+
+let timeoc = [
+     {
+          nome: 'Knave Fury Black E-sport',
+          tag: 'KFS',
+          logo: './images/Logos/Sem Fundo/PHXA.png',
+          vitoria: 0,
+          derrota: 0,
+     },
+     {
+          nome: 'Lotus Galaxy',
+          tag: 'LG',
+          logo: './images/Logos/Sem Fundo/PHXG.png',
+          vitoria: 0,
+          derrota: 0,
+     },
+     {
+          nome: 'Orange Kingdom Ming',
+          tag: 'OKM',
+          logo: './images/Logos/Sem Fundo/okempo.png',
+          vitoria: 0,
+          derrota: 0,
+     },
+     {
+          nome: 'NEO AKIHABARA',
+          tag: 'AKH',
+          logo: './images/Logos/Sem Fundo/png-akiha.png',
+          vitoria: 0,
+          derrota: 0,
+     },
+     {
+          nome: 'ORANGE KINGDOM - OWARI',
+          tag: 'OKO',
+          logo: './images/Logos/Sem Fundo/okempo.png',
+          vitoria: 0,
+          derrota: 0,
+     },
+     {
+          nome: 'ORANGE KINGDOM - UMAYYAD',
+          tag: 'OKU',
+          logo: './images/Logos/Sem Fundo/okempo.png',
+          vitoria: 0,
+          derrota: 0,
+     },     {
+          nome: 'EIGHT DIVINE WAYS',
+          tag: 'EDW',
+          logo: './images/Logos/Sem Fundo/EDW.png',
+          vitoria: 0,
+          derrota: 0,
+     },     {
+          nome: 'Eight Divine Ways Black',
+          tag: 'EDWB',
+          logo: './images/Logos/Sem Fundo/EDW.png',
+          vitoria: 0,
+          derrota: 0,
      },
 ]
 
@@ -155,3 +212,17 @@ for(j=0;j<grupoDTEMP.length;j++){
           document.getElementById(`fraggrupoD-${j+1}`).innerHTML = `${grupoDTEMP[j].vitoria}/${grupoDTEMP[j].derrota}`
 }
 
+grupoOCTEMP = timeoc.sort((a,b) => {
+     if (a.vitoria > b.vitoria) {
+          return -1;
+        }
+        if (a.vitoria < b.vitoria) {
+          return 1;
+        }
+        return 0;
+})
+for(j=0;j<grupoOCTEMP.length;j++){
+          document.getElementById(`imggrupoO-${j+1}`).setAttribute('src', `${grupoOCTEMP[j].logo}`)
+          document.getElementById(`nomegrupoO-${j+1}`).innerHTML = grupoOCTEMP[j].nome 
+          document.getElementById(`fraggrupoO-${j+1}`).innerHTML = `${grupoOCTEMP[j].vitoria}/${grupoOCTEMP[j].derrota}`
+}
