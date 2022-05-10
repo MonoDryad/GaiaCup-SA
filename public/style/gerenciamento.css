@@ -1,0 +1,227 @@
+body{
+    background: url('../images/background-shadow_isles.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.containerGerenciamentoDeContas-User{
+    margin-top: 5%;
+}
+
+.informationTitle{
+    margin-top: 5%;
+}
+
+.actualEmail, .actualPassword, .actualSummoner{
+    color: rgb(175, 175, 175);
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+.account-Title{
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.userGerenciamentoDeContas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.rightDisplayUser{
+    background-color: #222222;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.4px, #222222 0, #222222 50%);
+    width: 60%;
+    border: white 1px solid;
+}
+
+.leftDisplayUser{
+    display: flex;
+    flex-direction: column;
+    background-color: #212529;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 30%;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+    border-left: white 1px solid;
+    border-right: none;
+}
+
+.showPassword{
+    width: 100%;
+}
+
+.myBtn{
+    color: aliceblue;
+    background-color: #212529;
+    border-radius: 0px !important;
+    border: 0px !important;
+    padding: 1%;
+    text-align: center;
+}
+
+.divNoAccount{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.myBtnAdmin{
+    color: aliceblue;
+    background-color: #212529;
+    border-radius: 0px !important;
+    border: 0px !important;
+    padding: 1%;
+    text-align: center;
+}
+
+.myBtn:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(0, 89, 255);
+}
+
+.myBtnAdmin:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(0, 89, 255);
+}
+
+.showPassword{
+    margin-bottom: 1%;
+}
+
+.inpChangeAccount{
+    background: transparent;
+    width: 100%;
+}
+
+.informations{
+    width: 60%;
+}
+
+.divAlterarEmail, .divVincularInvocador, .divAlterarSenha{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.informationTitle, .gerenciamento-Title{
+    text-align: center !important;
+    margin-bottom: 3% !important;
+}
+
+.receiveEmailGaiaCup{
+    text-align: center;
+}
+
+.inpChangeAccount{
+    margin-bottom: 5%;
+}
+
+.usersGoHere{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6%;
+    width: 100%;
+}
+
+.imgUserFind{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.letItBeResponsive{
+    margin-left: 1%;
+    border: 1px solid grey;
+    padding: 2%;
+}
+
+.removeIt{
+    display: none;
+}
+
+.divShowUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.divShowUser input{
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px gray solid;
+}
+
+.divShowUser{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 890px) {
+    .userGerenciamentoDeContas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    .rightDisplayUser{
+        background-color: #222222;
+        opacity: 1;
+        background-size: 4px 4px;
+        background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.4px, #222222 0, #222222 50%);
+        width: 100%;
+        border-top: none;
+        border-bottom: white 1px solid;
+        border-left: white 1px solid;
+        border-right: white 1px solid;
+    }
+    
+    .leftDisplayUser{
+        display: flex;
+        flex-direction: column;
+        background-color: #212529;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 100%;
+        border-top: white 1px solid;
+        border-bottom: white 1px solid;
+        border-left: white 1px solid;
+        border-right: white 1px solid;
+    }
+
+    .letItBeResponsive{
+        border: 1px solid grey;
+        padding: 4%;
+        width: 45% !important;
+    }
+
+    .usersGoHere{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6%;
+        width: 100%;
+    }
+
+}
